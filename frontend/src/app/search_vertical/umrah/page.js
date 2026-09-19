@@ -25,7 +25,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/14-days-3-star-umrah-package-695-visa_return-flightshotels.jpg",
+    image: "https://i.pinimg.com/736x/bd/09/aa/bd09aa5b48c02fbf6e79b39528d9f43a.jpg",
     rating: 8.8,
     ratingText: "Very Good",
     reviews: 420,
@@ -44,7 +44,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/14-days-3-star-umrah-package-695-visa_return-flightshotels.jpg",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
     rating: 8.9,
     ratingText: "Very Good",
     reviews: 380,
@@ -63,7 +63,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/7-days-4-star-umrah-package-650-visaflighthotels-1-560x400-1.jpg",
+    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
     rating: 9.1,
     ratingText: "Exceptional",
     reviews: 510,
@@ -82,7 +82,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/10-days-4-star-umrah-package-695-visareturn-flighthotels-550x400-1.jpg",
+    image: "https://i.pinimg.com/1200x/f9/67/67/f967673096d31252dced546e0809ea0b.jpg",
     rating: 9.0,
     ratingText: "Exceptional",
     reviews: 630,
@@ -101,7 +101,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/12days-4-star-umrah-package-745-visaflightshotels-560x400-1.jpg",
+    image: "https://i.pinimg.com/1200x/c6/27/83/c62783fc7679e8a756a36064508de74b.jpg",
     rating: 9.2,
     ratingText: "Exceptional",
     reviews: 450,
@@ -120,7 +120,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/12days-4-star-umrah-package-745-visaflightshotels-560x400-1.jpg",
+    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80",
     rating: 9.1,
     ratingText: "Exceptional",
     reviews: 720,
@@ -524,9 +524,8 @@ function UmrahContent() {
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`flex-1 min-w-fit py-2 px-3 rounded-xl text-xs font-bold transition-all ${
-                    selectedCategory === cat ? "bg-white text-[#191e3b] shadow-xs" : "text-gray-600 hover:text-black"
-                  }`}
+                  className={`flex-1 min-w-fit py-2 px-3 rounded-xl text-xs font-bold transition-all ${selectedCategory === cat ? "bg-white text-[#191e3b] shadow-xs" : "text-gray-600 hover:text-black"
+                    }`}
                 >
                   {cat === "All" ? "All Packages" : `${cat} Packages`}
                 </button>

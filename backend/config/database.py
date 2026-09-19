@@ -5,11 +5,13 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-url = getenv("Database_URL") 
+url = getenv("DATABASE_URL") or getenv("Database_URL")
 db_name = getenv("MONGO_DB_NAME")
-collection_name = getenv("MONGO_DB_COLLECTION") 
+collection_name = getenv("MONGO_DB_COLLECTION")
 
-print('url',url)
+print("url", url)
+
+
 def db_connection():
     try:
         if not url:

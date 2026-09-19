@@ -16,7 +16,8 @@ dependencies = [
     "python-multipart (>=0.0.32,<0.0.33)",
     "uvicorn (>=0.53.0,<0.54.0)",
     "google-genai (>=2.24.0,<3.0.0)",
-    "openai-agents (>=0.22.3,<0.23.0)"
+    "openai-agents (>=0.22.3,<0.23.0)",
+    "httpx (>=0.28.1,<0.29.0)"
 ]
 
 
