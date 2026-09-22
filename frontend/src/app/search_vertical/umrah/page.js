@@ -13,25 +13,6 @@ import {
 
 const UMRAH_PACKAGES = [
   {
-    id: "u1",
-    name: "7 Days 3 Star Umrah Package",
-    category: "3 Star",
-    stars: 3,
-    duration: "7 Days",
-    nights_makkah: 4,
-    nights_madinah: 3,
-    price: 595,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://i.pinimg.com/736x/bd/09/aa/bd09aa5b48c02fbf6e79b39528d9f43a.jpg",
-    rating: 8.8,
-    ratingText: "Very Good",
-    reviews: 420,
-    badge: "Budget Saver"
-  },
-  {
     id: "u2",
     name: "10 Days 3 Star Umrah Package",
     category: "3 Star",
@@ -215,7 +196,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/Makkah_7_sept_08.jpg",
+    image: "https://images.unsplash.com/photo-1605553378313-22d0dc541393?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1ha2thaHxlbnwwfHwwfHx8MA%3D%3D",
     rating: 9.0,
     ratingText: "Exceptional",
     reviews: 410,
@@ -239,6 +220,25 @@ const UMRAH_PACKAGES = [
     ratingText: "Exceptional",
     reviews: 580,
     badge: "Dec & Ramadan"
+  },
+  {
+    id: "u1",
+    name: "7 Days 3 Star Umrah Package",
+    category: "3 Star",
+    stars: 3,
+    duration: "7 Days",
+    nights_makkah: 4,
+    nights_madinah: 3,
+    price: 595,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://i.pinimg.com/736x/bd/09/aa/bd09aa5b48c02fbf6e79b39528d9f43a.jpg",
+    rating: 8.8,
+    ratingText: "Very Good",
+    reviews: 420,
+    badge: "Budget Saver"
   },
   {
     id: "u13",
@@ -272,7 +272,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/images-2.jpg",
+    image: "https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFra2FofGVufDB8fDB8fHww",
     rating: 9.3,
     ratingText: "Exceptional",
     reviews: 710,
@@ -291,7 +291,7 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/images-2.jpg",
+    image: "https://images.unsplash.com/photo-1667454872134-c25973237138?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFkaW5haCUyMG1vc3F1ZXxlbnwwfHwwfHx8MA%3D%3D",
     rating: 9.4,
     ratingText: "Exceptional",
     reviews: 850,
@@ -301,9 +301,9 @@ const UMRAH_PACKAGES = [
 
 function UmrahPackageCard({ pkg }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-row group">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-col md:flex-row group">
       {/* Image */}
-      <div className="relative w-full sm:w-72 h-56 sm:h-auto shrink-0 overflow-hidden">
+      <div className="relative w-full h-56 sm:h-52 md:w-72 md:h-auto shrink-0 overflow-hidden">
         <img
           src={pkg.image}
           alt={pkg.name}

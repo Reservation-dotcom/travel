@@ -121,9 +121,9 @@ const SCHENGEN_SERVICES = [
 
 function SchengenServiceCard({ item }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-row group">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-col md:flex-row group">
       {/* 1. Country Flag & 2. Famous Destination Image */}
-      <div className="relative w-full sm:w-72 h-52 sm:h-auto shrink-0 overflow-hidden">
+      <div className="relative w-full h-52 sm:h-52 md:w-72 md:h-auto shrink-0 overflow-hidden">
         {/* Famous Destination Image */}
         <img
           src={item.destinationImage}

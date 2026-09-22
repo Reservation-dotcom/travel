@@ -25,7 +25,7 @@ const HAJJ_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/Makkah_7_sept_08.jpg",
+    image: "https://media.istockphoto.com/id/482206266/photo/kaaba-in-mecca.webp?a=1&b=1&s=612x612&w=0&k=20&c=YWHRjAp4EQi7gwiWgnmSwh9m8ez2fUTiJFFTSGlx0Pg=",
     rating: 8.9,
     ratingText: "Very Good",
     reviews: 580,
@@ -82,7 +82,7 @@ const HAJJ_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/images-2.jpg",
+    image: "https://images.unsplash.com/photo-1553755088-ef1973c7b4a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1ha2thaHxlbnwwfHwwfHx8MA%3D%3D",
     rating: 9.6,
     ratingText: "Exceptional",
     reviews: 840,
@@ -130,9 +130,9 @@ const HAJJ_PACKAGES = [
 
 function HajjPackageCard({ pkg }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-row group">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-col md:flex-row group">
       {/* Image */}
-      <div className="relative w-full sm:w-72 h-56 sm:h-auto shrink-0 overflow-hidden">
+      <div className="relative w-full h-56 sm:h-52 md:w-72 md:h-auto shrink-0 overflow-hidden">
         <img
           src={pkg.image}
           alt={pkg.name}
