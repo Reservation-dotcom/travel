@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import FlightSearch from "../components/search/FlightSearch";
+import EnquiryHeroForm from "../components/search/EnquiryHeroForm";
 import FlightCard from "../components/flights/FlightCard";
 import FloatingWhatsApp from "../components/ui/FloatingWhatsApp";
 import { Bell, Info, Search, ShieldCheck, Briefcase, Star } from "lucide-react";
@@ -150,12 +150,12 @@ function FlightsContent() {
       {/* ── 1. Expedia Top Header ── */}
       <Header />
 
-      {/* ── 2. Top Search Section Bar ── */}
-      <section className="bg-white border-b border-gray-200 shadow-xs py-3">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <FlightSearch onSearch={handleSearchSubmit} />
-        </div>
-      </section>
+      {/* ── 2. Enquiry Hero Form ── */}
+      <EnquiryHeroForm
+        title="For More Cheapest Offers, Fill the Form"
+        bgImage="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80"
+        pageType="Flight"
+      />
 
       {/* ── 3. Main 3-Column Layout ── */}
       <main className="flex-1 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">

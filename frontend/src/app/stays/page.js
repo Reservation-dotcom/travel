@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useMemo, useEffect, Suspense } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
-import StaySearch from "../components/search/StaySearch";
+import EnquiryHeroForm from "../components/search/EnquiryHeroForm";
 import StayCard from "../components/stays/StayCard";
 import FloatingWhatsApp from "../components/ui/FloatingWhatsApp";
 import { Search, MapPin, SlidersHorizontal, Info, ChevronDown, Sparkles, ExternalLink } from "lucide-react";
@@ -25,12 +25,6 @@ function StaysContent() {
     rooms: 1
   });
 
-  useEffect(() => {
-    if (urlDestination) {
-      setCurrentLocation(urlDestination);
-    }
-  }, [urlDestination]);
-
   // Category tab state
   const [activeTab, setActiveTab] = useState("all"); // 'all', 'hotels', 'homes'
 
@@ -47,94 +41,146 @@ function StaysContent() {
   });
   const [maxPrice, setMaxPrice] = useState(350);
 
-  // 4 Dummy Hotels dataset matching Expedia screenshot
+  // Famous international hotel stays with rich travel details
   const initialHotels = [
     {
-      id: "1",
-      name: "Pearl Continental Lahore",
-      location: "Mall Road",
+      id: "saudi-1",
+      name: "The Ritz-Carlton, Riyadh",
+      location: "Riyadh, Saudi Arabia",
+      country: "Saudi Arabia",
+      countryFlag: "🇸🇦",
+      flagImage: "https://flagcdn.com/w160/sa.png",
       type: "hotels",
       breakfastIncluded: true,
       pool: true,
       airportShuttle: true,
       freeWifi: true,
-      rating: 7.6,
-      ratingText: "Good",
-      reviewCount: 808,
-      discountTag: "$27 off",
-      nightlyPrice: 105,
-      originalTotal: 272,
-      totalPrice: 245,
+      rating: 9.4,
+      ratingText: "Exceptional",
+      reviewCount: 1324,
+      discountTag: "60% OFF",
+      nightlyPrice: 299,
+      originalTotal: 820,
+      totalPrice: 299,
+      phone: "+966 11 800 8888",
+      whatsapp: "+966555123456",
+      features: ["Royal spa", "Sky lounge", "Private valet"],
       images: [
         "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80"
+        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80"
       ]
     },
     {
-      id: "2",
-      name: "Avari Xpress Gulberg",
-      location: "Lahore",
+      id: "italy-1",
+      name: "Hotel Eden Rome",
+      location: "Rome, Italy",
+      country: "Italy",
+      countryFlag: "🇮🇹",
+      flagImage: "https://flagcdn.com/w160/it.png",
       type: "hotels",
       breakfastIncluded: true,
       pool: false,
-      airportShuttle: false,
-      freeWifi: true,
-      rating: 8.6,
-      ratingText: "Excellent",
-      reviewCount: 175,
-      discountTag: "$72 off",
-      nightlyPrice: 63,
-      originalTotal: 218,
-      totalPrice: 145,
-      images: [
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1560200353-ce0a95ef1641?auto=format&fit=crop&w=1000&q=80"
-      ]
-    },
-    {
-      id: "3",
-      name: "The Nishat Hotel Johar Town",
-      location: "Johar Town, Lahore",
-      type: "hotels",
-      breakfastIncluded: true,
-      pool: true,
       airportShuttle: true,
       freeWifi: true,
       rating: 9.2,
       ratingText: "Exceptional",
-      reviewCount: 340,
-      discountTag: "$45 off",
-      nightlyPrice: 120,
-      originalTotal: 310,
-      totalPrice: 280,
+      reviewCount: 980,
+      discountTag: "60% OFF",
+      nightlyPrice: 289,
+      originalTotal: 760,
+      totalPrice: 289,
+      phone: "+39 06 4784 8888",
+      whatsapp: "+393331234567",
+      features: ["Historic charm", "Rooftop terrace", "Fine dining"],
       images: [
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1000&q=80"
+        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=80"
       ]
     },
     {
-      id: "4",
-      name: "Faletti's Hotel Lahore",
-      location: "Egerton Road, Lahore",
+      id: "france-1",
+      name: "Le Bristol Paris",
+      location: "Paris, France",
+      country: "France",
+      countryFlag: "🇫🇷",
+      flagImage: "https://flagcdn.com/w160/fr.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      pool: true,
+      airportShuttle: false,
+      freeWifi: true,
+      rating: 9.5,
+      ratingText: "Exceptional",
+      reviewCount: 1140,
+      discountTag: "60% OFF",
+      nightlyPrice: 349,
+      originalTotal: 920,
+      totalPrice: 349,
+      phone: "+33 1 4567 9000",
+      whatsapp: "+33611223344",
+      features: ["Luxury spa", "Garden retreat", "VIP concierge"],
+      images: [
+        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80"
+      ]
+    },
+    {
+      id: "swiss-1",
+      name: "Bürgenstock Resort",
+      location: "Lake Lucerne, Switzerland",
+      country: "Switzerland",
+      countryFlag: "🇨🇭",
+      flagImage: "https://flagcdn.com/w160/ch.png",
       type: "homes",
       breakfastIncluded: true,
-      pool: false,
+      pool: true,
       airportShuttle: true,
       freeWifi: true,
-      rating: 8.2,
-      ratingText: "Very Good",
-      reviewCount: 520,
-      discountTag: "$30 off",
-      nightlyPrice: 85,
-      originalTotal: 210,
-      totalPrice: 190,
+      rating: 9.3,
+      ratingText: "Exceptional",
+      reviewCount: 875,
+      discountTag: "60% OFF",
+      nightlyPrice: 319,
+      originalTotal: 880,
+      totalPrice: 319,
+      phone: "+41 41 612 5000",
+      whatsapp: "+41791234567",
+      features: ["Lake view", "Thermal spa", "Panoramic gym"],
       images: [
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
         "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=80"
+        "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80"
+      ]
+    },
+    {
+      id: "turkey-1",
+      name: "The Peninsula Istanbul",
+      location: "Istanbul, Turkey",
+      country: "Turkey",
+      countryFlag: "🇹🇷",
+      flagImage: "https://flagcdn.com/w160/tr.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      pool: true,
+      airportShuttle: true,
+      freeWifi: true,
+      rating: 9.1,
+      ratingText: "Exceptional",
+      reviewCount: 1045,
+      discountTag: "60% OFF",
+      nightlyPrice: 279,
+      originalTotal: 700,
+      totalPrice: 279,
+      phone: "+90 212 355 9010",
+      whatsapp: "+905551234567",
+      features: ["Bosporus view", "Infinity pool", "Turkish bath"],
+      images: [
+        "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1560200353-ce0a95ef1641?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80"
       ]
     }
   ];
@@ -184,7 +230,7 @@ function StaysContent() {
       if (sortBy === "rating") return b.rating - a.rating;
       return 0; // default recommended
     });
-  }, [activeTab, propertyNameQuery, selectedRating, maxPrice, selectedAmenities, sortBy]);
+  }, [activeTab, propertyNameQuery, selectedRating, maxPrice, selectedAmenities, sortBy, initialHotels]);
 
   const toggleAmenity = (key) => {
     setSelectedAmenities((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -196,12 +242,12 @@ function StaysContent() {
       {/* ── 1. Expedia Top Header ── */}
       <Header />
 
-      {/* ── 2. Top Search Section Bar ── */}
-      <section className="bg-white border-b border-gray-200 shadow-xs py-3">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <StaySearch initialLocation={currentLocation} onSearch={handleSearchSubmit} />
-        </div>
-      </section>
+      {/* ── 2. Enquiry Hero Form ── */}
+      <EnquiryHeroForm
+        title="For More Cheapest Offers, Fill the Form"
+        bgImage="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80"
+        pageType="Stay"
+      />
 
       {/* ── 3. Main 3-Column Layout ── */}
       <main className="flex-1 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
@@ -353,7 +399,7 @@ function StaysContent() {
           </aside>
 
           {/* ════════════ CENTER COLUMN (Hotels Results) ════════════ */}
-          <section className="md:col-span-6 lg:col-span-9 xl:col-span-6 space-y-4">
+          <section className="md:col-span-6 lg:col-span-9 space-y-4">
             
             {/* Category Tabs Pill Bar */}
             <div className="bg-[#eef2f5] p-1 rounded-2xl flex items-center gap-1 w-full border border-gray-200">
@@ -454,44 +500,6 @@ function StaysContent() {
             )}
 
           </section>
-
-          {/* ════════════ RIGHT SIDEBAR (Ad Banner) ════════════ */}
-          <aside className="block md:col-span-3 lg:hidden xl:col-span-3 xl:block">
-            <div className="sticky top-24 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col group">
-              
-              {/* Ad Header */}
-              <div className="p-4 border-b border-gray-100 flex items-center justify-between">
-                <div className="text-sm font-black tracking-widest uppercase text-[#191e3b] font-serif">
-                  RIXOS
-                </div>
-                <span className="text-[10px] text-gray-400 font-medium">HOTELS</span>
-              </div>
-
-              {/* Luxury Pool/Ocean Image */}
-              <div className="relative h-[340px] w-full bg-gray-900 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
-                  alt="Rixos Luxury Resort"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
-
-              {/* Ad Content Body */}
-              <div className="p-5 text-center bg-white space-y-4">
-                <p className="text-sm font-medium text-gray-700 leading-relaxed">
-                  Rediscover luxury all-inclusive with Rixos in Jeddah
-                </p>
-                <button
-                  type="button"
-                  className="w-full py-2.5 px-4 bg-[#191e3b] hover:bg-black text-white text-xs font-bold rounded-full shadow-sm transition-all transform active:scale-95"
-                >
-                  Learn more
-                </button>
-              </div>
-
-            </div>
-          </aside>
 
         </div>
       </main>
