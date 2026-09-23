@@ -34,6 +34,13 @@ export default function SchengenVisaSearch({ onSearch }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const schengenTypes = [
+    { full: "Tourist", short: "Tourist" },
+    { full: "Business", short: "Business" },
+    { full: "Family Visit", short: "Family" },
+    { full: "Student", short: "Student" },
+  ];
+
   const schengenCountries = [
     { country: "France", detail: "Paris – Tourist C-Type Visa", flag: "🇫🇷" },
     { country: "Germany", detail: "Berlin – Business / Tourist Visa", flag: "🇩🇪" },
@@ -62,32 +69,35 @@ export default function SchengenVisaSearch({ onSearch }) {
     const data = { passportCountry, destCountry, visaType, applicants, dates: dateDisplay };
     if (onSearch) onSearch(data);
     router.push(
-      `/search_vertical/schengen?passport=${encodeURIComponent(passportCountry)}&dest=${encodeURIComponent(destCountry)}&type=${encodeURIComponent(visaType)}&applicants=${applicants}&dates=${encodeURIComponent(dateDisplay)}`
+      `/schengen`
     );
   };
 
   return (
     <div className="w-full bg-white space-y-4">
       {/* Visa Type Pills Header */}
-      <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-        <div className="flex items-center gap-2 flex-wrap">
-          {["Tourist", "Business", "Family Visit", "Student"].map((type) => (
+      <div className="flex items-center justify-between border-b border-gray-100 pb-3 gap-2">
+        <div className="flex items-center gap-2 flex-wrap min-w-0 overflow-hidden">
+          {schengenTypes.map((type) => (
             <button
-              key={type}
+              key={type.full}
               type="button"
-              onClick={() => setVisaType(type)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                visaType === type
+              onClick={() => setVisaType(type.full)}
+              className={`px-2.5 sm:px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold transition-all ${
+                visaType === type.full
                   ? "bg-[#003399] text-white font-bold shadow-xs"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
-              {type}
+              <span className="hidden md:inline">{type.full}</span>
+              <span className="md:hidden">{type.short}</span>
             </button>
           ))}
         </div>
-        <span className="text-xs font-bold text-[#003399] flex items-center gap-1">
-          <ShieldCheck className="w-3.5 h-3.5" /> Schengen Zone · 27 Countries
+        <span className="text-[10px] sm:text-xs font-bold text-[#003399] flex items-center gap-1 whitespace-nowrap">
+          <ShieldCheck className="w-3.5 h-3.5" />
+          <span className="hidden md:inline">Schengen Zone · 27 Countries</span>
+          <span className="md:hidden">Schengen</span>
         </span>
       </div>
 
@@ -100,7 +110,7 @@ export default function SchengenVisaSearch({ onSearch }) {
             <div className="flex items-center gap-2.5 w-full px-3.5 py-2.5 bg-white border border-gray-400 rounded-xl">
               <Globe className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Passport Country</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Passport Country</div>
                 <select
                   value={passportCountry}
                   onChange={(e) => setPassportCountry(e.target.value)}
@@ -132,7 +142,7 @@ export default function SchengenVisaSearch({ onSearch }) {
             >
               <FileText className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Schengen Destination</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Schengen Destination</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">{destCountry}</div>
               </div>
             </div>
@@ -187,7 +197,7 @@ export default function SchengenVisaSearch({ onSearch }) {
             >
               <Calendar className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Travel Dates</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Travel Dates</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">{dateDisplay}</div>
               </div>
             </div>
@@ -215,7 +225,7 @@ export default function SchengenVisaSearch({ onSearch }) {
             >
               <User className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Applicants</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Applicants</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">
                   {applicants} applicant{applicants > 1 ? "s" : ""}
                 </div>

@@ -97,7 +97,7 @@ export default function FlightSearch({ onSearch }) {
               key={item.id}
               type="button"
               onClick={() => setTripType(item.id)}
-              className={`px-3.5 py-1.5 rounded-full transition-all ${
+              className={`px-2.5 py-1.5 rounded-full text-[10px] sm:text-xs transition-all ${
                 tripType === item.id
                   ? "bg-[#191e3b] text-white shadow-xs font-bold"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -113,7 +113,7 @@ export default function FlightSearch({ onSearch }) {
           <select
             value={cabinClass}
             onChange={(e) => setCabinClass(e.target.value)}
-            className="text-xs font-bold bg-gray-50 border border-gray-300 rounded-lg px-3 py-1.5 text-[#191e3b] focus:outline-none focus:ring-2 focus:ring-[#006ce4] cursor-pointer"
+            className="text-[10px] sm:text-xs font-bold bg-gray-50 border border-gray-300 rounded-lg px-3 py-1.5 text-[#191e3b] focus:outline-none focus:ring-2 focus:ring-[#006ce4] cursor-pointer"
           >
             <option value="Economy">Economy</option>
             <option value="Premium economy">Premium economy</option>

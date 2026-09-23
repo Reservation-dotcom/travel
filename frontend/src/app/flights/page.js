@@ -6,6 +6,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import FlightSearch from "../components/search/FlightSearch";
 import FlightCard from "../components/flights/FlightCard";
+import FloatingWhatsApp from "../components/ui/FloatingWhatsApp";
 import { Bell, Info, Search, ShieldCheck, Briefcase, Star } from "lucide-react";
 
 function FlightsContent() {
@@ -427,6 +428,7 @@ function FlightsContent() {
 
       {/* ── 4. Expedia Footer ── */}
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

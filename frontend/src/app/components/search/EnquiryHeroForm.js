@@ -132,7 +132,7 @@ export default function EnquiryHeroForm({
       <div className="relative z-10 max-w-4xl mx-auto space-y-6 sm:space-y-8">
         {/* Title Header */}
         <div className="text-center">
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-extrabold text-white tracking-wide font-sans drop-shadow-md">
+          <h2 className="text-lg sm:text-2xl md:text-4xl font-extrabold text-white tracking-wide font-sans drop-shadow-md">
             {title}
           </h2>
         </div>
@@ -143,7 +143,7 @@ export default function EnquiryHeroForm({
             {/* Grid Row 1: Name, Email, Phone */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <label className="block text-xs font-bold text-gray-700 mb-1.5">Name</label>
+                <label className="hidden sm:hidden md:block text-xs font-bold text-gray-700 mb-1.5">Name</label>
                 <input
                   type="text"
                   name="name"
@@ -157,7 +157,7 @@ export default function EnquiryHeroForm({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-gray-700 mb-1.5">Email</label>
+                <label className="hidden sm:hidden md:block text-xs font-bold text-gray-700 mb-1.5">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -171,7 +171,7 @@ export default function EnquiryHeroForm({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-gray-700 mb-1.5">Phone</label>
+                <label className="hidden sm:hidden md:block text-xs font-bold text-gray-700 mb-1.5">Phone</label>
                 <input
                   type="tel"
                   name="phone"
@@ -190,7 +190,7 @@ export default function EnquiryHeroForm({
             {/* Grid Row 2: Passengers, Travel Date, Number of Days */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <label className="block text-xs font-bold text-gray-700 mb-1.5">Passengers</label>
+                <label className="hidden sm:hidden md:block text-xs font-bold text-gray-700 mb-1.5">Passengers</label>
                 <input
                   type="text"
                   name="passengers"
@@ -202,7 +202,7 @@ export default function EnquiryHeroForm({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-gray-700 mb-1.5">Travel Date</label>
+                <label className="hidden sm:hidden md:block text-xs font-bold text-gray-700 mb-1.5">Travel Date</label>
                 <input
                   type="text"
                   name="travelDate"
@@ -218,7 +218,7 @@ export default function EnquiryHeroForm({
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-gray-700 mb-1.5">Number of Days</label>
+                <label className="hidden sm:hidden md:block text-xs font-bold text-gray-700 mb-1.5">Number of Days</label>
                 <input
                   type="text"
                   name="numberOfDays"

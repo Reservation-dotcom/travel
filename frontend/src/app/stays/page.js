@@ -6,6 +6,7 @@ import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import StaySearch from "../components/search/StaySearch";
 import StayCard from "../components/stays/StayCard";
+import FloatingWhatsApp from "../components/ui/FloatingWhatsApp";
 import { Search, MapPin, SlidersHorizontal, Info, ChevronDown, Sparkles, ExternalLink } from "lucide-react";
 
 function StaysContent() {
@@ -352,7 +353,7 @@ function StaysContent() {
           </aside>
 
           {/* ════════════ CENTER COLUMN (Hotels Results) ════════════ */}
-          <section className="lg:col-span-6 space-y-4">
+          <section className="md:col-span-6 lg:col-span-9 xl:col-span-6 space-y-4">
             
             {/* Category Tabs Pill Bar */}
             <div className="bg-[#eef2f5] p-1 rounded-2xl flex items-center gap-1 w-full border border-gray-200">
@@ -455,7 +456,7 @@ function StaysContent() {
           </section>
 
           {/* ════════════ RIGHT SIDEBAR (Ad Banner) ════════════ */}
-          <aside className="lg:col-span-3">
+          <aside className="block md:col-span-3 lg:hidden xl:col-span-3 xl:block">
             <div className="sticky top-24 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col group">
               
               {/* Ad Header */}
@@ -497,6 +498,7 @@ function StaysContent() {
 
       {/* ── 4. Expedia Footer ── */}
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

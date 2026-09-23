@@ -36,6 +36,12 @@ export default function UmrahSearch({ onSearch }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const packageOptions = [
+    { full: "5 Star Luxury", short: "5 Star" },
+    { full: "4 Star Premium", short: "4 Star" },
+    { full: "Economy Saver", short: "Economy" },
+  ];
+
   const departureCities = [
     { city: "Lahore", country: "Pakistan" },
     { city: "Islamabad", country: "Pakistan" },
@@ -59,31 +65,35 @@ export default function UmrahSearch({ onSearch }) {
     const data = { origin, destination, dates: dateDisplay, adults, children: childrenCount, packageCategory };
     if (onSearch) onSearch(data);
     router.push(
-      `/search_vertical/umrah?origin=${encodeURIComponent(origin)}&dates=${encodeURIComponent(dateDisplay)}&adults=${adults}&children=${childrenCount}&category=${encodeURIComponent(packageCategory)}`
+      `/umrah`
     );
   };
 
   return (
     <div className="w-full bg-white space-y-4">
       {/* Package Type Pills Header */}
-      <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-        <div className="flex items-center gap-2">
-          {["5 Star Luxury", "4 Star Premium", "Economy Saver"].map((cat) => (
+      <div className="flex items-center justify-between border-b border-gray-100 pb-3 gap-2">
+        <div className="flex items-center gap-2 min-w-0 overflow-hidden">
+          {packageOptions.map((option) => (
             <button
-              key={cat}
+              key={option.full}
               type="button"
-              onClick={() => setPackageCategory(cat)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                packageCategory === cat
+              onClick={() => setPackageCategory(option.full)}
+              className={`px-2.5 sm:px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold transition-all ${
+                packageCategory === option.full
                   ? "bg-[#191e3b] text-white font-bold shadow-xs"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
-              {cat}
+              <span className="hidden md:inline">{option.full}</span>
+              <span className="md:hidden">{option.short}</span>
             </button>
           ))}
         </div>
-        <span className="text-xs font-bold text-[#006ce4]">✨ Umrah Packages 2026</span>
+        <span className="text-[10px] sm:text-xs font-bold text-[#006ce4] whitespace-nowrap">
+          <span className="hidden md:inline">✨ Umrah Packages 2026</span>
+          <span className="md:hidden">✨ Umrah</span>
+        </span>
       </div>
 
       {/* Main Search Row */}
@@ -104,7 +114,7 @@ export default function UmrahSearch({ onSearch }) {
             >
               <MapPin className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Departure City</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Departure City</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">{origin}</div>
               </div>
             </div>
@@ -147,7 +157,7 @@ export default function UmrahSearch({ onSearch }) {
             <div className="flex items-center gap-2.5 w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded-xl">
               <Building2 className="w-5 h-5 text-[#006ce4] shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Holy Destinations</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Holy Destinations</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">{destination}</div>
               </div>
             </div>
@@ -167,7 +177,7 @@ export default function UmrahSearch({ onSearch }) {
             >
               <Calendar className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Travel Dates</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Travel Dates</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">{dateDisplay}</div>
               </div>
             </div>
@@ -195,7 +205,7 @@ export default function UmrahSearch({ onSearch }) {
             >
               <User className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Pilgrims</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Pilgrims</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">
                   {adults + childrenCount} pilgrim{adults + childrenCount > 1 ? "s" : ""}
                 </div>

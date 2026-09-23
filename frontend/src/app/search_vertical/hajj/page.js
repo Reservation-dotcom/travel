@@ -128,6 +128,20 @@ const HAJJ_PACKAGES = [
   }
 ];
 
+function PageHeaderIcon({ src, alt, href = "#" }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={alt}
+      className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-white/60 transition-transform duration-200 hover:scale-105"
+    >
+      <img src={src} alt={alt} className="h-full w-full object-contain bg-white" />
+    </a>
+  );
+}
+
 function HajjPackageCard({ pkg }) {
   return (
     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-col md:flex-row group">
@@ -210,10 +224,11 @@ function HajjPackageCard({ pkg }) {
             {pkg.phone && (
               <a
                 href={`tel:${pkg.phone}`}
-                className="px-3.5 py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-2xs"
+                aria-label={`Call ${pkg.phone}`}
+                className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
               >
-                <Phone className="w-3.5 h-3.5 text-[#006ce4]" />
-                <span>{pkg.phone}</span>
+                <Phone className="w-3.5 h-3.5 text-[#006ce4] shrink-0" />
+                <span className="hidden sm:inline">{pkg.phone}</span>
               </a>
             )}
 
@@ -222,10 +237,11 @@ function HajjPackageCard({ pkg }) {
                 href={pkg.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center gap-1.5"
+                aria-label="Contact via WhatsApp"
+                className="px-2.5 py-2.5 sm:px-4 sm:py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
               >
-                <MessageSquareShare className="w-4 h-4" />
-                <span>WhatsApp</span>
+                <MessageSquareShare className="w-4 h-4 shrink-0" />
+                <span className="hidden sm:inline">WhatsApp</span>
               </a>
             )}
           </div>
@@ -330,9 +346,12 @@ function HajjContent() {
 
             {/* Results Header */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-              <div>
-                <h1 className="text-xl font-black text-[#191e3b]">{filtered.length} Hajj Packages Available</h1>
-                <p className="text-xs text-gray-500">Visa + Flight + Accommodation included</p>
+              <div className="flex items-center gap-3">
+                <PageHeaderIcon src="/mecca.png" alt="Hajj Makkah icon" href="https://www.google.com/search?q=makkah+kaaba+icon" />
+                <div>
+                  <h1 className="text-xl font-black text-[#191e3b]">{filtered.length} Hajj Packages Available</h1>
+                  <p className="text-xs text-gray-500">Visa + Flight + Accommodation included</p>
+                </div>
               </div>
               <div className="flex items-center gap-2">
                 <select

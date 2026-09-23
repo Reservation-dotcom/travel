@@ -10,7 +10,7 @@ import TrendingDestinations from "./components/home/TrendingDestinations";
 import PropertyTypes from "./components/home/PropertyTypes";
 import AppBanner from "./components/home/AppBanner";
 import TrustSection from "./components/home/TrustSection";
-import { MessageSquare } from "lucide-react";
+import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
 
 export default function Home() {
   return (
@@ -48,16 +48,7 @@ export default function Home() {
       {/* Mobile Bottom Navigation */}
       <MobileNav />
 
-      {/* Floating Help Button (Bottom Right) */}
-      <div className="fixed bottom-6 right-6 z-40 hidden sm:block">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center gap-2 px-4 py-2.5 bg-white text-[#191e3b] font-semibold text-xs rounded-full border border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all active:scale-95"
-        >
-          <MessageSquare className="w-4 h-4 text-[#006ce4]" />
-          <span>Help</span>
-        </button>
-      </div>
+      <FloatingWhatsApp />
     </div>
   );
 }

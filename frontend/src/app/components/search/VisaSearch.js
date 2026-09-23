@@ -29,6 +29,13 @@ export default function VisaSearch({ onSearch }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const visaTypes = [
+    { full: "Tourist Visa", short: "Tour" },
+    { full: "Business Visa", short: "Busines" },
+    { full: "Family Visit", short: "Family" },
+    { full: "Student Visa", short: "Student" },
+  ];
+
   const visaDestinations = [
     { country: "United Arab Emirates", detail: "Dubai 30 / 60 Days E-Visa", flag: "🇦🇪" },
     { country: "Saudi Arabia", detail: "Umrah / Tourist E-Visa 1 Year", flag: "🇸🇦" },
@@ -54,32 +61,35 @@ export default function VisaSearch({ onSearch }) {
     const data = { passportCountry, destCountry, visaType, applicants };
     if (onSearch) onSearch(data);
     router.push(
-      `/search_vertical/visa?passport=${encodeURIComponent(passportCountry)}&dest=${encodeURIComponent(destCountry)}&type=${encodeURIComponent(visaType)}&applicants=${applicants}`
+      `visa`
     );
   };
 
   return (
     <div className="w-full bg-white space-y-4">
       {/* Visa Category Header Pills */}
-      <div className="flex items-center justify-between border-b border-gray-100 pb-3">
-        <div className="flex items-center gap-2">
-          {["Tourist Visa", "Business Visa", "Family Visit", "Student Visa"].map((type) => (
+      <div className="flex items-center justify-between border-b border-gray-100 pb-3 gap-2">
+        <div className="flex items-center gap-2 min-w-0 overflow-hidden">
+          {visaTypes.map((type) => (
             <button
-              key={type}
+              key={type.full}
               type="button"
-              onClick={() => setVisaType(type)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                visaType === type
+              onClick={() => setVisaType(type.full)}
+              className={`px-2.5 sm:px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold transition-all ${
+                visaType === type.full
                   ? "bg-[#191e3b] text-white font-bold shadow-xs"
                   : "bg-gray-100 text-gray-700 hover:bg-gray-200"
               }`}
             >
-              {type}
+              <span className="hidden md:inline">{type.full}</span>
+              <span className="md:hidden">{type.short}</span>
             </button>
           ))}
         </div>
-        <span className="text-xs font-bold text-[#007837] flex items-center gap-1">
-          <ShieldCheck className="w-3.5 h-3.5" /> Fast Visa Processing
+        <span className="text-[10px] sm:text-xs font-bold text-[#007837] flex items-center gap-1 whitespace-nowrap">
+          <ShieldCheck className="w-3.5 h-3.5" />
+          <span className="hidden md:inline">Fast Visa Processing</span>
+          <span className="md:hidden">Fast</span>
         </span>
       </div>
 
@@ -92,7 +102,7 @@ export default function VisaSearch({ onSearch }) {
             <div className="flex items-center gap-2.5 w-full px-3.5 py-2.5 bg-white border border-gray-400 rounded-xl">
               <Globe className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Passport Country</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Passport Country</div>
                 <select
                   value={passportCountry}
                   onChange={(e) => setPassportCountry(e.target.value)}
@@ -121,7 +131,7 @@ export default function VisaSearch({ onSearch }) {
             >
               <FileText className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Visa Destination</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Visa Destination</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">{destCountry}</div>
               </div>
             </div>
@@ -175,7 +185,7 @@ export default function VisaSearch({ onSearch }) {
             >
               <User className="w-5 h-5 text-gray-700 shrink-0" />
               <div className="flex-1 min-w-0 text-left">
-                <div className="text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Applicants</div>
+                <div className="hidden sm:hidden md:block text-[10px] font-bold uppercase tracking-wider text-gray-500 leading-tight">Applicants</div>
                 <div className="text-sm font-bold text-[#191e3b] truncate leading-snug">
                   {applicants} applicant{applicants > 1 ? "s" : ""}
                 </div>

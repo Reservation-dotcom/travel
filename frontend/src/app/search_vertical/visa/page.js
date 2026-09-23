@@ -8,200 +8,200 @@ import EnquiryHeroForm from "../../components/search/EnquiryHeroForm";
 import FloatingWhatsApp from "../../components/ui/FloatingWhatsApp";
 import {
   Search, ShieldCheck, Globe, FileText, CheckCircle2, Clock,
-  Sparkles, User, ArrowRight, FileCheck
+  Sparkles, User, ArrowRight, FileCheck, Phone, MessageSquareShare
 } from "lucide-react";
 
 const OTHER_VISA_SERVICES = [
   {
     id: "v1",
-    country: "United Arab Emirates",
-    flag: "🇦🇪",
-    title: "Dubai 30-Days Express Tourist E-Visa",
+    country: "UAE",
+    flagImage: "https://flagcdn.com/w160/ae.png",
+    destinationImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80",
+    title: "UAE",
     type: "Tourist Visa",
-    processingTime: "24 - 48 Hours",
-    validity: "60 Days from issue",
-    stayDuration: "30 Days Single Entry",
-    pricePerApplicant: 145,
-    originalPrice: 180,
-    discount: "Save $35 per applicant",
-    badge: "Fast Track",
-    approvalRate: "99.2%",
-    requirements: ["Passport Scan (6m validity)", "Passport Size Photo (White BG)", "CNIC / ID Copy"],
-    description: "Instant 30-day Dubai tourist e-visa with zero hassle. Fully digital process without embassy visit.",
-    image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Assessment", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
   },
   {
     id: "v2",
-    country: "Saudi Arabia",
-    flag: "🇸🇦",
-    title: "Saudi 1-Year Multiple Entry Tourist E-Visa",
+    country: "Saudi",
+    flagImage: "https://flagcdn.com/w160/sa.png",
+    destinationImage: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
+    title: "Saudi",
     type: "Tourist Visa",
-    processingTime: "1 - 3 Business Days",
-    validity: "1 Year Multiple Entry",
-    stayDuration: "90 Days per visit",
-    pricePerApplicant: 220,
-    originalPrice: 260,
-    discount: "Save $40 per applicant",
-    badge: "Bestseller",
-    approvalRate: "98.8%",
-    requirements: ["Passport Scan", "Digital Photo", "Mandatory Covid/Health Insurance Included"],
-    description: "Official tourist e-visa valid for Umrah, leisure, and family visit across Saudi Arabia.",
-    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Interview", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
   },
   {
     id: "v3",
-    country: "United Kingdom",
-    flag: "🇬🇧",
-    title: "UK Standard Visitor Visa (6 Months Consultation & Slot)",
+    country: "UK",
+    flagImage: "https://flagcdn.com/w160/gb.png",
+    destinationImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80",
+    title: "UK",
     type: "Tourist Visa",
-    processingTime: "15 - 20 Business Days",
-    validity: "6 Months Multiple Entry",
-    stayDuration: "Up to 180 Days",
-    pricePerApplicant: 290,
-    originalPrice: 340,
-    discount: "Save $50 per applicant",
-    badge: "Full Assistance",
-    approvalRate: "96.5%",
-    requirements: ["Bank Statement (6m)", "Employment / Business Proof", "VFS Appointment Booking", "Cover Letter"],
-    description: "Complete UK visitor visa package including file preparation, appointment booking & biometric guidance.",
-    image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Advice", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
   },
   {
     id: "v4",
     country: "Turkey",
-    flag: "🇹🇷",
-    title: "Turkey 30-Days Single Entry E-Visa",
+    flagImage: "https://flagcdn.com/w160/tr.png",
+    destinationImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80",
+    title: "Turkey",
     type: "Tourist Visa",
-    processingTime: "12 - 24 Hours",
-    validity: "180 Days from issue",
-    stayDuration: "30 Days Single Entry",
-    pricePerApplicant: 95,
-    originalPrice: 120,
-    discount: "Save $25 per applicant",
-    badge: "Instant Approval",
-    approvalRate: "99.5%",
-    requirements: ["Valid Schengen/USA/UK/Ireland Visa or Residence Permit", "Passport Scan"],
-    description: "Instant Turkey e-visa for valid passport holders with prerequisite visa or residency.",
-    image: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Checklist", "Review", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
   },
   {
     id: "v5",
     country: "Thailand",
-    flag: "🇹🇭",
-    title: "Thailand Tourist Sticker Visa Complete File",
+    flagImage: "https://flagcdn.com/w160/th.png",
+    destinationImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=900&q=80",
+    title: "Thailand",
     type: "Tourist Visa",
-    processingTime: "5 - 7 Business Days",
-    validity: "3 Months",
-    stayDuration: "60 Days Entry",
-    pricePerApplicant: 110,
-    originalPrice: 140,
-    discount: "Save $30 per applicant",
-    badge: "Sticker Visa",
-    approvalRate: "97.8%",
-    requirements: ["Original Passport", "Bank Statement ($1000 minimum)", "Confirmed Hotel & Return Flight"],
-    description: "Hassle-free Thai embassy sticker visa filing service with ticket & hotel itinerary support.",
-    image: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=900&q=80",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Guide", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
   },
   {
     id: "v6",
-    country: "United States",
-    flag: "🇺🇸",
-    title: "USA B1/B2 Tourist Visa Prep & Interview Slot",
+    country: "USA",
+    flagImage: "https://flagcdn.com/w160/us.png",
+    destinationImage: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=80",
+    title: "USA",
     type: "Business Visa",
-    processingTime: "Appointment Dependent",
-    validity: "10 Years Multiple Entry",
-    stayDuration: "6 Months per visit",
-    pricePerApplicant: 350,
-    originalPrice: 420,
-    discount: "Save $70 per applicant",
-    badge: "Expert Prep",
-    approvalRate: "94.2%",
-    requirements: ["DS-160 Form Filing", "Consulate Appointment Slot", "Mock Interview Training", "Financial Documents"],
-    description: "End-to-end US B1/B2 visitor visa guidance including early appointment tracking & interview prep.",
-    image: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=80",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
   },
 ];
 
+function PageHeaderIcon({ src, alt, href = "#" }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={alt}
+      className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-white/60 transition-transform duration-200 hover:scale-105"
+    >
+      <img src={src} alt={alt} className="h-full w-full object-contain bg-white" />
+    </a>
+  );
+}
+
 function VisaServiceCard({ item }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-row group">
-      {/* Image */}
-      <div className="relative w-full sm:w-64 h-48 sm:h-auto shrink-0 overflow-hidden">
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col sm:flex-col md:flex-row group">
+      <div className="relative w-full h-52 sm:h-52 md:w-72 md:h-auto shrink-0 overflow-hidden">
         <img
-          src={item.image}
-          alt={item.title}
+          src={item.destinationImage}
+          alt={`${item.country} destination`}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <span className="absolute top-3 left-3 bg-[#191e3b] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow flex items-center gap-1">
-          <span>{item.flag}</span>
-          <span>{item.country}</span>
-        </span>
-        {item.badge && (
-          <span className="absolute bottom-3 left-3 bg-[#006ce4] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
-            {item.badge}
-          </span>
-        )}
+
+        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full shadow-md flex items-center gap-2 border border-gray-100">
+          <img
+            src={item.flagImage}
+            alt={`${item.country} Flag`}
+            className="w-5 h-3.5 object-cover rounded-xs border border-gray-200 shadow-2xs"
+          />
+          <span className="text-xs font-bold text-gray-900">{item.country}</span>
+        </div>
+
+        <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-md uppercase tracking-wide">
+          {item.discountBadge}
+        </div>
       </div>
 
-      {/* Content */}
-      <div className="flex-1 p-5 flex flex-col justify-between gap-3">
+      <div className="flex-1 p-5 flex flex-col justify-between gap-4">
         <div>
           <div className="flex items-start justify-between gap-2">
             <div>
-              <h3 className="text-base font-bold text-[#191e3b] leading-tight">{item.title}</h3>
-              <p className="text-xs text-gray-500 mt-1 leading-relaxed">{item.description}</p>
+              <h3 className="text-lg sm:text-xl font-black text-[#191e3b] leading-tight">{item.title}</h3>
             </div>
             <div className="text-right shrink-0">
-              <span className="inline-block bg-emerald-50 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-xl border border-emerald-200">
-                {item.approvalRate} Approval Rate
+              <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200 shadow-2xs">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                {item.successRatio}
               </span>
             </div>
           </div>
 
-          {/* Meta Chips */}
-          <div className="flex flex-wrap gap-2 mt-3">
-            <span className="inline-flex items-center gap-1 bg-blue-50 text-[#006ce4] text-[10px] font-semibold px-2.5 py-1 rounded-full border border-blue-100">
-              <Clock className="w-3 h-3" /> Processing: {item.processingTime}
-            </span>
-            <span className="inline-flex items-center gap-1 bg-purple-50 text-purple-700 text-[10px] font-semibold px-2.5 py-1 rounded-full border border-purple-100">
-              <Globe className="w-3 h-3" /> Validity: {item.validity}
-            </span>
-            <span className="inline-flex items-center gap-1 bg-amber-50 text-amber-800 text-[10px] font-semibold px-2.5 py-1 rounded-full border border-amber-100">
-              <FileCheck className="w-3 h-3" /> Stay: {item.stayDuration}
-            </span>
-          </div>
-
-          {/* Requirements list */}
-          <div className="mt-3 space-y-1">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Key Requirements:</span>
-            <div className="flex flex-wrap gap-x-3 gap-y-1">
-              {item.requirements.map((req, i) => (
-                <span key={i} className="flex items-center gap-1 text-[11px] text-gray-700 font-medium">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  {req}
+          <div className="mt-4 pt-3 border-t border-gray-100 space-y-2">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Included Services:</span>
+            <div className="flex flex-wrap gap-2">
+              {item.services.map((service, i) => (
+                <span key={i} className="inline-flex items-center gap-1.5 bg-blue-50 text-[#003399] text-[10px] md:text-[12px] font-semibold px-3 py-1.5 rounded-xl border border-blue-100">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#003399] shrink-0" />
+                  {service}
                 </span>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Price & Action */}
-        <div className="flex items-end justify-between border-t border-gray-100 pt-3">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 pt-3">
           <div>
-            <div className="text-[10px] text-emerald-600 font-bold">{item.discount}</div>
-            <div className="text-xs text-gray-400 line-through">${item.originalPrice}/applicant</div>
             <div className="text-2xl font-black text-[#191e3b]">
-              ${item.pricePerApplicant}
-              <span className="text-xs font-normal text-gray-500"> / applicant</span>
+              {item.currency}{item.pricePerApplicant}
+              <span className="text-xs font-normal text-gray-500"> / per person</span>
             </div>
           </div>
-          <button
-            onClick={() => alert(`Starting visa application for ${item.title}. Our consultant will connect with you shortly!`)}
-            className="px-5 py-2.5 bg-[#006ce4] hover:bg-[#0057b8] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center gap-1.5"
-          >
-            <span>Apply Now</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
+
+          <div className="flex items-center gap-2">
+            {item.phone && (
+              <a
+                href={`tel:${item.phone}`}
+                aria-label={`Call ${item.phone}`}
+                className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#003399] text-[#191e3b] hover:text-[#003399] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#003399] shrink-0" />
+                <span className="hidden sm:inline">{item.phone}</span>
+              </a>
+            )}
+
+            {item.whatsapp && (
+              <a
+                href={item.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contact via WhatsApp"
+                className="px-2.5 py-2.5 sm:px-4 sm:py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+              >
+                <MessageSquareShare className="w-4 h-4 shrink-0" />
+                <span className="hidden sm:inline">WhatsApp</span>
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -295,9 +295,12 @@ function VisaContent() {
           <section className="lg:col-span-9 space-y-4">
             {/* Header bar */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-              <div>
-                <h1 className="text-xl font-black text-[#191e3b]">{filtered.length} Visa Options Available</h1>
-                <p className="text-xs text-gray-500">Global travel visa processing & file support</p>
+              <div className="flex items-center gap-3">
+                <PageHeaderIcon src="/visa.png" alt="Other visa icon" href="https://www.google.com/search?q=visa+application+icon" />
+                <div>
+                  <h1 className="text-xl font-black text-[#191e3b]">{filtered.length} Visa Options Available</h1>
+                  <p className="text-xs text-gray-500">Global travel visa processing & file support</p>
+                </div>
               </div>
               <select
                 value={sortBy}
