@@ -37,12 +37,12 @@ export default function Header() {
   }, []);
 
   const shopCategories = [
-    { name: "Stays", icon: Bed, href: "/stays", desc: "Hotels, resorts, vacation rentals" },
-    { name: "Flights", icon: Plane, href: "/flights", desc: "Domestic and international airlines" },
+    { name: "Schengen", icon: Globe, href: "/schengen", desc: "Schengen visa appointments and requirements" },
     { name: "Umrah", icon: MapPin, href: "/umrah", desc: "Complete Umrah packages and pilgrimage support" },
     { name: "Hajj", icon: ShieldCheck, href: "/hajj", desc: "Hajj packages with guided planning" },
-    { name: "Schengen", icon: Globe, href: "/schengen", desc: "Schengen visa appointments and requirements" },
     { name: "Other Visa", icon: FileText, href: "/visa", desc: "Tourist, business, and visit visa options" },
+    { name: "Flights", icon: Plane, href: "/flights", desc: "Domestic and international airlines" },
+    { name: "Stays", icon: Bed, href: "/stays", desc: "Hotels, resorts, vacation rentals" },
   ];
 
   return (

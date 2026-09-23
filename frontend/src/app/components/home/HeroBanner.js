@@ -11,7 +11,7 @@ import VisaSearch from "../search/VisaSearch";
 import SchengenVisaSearch from "../search/SchengenVisaSearch";
 
 export default function HeroBanner() {
-  const [activeTab, setActiveTab] = useState("stays");
+  const [activeTab, setActiveTab] = useState("schengen");
 
   return (
     <div className="relative w-full bg-white">

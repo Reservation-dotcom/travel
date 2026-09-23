@@ -117,7 +117,7 @@ export default function EnquiryHeroForm({
         pauseOnHover
       />
 
-      <div className="relative w-full overflow-hidden bg-gray-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full overflow-hidden bg-gray-900 pt-6 pb-4 sm:pt-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -129,7 +129,7 @@ export default function EnquiryHeroForm({
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-4xl mx-auto space-y-6 sm:space-y-8">
+      <div className="relative z-10 max-w-4xl mx-auto space-y-3 sm:space-y-5">
         {/* Title Header */}
         <div className="text-center">
           <h2 className="text-lg sm:text-2xl md:text-4xl font-extrabold text-white tracking-wide font-sans drop-shadow-md">

@@ -128,17 +128,14 @@ const HAJJ_PACKAGES = [
   }
 ];
 
-function PageHeaderIcon({ src, alt, href = "#" }) {
+function PageHeaderIcon({ src, alt }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
+    <div
       aria-label={alt}
-      className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-white/60 transition-transform duration-200 hover:scale-105"
+      className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-white/60"
     >
       <img src={src} alt={alt} className="h-full w-full object-contain bg-white" />
-    </a>
+    </div>
   );
 }
 
@@ -347,7 +344,7 @@ function HajjContent() {
             {/* Results Header */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
               <div className="flex items-center gap-3">
-                <PageHeaderIcon src="/mecca.png" alt="Hajj Makkah icon" href="https://www.google.com/search?q=makkah+kaaba+icon" />
+                <PageHeaderIcon src="/mecca.png" alt="Hajj Makkah icon" />
                 <div>
                   <h1 className="text-xl font-black text-[#191e3b]">{filtered.length} Hajj Packages Available</h1>
                   <p className="text-xs text-gray-500">Visa + Flight + Accommodation included</p>

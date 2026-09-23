@@ -11,12 +11,12 @@ const tabIcons = {
 
 export default function SearchTab({ activeTab, setActiveTab }) {
   const tabs = [
-    { id: "stays", label: "Stays", icon: tabIcons.stays },
-    { id: "flights", label: "Flights", icon: tabIcons.flights },
+    { id: "schengen", label: "Schengen", icon: tabIcons.schengen },
     { id: "umrah", label: "Umrah", icon: tabIcons.umrah },
     { id: "hajj", label: "Hajj", icon: tabIcons.hajj },
-    { id: "schengen", label: "Schengen", icon: tabIcons.schengen },
     { id: "visa", label: "Other Visa", icon: tabIcons.visa },
+    { id: "flights", label: "Flights", icon: tabIcons.flights },
+    { id: "stays", label: "Stays", icon: tabIcons.stays },
   ];
 
   return (
