@@ -63,7 +63,7 @@ function StaysContent() {
       originalTotal: 820,
       totalPrice: 299,
       phone: "+966 11 800 8888",
-      whatsapp: "+966555123456",
+      whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
       features: ["Royal spa", "Sky lounge", "Private valet"],
       images: [
         "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",

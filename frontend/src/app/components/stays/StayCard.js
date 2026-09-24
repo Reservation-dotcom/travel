@@ -154,9 +154,9 @@ export default function StayCard({ stay }) {
               </a>
             )}
 
-            {stay.whatsapp && (
+            {(stay.whatsapp || "https://api.whatsapp.com/send?phone=442039700100") && (
               <a
-                href={`https://wa.me/${stay.whatsapp.replace(/\D/g, "")}`}
+                href="https://api.whatsapp.com/send?phone=442039700100"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-2.5 py-1.5 text-[11px] font-semibold text-green-700 hover:bg-green-100 block"

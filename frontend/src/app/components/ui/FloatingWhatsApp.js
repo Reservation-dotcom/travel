@@ -5,7 +5,7 @@ import { MessageSquareShare } from "lucide-react";
 export default function FloatingWhatsApp() {
   return (
     <a
-      href="https://api.whatsapp.com/send?phone=4407821030906"
+      href="https://api.whatsapp.com/send?phone=442039700100"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

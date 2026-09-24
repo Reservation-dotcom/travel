@@ -25,7 +25,7 @@ const OTHER_VISA_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Assessment", "Checklist", "Support"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "v2",
@@ -40,7 +40,7 @@ const OTHER_VISA_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Review", "Interview", "Support"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "v3",
@@ -55,7 +55,7 @@ const OTHER_VISA_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Advice", "Checklist", "Support"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "v4",
@@ -70,7 +70,7 @@ const OTHER_VISA_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Checklist", "Review", "Support"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "v5",
@@ -85,7 +85,7 @@ const OTHER_VISA_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Guide", "Checklist", "Support"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "v6",
@@ -100,7 +100,7 @@ const OTHER_VISA_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
 ];
 

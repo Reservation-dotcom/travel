@@ -24,7 +24,7 @@ const SCHENGEN_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "s2",
@@ -39,7 +39,7 @@ const SCHENGEN_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "s3",
@@ -54,7 +54,7 @@ const SCHENGEN_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "s4",
@@ -69,7 +69,7 @@ const SCHENGEN_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "s5",
@@ -84,7 +84,7 @@ const SCHENGEN_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "s6",
@@ -99,7 +99,7 @@ const SCHENGEN_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "File Building", "Submission & Tracking"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
 
   {
@@ -115,7 +115,7 @@ const SCHENGEN_SERVICES = [
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
     phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=4407821030906"
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   }
 ];
 
@@ -164,23 +164,30 @@ function SchengenServiceCard({ item }) {
           {/* Top Row: Country Title & 99% Success Ratio */}
           <div className="flex items-start justify-between gap-2">
             <div>
-              <h3 className="text-lg sm:text-xl font-black text-[#191e3b] leading-tight">{item.title}</h3>
+              <h3 className="text-lg sm:text-xl font-black text-[#191e3b] leading-tight">
+                <span className="sm:hidden">{item.country} Visa</span>
+                <span className="hidden sm:inline">{item.title}</span>
+              </h3>
             </div>
             <div className="text-right shrink-0">
-              <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200 shadow-2xs">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                {item.successRatio}
+              <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-full border border-emerald-200 shadow-2xs">
+                <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-600 shrink-0" />
+                <span className="hidden sm:inline">{item.successRatio}</span>
+                <span className="sm:hidden">99% Ratio</span>
               </span>
             </div>
           </div>
 
           {/* 3 Important Services */}
           <div className="mt-4 pt-3 border-t border-gray-100 space-y-2">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">Included Services:</span>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-gray-400">
+              <span className="hidden sm:inline">Included Services:</span>
+              <span className="sm:hidden">Included:</span>
+            </span>
             <div className="flex flex-wrap gap-2">
               {item.services.map((service, i) => (
-                <span key={i} className="inline-flex items-center gap-1.5 bg-blue-50 text-[#003399] text-[10px] md:text-[12px] font-semibold px-3 py-1.5 rounded-xl border border-blue-100">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#003399] shrink-0" />
+                <span key={i} className="inline-flex items-center gap-1.5 bg-blue-50 text-[#003399] text-[9px] sm:text-[10px] md:text-[12px] font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-blue-100">
+                  <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#003399] shrink-0" />
                   {service}
                 </span>
               ))}
