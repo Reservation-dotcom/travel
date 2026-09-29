@@ -4,8 +4,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-const GMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function EnquiryHeroForm({
   title = "For More Cheapest Offers, Fill the Form",
@@ -24,32 +23,61 @@ export default function EnquiryHeroForm({
   const [submitted, setSubmitted] = useState(false);
 
   const validateForm = () => {
-    const trimmedName = formData.name.trim();
-    const trimmedEmail = formData.email.trim();
-    const cleanPhone = formData.phone.replace(/\D/g, "");
+    const name = formData.name.trim();
+    const email = formData.email.trim();
+    const phone = formData.phone.trim();
+    const cleanPhone = phone.replace(/\D/g, "");
+    const passengers = formData.passengers.trim();
+    const travelDate = formData.travelDate.trim();
+    const numberOfDays = formData.numberOfDays.trim();
 
-    if (trimmedName.length < 3) {
+    if (!name) {
+      toast.error("Please enter your name.");
+      return false;
+    }
+
+    if (name.length < 3) {
       toast.error("Name must be at least 3 characters long.");
       return false;
     }
 
-    if (!GMAIL_REGEX.test(trimmedEmail)) {
-      toast.error("Please enter a valid Gmail address ending with @gmail.com.");
+    if (!email) {
+      toast.error("Please enter your email address.");
       return false;
     }
 
-    if (cleanPhone.length !== 11) {
-      toast.error("Phone number must contain exactly 11 digits.");
+    if (!EMAIL_REGEX.test(email)) {
+      toast.error("Please enter a valid email address (e.g. user@example.com).");
       return false;
     }
 
-    if (formData.travelDate && !/^\d{4}-\d{2}-\d{2}$/.test(formData.travelDate)) {
-      toast.error("Please choose a valid travel date.");
+    if (!phone) {
+      toast.error("Please enter your phone number.");
       return false;
     }
 
-    if (formData.numberOfDays && Number(formData.numberOfDays) <= 0) {
-      toast.error("Number of days must be greater than 0.");
+    if (cleanPhone.length < 10) {
+      toast.error("Phone number must contain at least 10 digits.");
+      return false;
+    }
+
+    if (!passengers) {
+      toast.error("Please enter the number of passengers.");
+      return false;
+    }
+
+    if (!travelDate) {
+      toast.error("Please select a travel date.");
+      return false;
+    }
+
+    if (!numberOfDays) {
+      toast.error("Please enter the number of days.");
+      return false;
+    }
+
+    if (isNaN(Number(numberOfDays)) || Number(numberOfDays) <= 0) {
+      toast.error("Number of days must be a positive number.");
       return false;
     }
 
@@ -70,27 +98,29 @@ export default function EnquiryHeroForm({
     setSubmitted(true);
 
     try {
-      const response = await fetch(`${API_URL}/inquiry/submit`, {
+      const response = await fetch("/api/enquiry", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...formData,
           name: formData.name.trim(),
           email: formData.email.trim(),
           phone: formData.phone.trim(),
-          pageType,
+          passengers: formData.passengers.trim(),
+          travelDate: formData.travelDate.trim(),
+          numberOfDays: formData.numberOfDays.trim(),
+          enquiryFrom: pageType || "Travel Enquiry",
         }),
       });
 
-      const payload = await response.json().catch(() => ({ message: "Request failed" }));
+      const payload = await response.json().catch(() => ({ message: "Failed to parse API response" }));
 
-      if (!response.ok) {
-        throw new Error(payload?.detail || payload?.message || "Unable to submit inquiry.");
+      if (!response.ok || !payload.success) {
+        throw new Error(payload.message || "Unable to send enquiry email.");
       }
 
-      toast.success(`Thank you ${formData.name.trim() || "Customer"}! Your ${pageType} inquiry has been received.`);
+      toast.success(`Thank you ${formData.name.trim()}! Your ${pageType} enquiry has been sent successfully.`);
       setFormData({
         name: "",
         email: "",
@@ -100,7 +130,7 @@ export default function EnquiryHeroForm({
         numberOfDays: ""
       });
     } catch (error) {
-      toast.error(error.message || "Something went wrong while sending the inquiry.");
+      toast.error(error.message || "Something went wrong while sending the enquiry.");
     } finally {
       setSubmitted(false);
     }
@@ -139,7 +169,7 @@ export default function EnquiryHeroForm({
 
         {/* Form Card */}
         <div className="bg-white/98 backdrop-blur-md rounded-3xl p-6 sm:p-8 sm:px-10 shadow-2xl border border-white/20">
-          <form onSubmit={handleSubmit} className="space-y-5">
+          <form onSubmit={handleSubmit} noValidate className="space-y-5">
             {/* Grid Row 1: Name, Email, Phone */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               <div>
@@ -147,8 +177,6 @@ export default function EnquiryHeroForm({
                 <input
                   type="text"
                   name="name"
-                  required
-                  minLength={3}
                   placeholder="Name"
                   value={formData.name}
                   onChange={handleChange}
@@ -161,11 +189,9 @@ export default function EnquiryHeroForm({
                 <input
                   type="email"
                   name="email"
-                  required
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleChange}
-                  pattern="^[a-zA-Z0-9._%+-]+@gmail\\.com$"
                   className="w-full px-4 py-2.5 text-sm bg-white border border-[#80d4f2] focus:border-[#2bb2d5] rounded-xl focus:ring-2 focus:ring-[#80d4f2]/40 focus:outline-none transition-all placeholder-gray-400 text-gray-800"
                 />
               </div>
@@ -175,9 +201,6 @@ export default function EnquiryHeroForm({
                 <input
                   type="tel"
                   name="phone"
-                  required
-                  minLength={11}
-                  maxLength={20}
                   inputMode="numeric"
                   placeholder="Phone"
                   value={formData.phone}

@@ -19,7 +19,7 @@ const OTHER_VISA_SERVICES = [
     destinationImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80",
     title: "UAE",
     type: "Tourist Visa",
-    pricePerApplicant: 45,
+    pricePerApplicant: 195,
     currency: "£",
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
@@ -34,7 +34,7 @@ const OTHER_VISA_SERVICES = [
     destinationImage: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
     title: "Saudi",
     type: "Tourist Visa",
-    pricePerApplicant: 45,
+    pricePerApplicant: 195,
     currency: "£",
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
@@ -49,7 +49,7 @@ const OTHER_VISA_SERVICES = [
     destinationImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80",
     title: "UK",
     type: "Tourist Visa",
-    pricePerApplicant: 45,
+    pricePerApplicant: 195,
     currency: "£",
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
@@ -64,7 +64,7 @@ const OTHER_VISA_SERVICES = [
     destinationImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80",
     title: "Turkey",
     type: "Tourist Visa",
-    pricePerApplicant: 45,
+    pricePerApplicant: 195,
     currency: "£",
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
@@ -79,7 +79,7 @@ const OTHER_VISA_SERVICES = [
     destinationImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=900&q=80",
     title: "Thailand",
     type: "Tourist Visa",
-    pricePerApplicant: 45,
+    pricePerApplicant: 195,
     currency: "£",
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
@@ -94,7 +94,7 @@ const OTHER_VISA_SERVICES = [
     destinationImage: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=80",
     title: "USA",
     type: "Business Visa",
-    pricePerApplicant: 45,
+    pricePerApplicant: 195,
     currency: "£",
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
@@ -316,9 +316,8 @@ function VisaContent() {
                 <button
                   key={t}
                   onClick={() => setSelectedType(t)}
-                  className={`flex-1 min-w-fit py-2 px-3 rounded-xl text-xs font-bold transition-all ${
-                    selectedType === t ? "bg-white text-[#191e3b] shadow-xs" : "text-gray-600 hover:text-black"
-                  }`}
+                  className={`flex-1 min-w-fit py-2 px-3 rounded-xl text-xs font-bold transition-all ${selectedType === t ? "bg-white text-[#191e3b] shadow-xs" : "text-gray-600 hover:text-black"
+                    }`}
                 >
                   {t}
                 </button>

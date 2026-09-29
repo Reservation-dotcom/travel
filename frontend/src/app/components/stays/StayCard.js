@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Coffee, Waves, Bus, Wifi, Phone, MessageCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight, Bus, Phone, MessageSquareShare, ShieldCheck, Car, Building2, Wifi, Coffee } from "lucide-react";
 
 export default function StayCard({ stay }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -25,22 +25,28 @@ export default function StayCard({ stay }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 flex flex-col md:flex-row group mb-4 w-full min-w-0">
-      
+    <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row group mb-4 w-full min-w-0">
+
       {/* ── Left Column: Image Carousel ── */}
       <div className="relative md:w-[300px] lg:w-[360px] xl:w-[400px] shrink-0 h-[220px] md:h-auto overflow-hidden bg-gray-100">
         <img
           src={images[currentImageIndex]}
           alt={stay.name}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-102"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
+        {/* Stay + Transport Badge */}
+        <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 rounded-full bg-[#191e3b] px-3 py-1 text-[11px] font-extrabold text-white shadow-md border border-white/20">
+          <Car className="w-3.5 h-3.5 text-yellow-400" />
+          <span>Stay + Transport Included</span>
+        </div>
+
         {/* Country flag badge */}
-        <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5 rounded-full bg-white/90 px-2.5 py-1 text-[10px] sm:text-xs font-bold text-[#191e3b] shadow-md backdrop-blur-sm border border-white/80">
+        <div className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[10px] sm:text-xs font-bold text-[#191e3b] shadow-md backdrop-blur-xs border border-gray-200">
           <img
             src={stay.flagImage || `https://flagcdn.com/w160/${(stay.country || "sa").toLowerCase().slice(0, 2)}.png`}
             alt={`${stay.country || "Saudi Arabia"} Flag`}
-            className="w-5 h-3.5 object-cover rounded-xs border border-gray-200 shadow-sm"
+            className="w-5 h-3.5 object-cover rounded-xs border border-gray-200 shadow-2xs"
           />
           <span>{stay.country || "Saudi Arabia"}</span>
         </div>
@@ -51,7 +57,7 @@ export default function StayCard({ stay }) {
             <button
               type="button"
               onClick={handlePrevImage}
-              className="p-1.5 rounded-full bg-black/50 hover:bg-black/75 text-white pointer-events-auto transition-transform active:scale-90"
+              className="p-1.5 rounded-full bg-black/60 hover:bg-black/80 text-white pointer-events-auto transition-transform active:scale-90"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-4 h-4" />
@@ -59,7 +65,7 @@ export default function StayCard({ stay }) {
             <button
               type="button"
               onClick={handleNextImage}
-              className="p-1.5 rounded-full bg-black/50 hover:bg-black/75 text-white pointer-events-auto transition-transform active:scale-90"
+              className="p-1.5 rounded-full bg-black/60 hover:bg-black/80 text-white pointer-events-auto transition-transform active:scale-90"
               aria-label="Next image"
             >
               <ChevronRight className="w-4 h-4" />
@@ -69,103 +75,97 @@ export default function StayCard({ stay }) {
 
         {/* Image dots indicator */}
         {images.length > 1 && (
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1 z-10">
-            {images.map((_, idx) => (
-              <div
-                key={idx}
-                className={`h-1.5 rounded-full transition-all ${
-                  idx === currentImageIndex ? "w-4 bg-white" : "w-1.5 bg-white/60"
-                }`}
-              />
-            ))}
+          <div className="absolute bottom-3 right-3 flex items-center gap-1 z-10 bg-black/50 px-2 py-0.5 rounded-full">
+            <span className="text-[10px] text-white font-bold">{currentImageIndex + 1}/{images.length}</span>
           </div>
         )}
       </div>
 
-      {/* ── Right Column: Hotel Info & Pricing ── */}
+      {/* ── Right Column: Hotel & Transport Info ── */}
       <div className="flex-1 min-w-0 p-4 sm:p-5 flex flex-col justify-between text-[#191e3b]">
-        
+
         {/* Top Info */}
         <div>
           <div className="flex items-start justify-between gap-2">
             <div>
-              <h3 className="text-lg sm:text-xl font-bold text-[#191e3b] leading-snug group-hover:text-[#006ce4] transition-colors">
+              <h3 className="text-lg sm:text-xl font-black text-[#191e3b] leading-tight group-hover:text-[#006ce4] transition-colors">
                 {stay.name}
               </h3>
-              <p className="text-xs font-semibold text-gray-500 mt-0.5">{stay.location}</p>
+              <p className="text-xs font-semibold text-gray-500 mt-1">{stay.location}</p>
+            </div>
+            <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-200 shrink-0">
+              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+              {stay.ratingText || "Exceptional"}
+            </span>
+          </div>
+
+          {/* Stay + Transport Inclusions Chips */}
+          <div className="mt-3.5 pt-3 border-t border-gray-100 space-y-2">
+            <div className="text-[10px] font-extrabold uppercase tracking-wider text-gray-400">Package Inclusions:</div>
+            <div className="flex flex-wrap items-center gap-2">
+              <div className="flex items-center gap-1.5 rounded-xl bg-blue-50 px-3 py-1.5 text-xs font-bold text-[#006ce4] border border-blue-100">
+                <Building2 className="w-4 h-4 text-[#006ce4]" />
+                <span>Luxury Stay</span>
+              </div>
+              <div className="flex items-center gap-1.5 rounded-xl bg-emerald-50 px-3 py-1.5 text-xs font-bold text-emerald-700 border border-emerald-100">
+                <Car className="w-4 h-4 text-emerald-600" />
+                <span>{stay.transportType || "Private Airport Chauffeur Transfer Included"}</span>
+              </div>
+              {stay.breakfastIncluded && (
+                <div className="flex items-center gap-1.5 rounded-xl bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-700 border border-amber-100">
+                  <Coffee className="w-3.5 h-3.5" />
+                  <span>Breakfast Included</span>
+                </div>
+              )}
             </div>
           </div>
 
-          {/* Premium highlight labels */}
-          <div className="flex flex-wrap items-center gap-2 mt-3">
-            {stay.pool && (
-              <div className="flex items-center gap-1.5 rounded-full bg-blue-50 px-2.5 py-1.5 text-[10px] font-bold text-[#006ce4] border border-blue-100">
-                <Waves className="w-3.5 h-3.5" />
-                <span>Luxury Pool</span>
-              </div>
-            )}
-            {stay.breakfastIncluded && (
-              <div className="flex items-center gap-1.5 rounded-full bg-amber-50 px-2.5 py-1.5 text-[10px] font-bold text-amber-700 border border-amber-100">
-                <Coffee className="w-3.5 h-3.5" />
-                <span>Breakfast Included</span>
-              </div>
-            )}
-            {stay.freeWifi && (
-              <div className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1.5 text-[10px] font-bold text-emerald-700 border border-emerald-100">
-                <Wifi className="w-3.5 h-3.5" />
-                <span>Free Wi‑Fi</span>
-              </div>
-            )}
-            {!stay.pool && !stay.breakfastIncluded && !stay.freeWifi && (
-              <div className="flex items-center gap-1.5 rounded-full bg-gray-100 px-2.5 py-1.5 text-[10px] font-bold text-gray-600 border border-gray-200">
-                <span>Premium Stay</span>
-              </div>
-            )}
-          </div>
+          {/* Features list */}
+          {stay.features && stay.features.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {stay.features.map((feat, i) => (
+                <span key={i} className="text-[11px] font-semibold text-gray-600 bg-gray-100 px-2.5 py-0.5 rounded-md">
+                  • {feat}
+                </span>
+              ))}
+            </div>
+          )}
 
         </div>
 
         {/* Bottom Row: Price left, contact right */}
-        <div className="mt-6 pt-4 border-t border-gray-100 flex items-end justify-between gap-4">
-          
-          {/* Left: Price + discount */}
-          <div className="text-left">
-            {stay.discountTag && (
-              <div className="inline-block bg-[#ff4d4f] text-white text-[11px] font-black px-2 py-0.5 rounded-md mb-2 shadow-sm">
-                {stay.discountTag}
-              </div>
-            )}
+        <div className="mt-5 pt-3 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
 
-            <div className="text-2xl sm:text-3xl font-black text-[#191e3b] leading-none">
-              ${stay.totalPrice}
+          {/* Left: Price */}
+          <div>
+            <span className="text-[10px] font-bold text-gray-400 block uppercase tracking-wide">Stay + Transport Deal</span>
+            <div className="text-2xl sm:text-3xl font-black text-[#191e3b] leading-tight">
+              £{stay.totalPrice}
+              <span className="text-xs font-normal text-gray-500"> / per stay package</span>
             </div>
           </div>
 
-          {/* Right: Contact Details */}
-          <div className="text-right space-y-2">
-            {stay.phone && (
-              <a
-                href={`tel:${stay.phone.replace(/\s+/g, "")}`}
-                className="inline-flex items-center justify-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1.5 text-[11px] font-semibold text-[#191e3b] hover:border-[#006ce4] hover:text-[#006ce4]"
-                aria-label={`Call ${stay.phone}`}
-              >
-                <Phone className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">{stay.phone}</span>
-              </a>
-            )}
+          {/* Right: Contact Details (Phone + WhatsApp) */}
+          <div className="flex items-center gap-2">
+            <a
+              href={`tel:${(stay.phone || "02039700100").replace(/\s+/g, "")}`}
+              className="px-3.5 py-2.5 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-2xs"
+              aria-label="Call phone"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#006ce4]" />
+              <span className="hidden sm:inline">{stay.phone || "02039700100"}</span>
+            </a>
 
-            {(stay.whatsapp || "https://api.whatsapp.com/send?phone=442039700100") && (
-              <a
-                href="https://api.whatsapp.com/send?phone=442039700100"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-2.5 py-1.5 text-[11px] font-semibold text-green-700 hover:bg-green-100 block"
-                aria-label="WhatsApp contact"
-              >
-                <MessageCircle className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">WhatsApp</span>
-              </a>
-            )}
+            <a
+              href="https://api.whatsapp.com/send?phone=4407821030906"
+              target="_blank"
+              rel="noreferrer"
+              className="px-4 py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-[1.02] active:scale-95 flex items-center gap-1.5"
+              aria-label="WhatsApp contact"
+            >
+              <MessageSquareShare className="w-4 h-4" />
+              <span>WhatsApp</span>
+            </a>
           </div>
         </div>
 

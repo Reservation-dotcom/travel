@@ -3,12 +3,13 @@
 import { useState } from "react";
 import Image from "next/image";
 import SearchTab from "../search/SearchTab";
-import StaySearch from "../search/StaySearch";
-import FlightSearch from "../search/FlightSearch";
-import UmrahSearch from "../search/UmrahSearch";
-import HajjSearch from "../search/HajjSearch";
-import VisaSearch from "../search/VisaSearch";
 import SchengenVisaSearch from "../search/SchengenVisaSearch";
+import VisaSearch from "../search/VisaSearch";
+import LoveHolidaySearch from "../search/LoveHolidaySearch";
+import UmrahSearch from "../search/UmrahSearch";
+import TravelInsuranceSearch from "../search/TravelInsuranceSearch";
+import FlightSearch from "../search/FlightSearch";
+import StaySearch from "../search/StaySearch";
 
 export default function HeroBanner() {
   const [activeTab, setActiveTab] = useState("schengen");
@@ -41,17 +42,18 @@ export default function HeroBanner() {
       <div className="relative z-30 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-0 sm:-mt-[90px]">
         <div className="bg-white rounded-2xl shadow-2xl border border-gray-200/80 overflow-visible relative z-30">
 
-          {/* 6 Tabs — icons centered equally */}
+          {/* Vertical Search Tabs */}
           <SearchTab activeTab={activeTab} setActiveTab={setActiveTab} />
 
           {/* Search form content */}
           <div className="w-full p-4 sm:p-6 rounded-b-2xl relative z-30">
-            {activeTab === "stays" && <StaySearch />}
-            {activeTab === "flights" && <FlightSearch />}
-            {activeTab === "umrah" && <UmrahSearch />}
-            {activeTab === "hajj" && <HajjSearch />}
             {activeTab === "schengen" && <SchengenVisaSearch />}
             {activeTab === "visa" && <VisaSearch />}
+            {activeTab === "love-holiday" && <LoveHolidaySearch />}
+            {activeTab === "umrah" && <UmrahSearch />}
+            {activeTab === "travel-insurance" && <TravelInsuranceSearch />}
+            {activeTab === "flights" && <FlightSearch />}
+            {activeTab === "stays" && <StaySearch />}
           </div>
 
         </div>

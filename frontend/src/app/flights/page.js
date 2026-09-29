@@ -1,327 +1,238 @@
 "use client";
 
-import { useState, useMemo, useEffect, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import { useState, useMemo, Suspense } from "react";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import EnquiryHeroForm from "../components/search/EnquiryHeroForm";
 import FlightCard from "../components/flights/FlightCard";
 import FloatingWhatsApp from "../components/ui/FloatingWhatsApp";
-import { Bell, Info, Search, ShieldCheck, Briefcase, Star } from "lucide-react";
+import { Plane, Search, ShieldCheck, Phone, MessageSquareShare } from "lucide-react";
+
+const FLIGHT_PACKAGES = [
+  {
+    id: "f1",
+    origin: "London Gatwick",
+    originCode: "LGW",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Wed 02 Dec - Mon 14 Dec",
+    price: 401,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901471323&checksum=29f4ae8f62bfb0938a79c4ada9942a8729db7860&group_id=1"
+  },
+  {
+    id: "f2",
+    origin: "Manchester",
+    originCode: "MAN",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Fri 06 Nov - Sat 21 Nov",
+    price: 401,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901451385&checksum=7dc7508d58743de6ebba2161f3df3f51f10cfdd6&group_id=1"
+  },
+  {
+    id: "f3",
+    origin: "London Heathrow",
+    originCode: "LHR",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Sun 08 Nov - Tue 24 Nov",
+    price: 429,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901582683&checksum=d14d286e106f8cc545a1777db42271a9dfd8f1e3&group_id=1"
+  },
+  {
+    id: "f4",
+    origin: "London Heathrow",
+    originCode: "LHR",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Thu 05 Nov - Wed 25 Nov",
+    price: 478,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901517290&checksum=783a237b0a537188c31214d0041ce64227267f8e&group_id=1"
+  },
+  {
+    id: "f5",
+    origin: "London Gatwick",
+    originCode: "LGW",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Thu 05 Nov - Mon 23 Nov",
+    price: 501,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901195455&checksum=316d56e3fe6bca79e9fe066f99fedf9e9ff915d5&group_id=1"
+  },
+  {
+    id: "f6",
+    origin: "London Gatwick",
+    originCode: "LGW",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Wed 25 Nov - Wed 16 Dec",
+    price: 506,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901049726&checksum=bac45aeef7be5fae0cca67479c08773ae714df82&group_id=1"
+  },
+  {
+    id: "f7",
+    origin: "Manchester",
+    originCode: "MAN",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Sun 08 Nov - Wed 18 Nov",
+    price: 510,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901446509&checksum=97ad6a85a0ca9ab1a88e64519556e9915b9c7681&group_id=1"
+  },
+  {
+    id: "f8",
+    origin: "London Heathrow",
+    originCode: "LHR",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Thu 05 Nov - Wed 25 Nov",
+    price: 515,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901111797&checksum=1e4d2d5cf871f3385c840b8a28484e458e9302c6&group_id=1"
+  },
+  {
+    id: "f9",
+    origin: "London Heathrow",
+    originCode: "LHR",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Tue 03 Nov - Mon 23 Nov",
+    price: 536,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901176054&checksum=f5f4afa4b0a394763c02177c685a7325fb64afc6&group_id=1"
+  },
+  {
+    id: "f10",
+    origin: "London Heathrow",
+    originCode: "LHR",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Mon 09 Nov - Tue 24 Nov",
+    price: 537,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901301597&checksum=13b86e452310d44288e70649aeb92aa5ac68b22b&group_id=1"
+  },
+  {
+    id: "f11",
+    origin: "Manchester",
+    originCode: "MAN",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Mon 09 Nov - Tue 17 Nov",
+    price: 541,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901026252&checksum=a868d8649be30a4ae74330dc8322053c88250057&group_id=1"
+  },
+  {
+    id: "f12",
+    origin: "Manchester",
+    originCode: "MAN",
+    destination: "Islamabad",
+    destCode: "ISB",
+    dates: "Sun 08 Nov - Tue 24 Nov",
+    price: 552,
+    currency: "£",
+    bookUrl: "https://www.flightcatchers.com/search.php?searchoffer=1&offer_flight=901423320&checksum=31ecd3072f7e80e47fcaef85f6e7f71a64fd2fd5&group_id=1"
+  }
+];
 
 function FlightsContent() {
-  const searchParams = useSearchParams();
-  const urlOrigin = searchParams.get("origin");
-  const urlDest = searchParams.get("destination");
-  const urlDates = searchParams.get("dates");
+  const [selectedOrigin, setSelectedOrigin] = useState("All");
+  const [sortBy, setSortBy] = useState("price-low");
 
-  const [currentOrigin, setCurrentOrigin] = useState(urlOrigin || "Lahore (LHE)");
-  const [currentDest, setCurrentDest] = useState(urlDest || "Islamabad (ISB)");
-  const [currentDates, setCurrentDates] = useState(urlDates || "Wed, Sep 30 - Wed, Oct 7");
+  const origins = ["All", "London Gatwick", "London Heathrow", "Manchester"];
 
-  // Selected date in 7-day matrix strip
-  const [selectedMatrixIndex, setSelectedMatrixIndex] = useState(3); // Wed, Sep 30
-
-  // Filter states
-  const [watchPrices, setWatchPrices] = useState(false);
-  const [nonstopOnly, setNonstopOnly] = useState(false);
-  const [selectedAirlines, setSelectedAirlines] = useState({
-    flyJinnah: false,
-    pia: false,
-    airblue: false,
-  });
-  const [basicEconomyOnly, setBasicEconomyOnly] = useState(false);
-  const [sortBy, setSortBy] = useState("recommended");
-
-  useEffect(() => {
-    if (urlOrigin) setCurrentOrigin(urlOrigin);
-    if (urlDest) setCurrentDest(urlDest);
-    if (urlDates) setCurrentDates(urlDates);
-  }, [urlOrigin, urlDest, urlDates]);
-
-  // 7-Day Date Matrix dataset
-  const dateMatrix = [
-    { day: "Sun, Sep 27", price: 71 },
-    { day: "Mon, Sep 28", price: 70 },
-    { day: "Tue, Sep 29", price: 70 },
-    { day: "Wed, Sep 30", price: 69, isLowest: true },
-    { day: "Thu, Oct 1", price: 71 },
-    { day: "Fri, Oct 2", price: 70 },
-    { day: "Sat, Oct 3", price: 68 },
-  ];
-
-  // 4 Realistic Dummy Flights dataset matching screenshot
-  const initialFlights = [
-    {
-      id: "f1",
-      airline: "Fly Jinnah",
-      airlineCode: "FJ",
-      airlineLogoText: "FJ",
-      airlineColor: "bg-red-600",
-      departureTime: "8:40am",
-      arrivalTime: "9:25am",
-      originCode: currentOrigin.includes("(") ? currentOrigin.split("(")[1].replace(")", "") : "LHE",
-      destCode: currentDest.includes("(") ? currentDest.split("(")[1].replace(")", "") : "ISB",
-      duration: "45m",
-      stops: "Nonstop",
-      price: 69,
-      isLowest: true,
-      tripLabel: "Roundtrip per traveler",
-    },
-    {
-      id: "f2",
-      airline: "Fly Jinnah",
-      airlineCode: "FJ",
-      airlineLogoText: "FJ",
-      airlineColor: "bg-red-600",
-      departureTime: "7:25pm",
-      arrivalTime: "8:10pm",
-      originCode: currentOrigin.includes("(") ? currentOrigin.split("(")[1].replace(")", "") : "LHE",
-      destCode: currentDest.includes("(") ? currentDest.split("(")[1].replace(")", "") : "ISB",
-      duration: "45m",
-      stops: "Nonstop",
-      price: 74,
-      isLowest: false,
-      tripLabel: "Roundtrip per traveler",
-    },
-    {
-      id: "f3",
-      airline: "PIA (Pakistan International)",
-      airlineCode: "PK",
-      airlineLogoText: "PK",
-      airlineColor: "bg-emerald-800",
-      departureTime: "1:15pm",
-      arrivalTime: "2:05pm",
-      originCode: currentOrigin.includes("(") ? currentOrigin.split("(")[1].replace(")", "") : "LHE",
-      destCode: currentDest.includes("(") ? currentDest.split("(")[1].replace(")", "") : "ISB",
-      duration: "50m",
-      stops: "Nonstop",
-      price: 82,
-      isLowest: false,
-      tripLabel: "Roundtrip per traveler",
-    },
-    {
-      id: "f4",
-      airline: "Airblue",
-      airlineCode: "PA",
-      airlineLogoText: "PA",
-      airlineColor: "bg-[#0057b8]",
-      departureTime: "6:00pm",
-      arrivalTime: "6:55pm",
-      originCode: currentOrigin.includes("(") ? currentOrigin.split("(")[1].replace(")", "") : "LHE",
-      destCode: currentDest.includes("(") ? currentDest.split("(")[1].replace(")", "") : "ISB",
-      duration: "55m",
-      stops: "Nonstop",
-      price: 89,
-      isLowest: false,
-      tripLabel: "Roundtrip per traveler",
-    },
-  ];
-
-  // Handle Search Trigger from Search Bar
-  const handleSearchSubmit = (data) => {
-    if (data.origin) setCurrentOrigin(data.origin);
-    if (data.destination) setCurrentDest(data.destination);
-    if (data.dates) setCurrentDates(data.dates);
-  };
-
-  // Filtered & Sorted Flights
   const filteredFlights = useMemo(() => {
-    return initialFlights.filter((flight) => {
-      if (nonstopOnly && flight.stops !== "Nonstop") return false;
-      if (selectedAirlines.flyJinnah && !flight.airline.includes("Fly Jinnah")) return false;
-      if (selectedAirlines.pia && !flight.airline.includes("PIA")) return false;
-      if (selectedAirlines.airblue && !flight.airline.includes("Airblue")) return false;
+    return FLIGHT_PACKAGES.filter((flight) => {
+      if (selectedOrigin !== "All" && flight.origin !== selectedOrigin) return false;
       return true;
     }).sort((a, b) => {
       if (sortBy === "price-low") return a.price - b.price;
-      if (sortBy === "duration") return parseInt(a.duration) - parseInt(b.duration);
-      return 0; // default recommended
+      if (sortBy === "price-high") return b.price - a.price;
+      return 0;
     });
-  }, [nonstopOnly, selectedAirlines, sortBy]);
-
-  const toggleAirline = (key) => {
-    setSelectedAirlines((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
+  }, [selectedOrigin, sortBy]);
 
   return (
     <div className="min-h-screen flex flex-col bg-[#f5f7f9] text-[#191e3b]">
-      
-      {/* ── 1. Expedia Top Header ── */}
       <Header />
 
-      {/* ── 2. Enquiry Hero Form ── */}
       <EnquiryHeroForm
         title="For More Cheapest Offers, Fill the Form"
         bgImage="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80"
         pageType="Flight"
       />
 
-      {/* ── 3. Main 3-Column Layout ── */}
-      <main className="flex-1 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          
-          {/* ════════════ LEFT SIDEBAR (Filters & Watch Prices) ════════════ */}
-          <aside className="lg:col-span-3 space-y-5">
-            
-            {/* 1. Watch Prices Card */}
-            <div className="bg-white rounded-2xl p-4 border border-gray-200 shadow-xs flex items-center justify-between gap-3">
-              <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-full bg-blue-50 text-[#006ce4] flex items-center justify-center shrink-0">
-                  <Bell className="w-4.5 h-4.5" />
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold text-[#191e3b]">Watch prices</h4>
-                  <p className="text-[11px] text-gray-500 leading-tight">
-                    Get notified when prices change
-                  </p>
-                </div>
+      <main className="flex-1 max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div className="grid grid-cols-1 gap-6">
+
+          {/* Sidebar Filter */}
+          <aside className="space-y-4">
+            <div className="bg-white rounded-2xl p-5 border border-gray-200 shadow-xs space-y-3">
+              <h3 className="text-sm font-bold text-[#191e3b]">Departure Airport</h3>
+              <div className="space-y-2">
+                {origins.map((orig) => (
+                  <label key={orig} className="flex items-center gap-2.5 cursor-pointer text-xs font-semibold text-gray-700 hover:text-black">
+                    <input
+                      type="radio"
+                      name="originFilter"
+                      checked={selectedOrigin === orig}
+                      onChange={() => setSelectedOrigin(orig)}
+                      className="w-4 h-4 text-[#006ce4] focus:ring-[#006ce4]"
+                    />
+                    <span>{orig === "All" ? "All Departure Airports" : orig}</span>
+                  </label>
+                ))}
               </div>
-              {/* Toggle Switch */}
-              <button
-                type="button"
-                onClick={() => setWatchPrices(!watchPrices)}
-                className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
-                  watchPrices ? "bg-[#191e3b]" : "bg-gray-300"
-                }`}
+            </div>
+
+            <div className="bg-gradient-to-br from-[#191e3b] to-[#006ce4] rounded-2xl p-5 text-white space-y-3">
+              <ShieldCheck className="w-8 h-8 text-yellow-300" />
+              <h4 className="font-bold text-sm">Best Flight Fare Guarantee</h4>
+              <p className="text-[11px] text-blue-100 leading-relaxed">
+                Direct flights and best connection fares to Islamabad (ISB) from UK airports with flexible rebooking options.
+              </p>
+              <a
+                href="tel:02039700100"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
-                <span
-                  className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${
-                    watchPrices ? "translate-x-5" : "translate-x-0"
-                  }`}
-                />
-              </button>
+                <Phone className="w-4 h-4" /> 02039700100
+              </a>
             </div>
-
-            {/* 2. Filter by Section */}
-            <div className="bg-white rounded-2xl p-5 border border-gray-200 shadow-xs space-y-5">
-              <h3 className="text-base font-bold text-[#191e3b]">Filter by</h3>
-
-              {/* Stops Filter */}
-              <div className="border-t border-gray-100 pt-4 space-y-2">
-                <div className="flex items-center justify-between text-xs font-bold text-[#191e3b]">
-                  <span>Stops</span>
-                  <span className="text-gray-400 font-normal">From</span>
-                </div>
-                <label className="flex items-center justify-between cursor-pointer text-xs font-medium text-gray-700 hover:text-black">
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      checked={nonstopOnly}
-                      onChange={(e) => setNonstopOnly(e.target.checked)}
-                      className="w-4 h-4 rounded border-gray-300 text-[#006ce4] focus:ring-[#006ce4]"
-                    />
-                    <span>Nonstop (2)</span>
-                  </div>
-                  <span className="font-bold text-[#191e3b]">$69</span>
-                </label>
-              </div>
-
-              {/* Airlines Filter */}
-              <div className="border-t border-gray-100 pt-4 space-y-2">
-                <div className="flex items-center justify-between text-xs font-bold text-[#191e3b]">
-                  <span>Airlines</span>
-                  <span className="text-gray-400 font-normal">From</span>
-                </div>
-                <div className="space-y-2">
-                  {[
-                    { key: "flyJinnah", label: "Fly Jinnah (2)", price: "$69" },
-                    { key: "pia", label: "PIA (1)", price: "$82" },
-                    { key: "airblue", label: "Airblue (1)", price: "$89" },
-                  ].map((item) => (
-                    <label key={item.key} className="flex items-center justify-between cursor-pointer text-xs font-medium text-gray-700 hover:text-black">
-                      <div className="flex items-center gap-2">
-                        <input
-                          type="checkbox"
-                          checked={selectedAirlines[item.key]}
-                          onChange={() => toggleAirline(item.key)}
-                          className="w-4 h-4 rounded border-gray-300 text-[#006ce4] focus:ring-[#006ce4]"
-                        />
-                        <span>{item.label}</span>
-                      </div>
-                      <span className="font-bold text-[#191e3b]">{item.price}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              {/* Preferred Class Filter */}
-              <div className="border-t border-gray-100 pt-4 space-y-2">
-                <div className="flex items-center justify-between text-xs font-bold text-[#191e3b]">
-                  <span>Preferred class</span>
-                  <span className="text-gray-400 font-normal">From</span>
-                </div>
-                <label className="flex items-center justify-between cursor-pointer text-xs font-medium text-gray-700 hover:text-black">
-                  <div className="flex items-start gap-2">
-                    <input
-                      type="checkbox"
-                      checked={basicEconomyOnly}
-                      onChange={(e) => setBasicEconomyOnly(e.target.checked)}
-                      className="w-4 h-4 mt-0.5 rounded border-gray-300 text-[#006ce4] focus:ring-[#006ce4]"
-                    />
-                    <div>
-                      <div>Basic economy (2)</div>
-                      <div className="text-[10px] text-gray-400">Fares may not include seats or bags</div>
-                    </div>
-                  </div>
-                  <span className="font-bold text-[#191e3b]">$69</span>
-                </label>
-              </div>
-
-            </div>
-
           </aside>
 
-          {/* ════════════ CENTER COLUMN (Flight Results) ════════════ */}
-          <section className="lg:col-span-6 space-y-4">
-            
-            {/* 7-Day Date Price Matrix Strip */}
-            <div className="grid grid-cols-7 gap-1.5 bg-white p-2 rounded-2xl border border-gray-200 shadow-xs text-center">
-              {dateMatrix.map((item, idx) => {
-                const isSelected = idx === selectedMatrixIndex;
-                return (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={() => setSelectedMatrixIndex(idx)}
-                    className={`py-2 px-1 rounded-xl transition-all border ${
-                      isSelected
-                        ? "border-[#191e3b] bg-white shadow-xs"
-                        : "border-gray-200 hover:border-gray-400 bg-gray-50/50"
-                    }`}
-                  >
-                    <div className="text-[10px] font-bold text-gray-600 truncate">{item.day}</div>
-                    <div className={`text-xs font-bold mt-0.5 ${item.isLowest ? "text-[#007837]" : "text-[#191e3b]"}`}>
-                      ${item.price}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Results Title & Sort Dropdown Header */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 py-1 px-1">
+          {/* Center Results Section */}
+          <section className="space-y-4">
+            {/* Header bar */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-white p-4 rounded-2xl border border-gray-200 shadow-xs">
               <div>
-                <h2 className="text-xl font-bold text-[#191e3b]">Departing flights</h2>
-                <p className="text-xs text-gray-500 mt-0.5">
-                  How our sort order and personalized savings work <Info className="w-3 h-3 inline text-gray-400" />
+                <h1 className="text-xl font-black text-[#191e3b]">
+                  {filteredFlights.length} Flights to Islamabad (ISB)
+                </h1>
+                <p className="text-xs text-gray-500">
+                  Exclusive UK flight deals from London Gatwick, Heathrow &amp; Manchester
                 </p>
               </div>
-
-              <div className="relative">
+              <div className="flex items-center gap-2">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-white border border-gray-300 rounded-xl px-3 py-1.5 text-xs font-bold text-[#191e3b] focus:outline-none focus:ring-2 focus:ring-[#006ce4] cursor-pointer shadow-xs"
+                  className="bg-white border border-gray-300 rounded-xl px-3 py-2 text-xs font-bold text-[#191e3b] focus:outline-none focus:ring-2 focus:ring-[#006ce4] cursor-pointer shadow-2xs"
                 >
-                  <option value="recommended">Sort by Recommended</option>
                   <option value="price-low">Price: Low to High</option>
-                  <option value="duration">Duration: Shortest</option>
+                  <option value="price-high">Price: High to Low</option>
                 </select>
               </div>
             </div>
 
-            {/* 4 Flight Result Cards */}
+            {/* List Cards */}
             {filteredFlights.length > 0 ? (
               <div className="space-y-3">
                 {filteredFlights.map((flight) => (
@@ -329,104 +240,26 @@ function FlightsContent() {
                 ))}
               </div>
             ) : (
-              <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center space-y-3">
-                <h3 className="text-base font-bold text-[#191e3b]">No flights match your filters</h3>
-                <p className="text-xs text-gray-500">Try clearing some filters to see available flights.</p>
+              <div className="bg-white rounded-2xl border border-gray-200 p-10 text-center space-y-3">
+                <div className="w-14 h-14 rounded-full bg-blue-50 text-[#006ce4] flex items-center justify-center mx-auto">
+                  <Search className="w-7 h-7" />
+                </div>
+                <h3 className="text-base font-bold">No flights match your filter</h3>
+                <p className="text-xs text-gray-500">Try selecting all airports to see all available deals.</p>
                 <button
                   type="button"
-                  onClick={() => {
-                    setNonstopOnly(false);
-                    setSelectedAirlines({ flyJinnah: false, pia: false, airblue: false });
-                  }}
-                  className="px-4 py-2 bg-[#006ce4] text-white text-xs font-bold rounded-full hover:bg-[#0057b8]"
+                  onClick={() => setSelectedOrigin("All")}
+                  className="px-5 py-2 bg-[#006ce4] text-white text-xs font-bold rounded-full hover:bg-[#0057b8]"
                 >
-                  Reset filters
+                  Reset Airport Filter
                 </button>
               </div>
             )}
-
-            {/* Bundle & Save Promo Banner */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-5 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-blue-100 text-[#006ce4] flex items-center justify-center shrink-0">
-                  <Briefcase className="w-5 h-5" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-[#191e3b]">
-                    Bundle &amp; Save in Islamabad!
-                  </h4>
-                  <p className="text-xs text-gray-600 mt-0.5">
-                    Save up to $974 by booking your flight + stay together <Info className="w-3 h-3 inline text-gray-400" />
-                  </p>
-                </div>
-              </div>
-              <button
-                type="button"
-                className="px-5 py-2.5 bg-[#006ce4] hover:bg-[#0057b8] text-white text-xs font-bold rounded-full shadow-xs transition-colors shrink-0"
-              >
-                Shop flight + stay
-              </button>
-            </div>
-
-            {/* OneKeyCash Rewards Banner */}
-            <div className="bg-[#0a1128] rounded-2xl p-4 sm:p-5 text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-amber-400 text-[#0a1128] flex items-center justify-center font-black text-xs shrink-0">
-                  <Star className="w-4 h-4 fill-current" />
-                </div>
-                <div className="text-xs sm:text-sm font-semibold">
-                  Earn OneKeyCash on top of air miles when you sign in and book a flight
-                </div>
-              </div>
-              <button
-                type="button"
-                className="px-5 py-2 bg-[#006ce4] hover:bg-[#0057b8] text-white text-xs font-bold rounded-full transition-colors shrink-0"
-              >
-                Sign in
-              </button>
-            </div>
-
           </section>
-
-          {/* ════════════ RIGHT SIDEBAR (Ad Banner) ════════════ */}
-          <aside className="lg:col-span-3">
-            <div className="sticky top-24 bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm flex flex-col group">
-              
-              {/* Ad Header */}
-              <div className="p-4 bg-[#003580] text-white text-center">
-                <div className="text-lg font-black tracking-widest uppercase font-serif">
-                  EXPLORE AFRICA
-                </div>
-              </div>
-
-              {/* Ocean / Tropical Beach Resort Photo */}
-              <div className="relative h-[360px] w-full bg-gray-900 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-                  alt="Nosy Be Madagascar"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white text-center">
-                  <div className="text-sm font-black tracking-wider uppercase">
-                    📍 NOSY BE, MADAGASCAR
-                  </div>
-                </div>
-              </div>
-
-              {/* Ethiopian Airlines Footer Banner */}
-              <div className="p-4 bg-white border-t border-gray-100 flex items-center justify-center gap-2">
-                <div className="text-xs font-bold text-[#007837]">
-                  Ethiopian Airlines
-                </div>
-              </div>
-
-            </div>
-          </aside>
 
         </div>
       </main>
 
-      {/* ── 4. Expedia Footer ── */}
       <Footer />
       <FloatingWhatsApp />
     </div>

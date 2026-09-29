@@ -1,1 +1,5 @@
-export default function Page() { return <div className='p-8 font-bold'>Coming Soon</div>; }
+import StaysPage from "../../stays/page";
+
+export default function Page() {
+  return <StaysPage />;
+}

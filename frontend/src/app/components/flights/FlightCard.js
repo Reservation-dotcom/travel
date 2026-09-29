@@ -1,73 +1,82 @@
 "use client";
 
-import { useState } from "react";
-import { Plane, Info } from "lucide-react";
+import { Plane, Calendar, Phone, MessageSquareShare, ExternalLink } from "lucide-react";
 
 export default function FlightCard({ flight }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-4 sm:p-5 shadow-xs hover:shadow-md transition-all duration-200 mb-3.5 group cursor-pointer text-[#191e3b]">
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        
-        {/* Left Side: Logo + Times + Duration */}
-        <div className="flex items-center gap-4 flex-1 min-w-0">
-          
-          {/* Branded Airline Logo Badge */}
-          <div
-            className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-xs shrink-0 shadow-xs ${
-              flight.airlineColor || "bg-red-600"
-            }`}
-          >
-            {flight.airlineLogoText || "FJ"}
+    <div className="bg-white rounded-2xl border border-gray-200/90 p-4 sm:p-5 shadow-xs hover:shadow-lg transition-all duration-300 mb-3.5 group text-[#191e3b]">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+
+        {/* Left Side: Origin & Destination & Dates */}
+        <div className="flex items-start sm:items-center gap-4 flex-1 min-w-0">
+
+          {/* Plane Icon Badge */}
+          <div className="w-12 h-12 rounded-2xl bg-blue-50 text-[#006ce4] flex items-center justify-center font-bold text-sm shrink-0 shadow-xs border border-blue-100 group-hover:bg-[#006ce4] group-hover:text-white transition-colors duration-300">
+            <Plane className="w-6 h-6 shrink-0" />
           </div>
 
           {/* Flight Details */}
-          <div className="flex-1 min-w-0">
-            {/* Departure & Arrival Times with connecting line */}
-            <div className="flex items-center gap-3">
-              <span className="text-base sm:text-lg font-bold text-[#191e3b]">
-                {flight.departureTime}
+          <div className="flex-1 min-w-0 space-y-1">
+            {/* Origin -> Destination Route */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-base sm:text-lg font-black text-[#191e3b]">
+                {flight.origin} ({flight.originCode})
               </span>
-              
-              <div className="relative flex-1 max-w-[120px] sm:max-w-[160px] h-[2px] bg-gray-300 my-auto">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-gray-400" />
-              </div>
-
-              <span className="text-base sm:text-lg font-bold text-[#191e3b]">
-                {flight.arrivalTime}
+              <span className="text-[#006ce4] font-bold">→</span>
+              <span className="text-base sm:text-lg font-black text-[#191e3b]">
+                {flight.destination} ({flight.destCode})
               </span>
             </div>
 
-            {/* Airport Route & Airline Name */}
-            <div className="text-xs text-gray-500 font-semibold mt-1 truncate">
-              <span>{flight.originCode || "LHE"} - {flight.destCode || "ISB"}</span>
-              <span className="mx-1.5">•</span>
-              <span className="text-gray-700 font-bold">{flight.airline}</span>
+            {/* Travel Dates */}
+            <div className="flex items-center gap-2 text-xs font-semibold text-gray-600 flex-wrap">
+              <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 px-2.5 py-1 rounded-full border border-green-200">
+                <Calendar className="w-3.5 h-3.5" />
+                <span>{flight.dates}</span>
+              </span>
+              <span className="text-gray-400">•</span>
+              <span className="text-gray-500 font-medium">Return Flight Package</span>
             </div>
           </div>
         </div>
 
-        {/* Middle: Duration & Nonstop Badge */}
-        <div className="text-left sm:text-center sm:px-4 shrink-0">
-          <div className="text-xs font-bold text-[#007837] flex items-center gap-1">
-            <span>{flight.duration}</span>
-            <span>•</span>
-            <span>{flight.stops || "Nonstop"}</span>
-          </div>
-          <div className="text-[11px] text-gray-400 font-medium mt-0.5">
-            {flight.flightNumber || "Direct"}
-          </div>
-        </div>
+        {/* Right Side: Price & Action Buttons */}
+        <div className="flex flex-wrap items-center justify-between lg:justify-end gap-3 w-full lg:w-auto border-t lg:border-t-0 pt-3 lg:pt-0 border-gray-100">
 
-        {/* Right Side: Price & Per traveler info */}
-        <div className="text-left sm:text-right shrink-0 border-t sm:border-t-0 pt-2 sm:pt-0 w-full sm:w-auto flex sm:block items-center justify-between">
-          <div>
-            <div className={`text-xl sm:text-2xl font-bold tracking-tight ${flight.isLowest ? "text-[#007837]" : "text-[#191e3b]"}`}>
-              ${flight.price}
-            </div>
-            <div className="text-[11px] text-gray-500 font-medium">
-              {flight.tripLabel || "Roundtrip per traveler"}
+          {/* Price Box */}
+          <div className="text-left lg:text-right">
+            <div className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">From</div>
+            <div className="text-2xl sm:text-3xl font-black text-[#191e3b] leading-tight">
+              {flight.currency || "£"}{flight.price}
+              <span className="text-xs font-semibold text-gray-500"> PP</span>
             </div>
           </div>
+
+          {/* Buttons: Book Now + Phone + WhatsApp */}
+          <div className="flex items-center gap-2 flex-wrap">
+
+
+            <a
+              href="tel:02039700100"
+              aria-label="Call 02039700100"
+              className="px-3 py-2.5 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-2xs"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#006ce4]" />
+              <span className="hidden sm:inline">02039700100</span>
+            </a>
+
+            <a
+              href="https://api.whatsapp.com/send?phone=4407821030906"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact via WhatsApp"
+              className="px-3 py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all flex items-center gap-1.5"
+            >
+              <MessageSquareShare className="w-4 h-4" />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+          </div>
+
         </div>
 
       </div>

@@ -136,9 +136,8 @@ export default function FeaturedDeals() {
                   aria-label="Save to favorites"
                 >
                   <Heart
-                    className={`w-4 h-4 ${
-                      isFav ? "fill-red-500 text-red-500" : "text-gray-700"
-                    }`}
+                    className={`w-4 h-4 ${isFav ? "fill-red-500 text-red-500" : "text-gray-700"
+                      }`}
                   />
                 </button>
               </div>
@@ -174,7 +173,7 @@ export default function FeaturedDeals() {
                 {/* Price block */}
                 <div className="pt-3 border-t border-gray-100 flex items-end justify-between">
                   <div>
-                    <span className="text-xs text-gray-400 line-through mr-1.5">
+                    <span className="text-xs font-extrabold text-[#191e3b] line-through mr-1.5">
                       ${deal.originalPrice}
                     </span>
                     <div className="text-xl font-extrabold text-[#191e3b]">
