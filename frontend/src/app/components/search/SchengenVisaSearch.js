@@ -54,6 +54,7 @@ export default function SchengenVisaSearch({ onSearch }) {
     { country: "Portugal", detail: "Lisbon – Tourist C-Type Visa", flag: "🇵🇹" },
     { country: "Sweden", detail: "Stockholm – Tourist C-Type Visa", flag: "🇸🇪" },
     { country: "Norway", detail: "Oslo – Tourist C-Type Visa", flag: "🇳🇴" },
+    { country: "Canada", detail: "Toronto / Vancouver – Visitor Visa", flag: "🇨🇦" },
   ];
 
   const filteredCountries = destQuery
