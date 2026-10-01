@@ -294,12 +294,12 @@ function LoveHolidayCard({ item }) {
         <div className="flex items-center justify-end gap-2.5 pt-3 border-t border-gray-100">
           {item.phone && (
             <a
-              href={`tel:${item.phone}`}
-              aria-label={`Call ${item.phone}`}
+              href="tel:02039700100"
+              aria-label="Contact Us"
               className="px-3 py-2 sm:px-4 sm:py-2.5 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs group-hover:border-[#006ce4]"
             >
               <Phone className="w-3.5 h-3.5 text-[#006ce4] shrink-0" />
-              <span className="hidden sm:inline">{item.phone}</span>
+              <span className="hidden sm:inline">Contact Us</span>
             </a>
           )}
 

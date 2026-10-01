@@ -58,11 +58,11 @@ export default function FlightCard({ flight }) {
 
             <a
               href="tel:02039700100"
-              aria-label="Call 02039700100"
+              aria-label="Contact Us"
               className="px-3 py-2.5 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-2xs"
             >
               <Phone className="w-3.5 h-3.5 text-[#006ce4]" />
-              <span className="hidden sm:inline">02039700100</span>
+              <span className="hidden sm:inline">Contact Us</span>
             </a>
 
             <a

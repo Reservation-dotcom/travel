@@ -220,12 +220,12 @@ function HajjPackageCard({ pkg }) {
           <div className="flex items-center gap-2">
             {pkg.phone && (
               <a
-                href={`tel:${pkg.phone}`}
-                aria-label={`Call ${pkg.phone}`}
+                href="tel:02039700100"
+                aria-label="Contact Us"
                 className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
               >
                 <Phone className="w-3.5 h-3.5 text-[#006ce4] shrink-0" />
-                <span className="hidden sm:inline">{pkg.phone}</span>
+                <span className="hidden sm:inline">Contact Us</span>
               </a>
             )}
 
@@ -333,7 +333,7 @@ function HajjContent() {
                 href="tel:02039700100"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-amber-100"
               >
-                <Phone className="w-4 h-4" /> 02039700100
+                <Phone className="w-4 h-4" /> Contact Us
               </a>
             </div>
           </aside>

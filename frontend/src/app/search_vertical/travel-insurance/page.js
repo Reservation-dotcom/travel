@@ -511,7 +511,7 @@ function TravelInsuranceContent() {
                   className="flex-1 sm:flex-initial px-4 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-2"
                 >
                   <Phone className="w-4 h-4 text-yellow-300" />
-                  <span className="hidden sm:inline">02039700100</span>
+                  <span className="hidden sm:inline">Contact Us</span>
                 </a>
                 <a
                   href="https://api.whatsapp.com/send?phone=4407821030906"

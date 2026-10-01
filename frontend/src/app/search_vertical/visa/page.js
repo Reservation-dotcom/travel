@@ -16,7 +16,7 @@ const OTHER_VISA_SERVICES = [
     id: "v1",
     country: "UAE",
     flagImage: "https://flagcdn.com/w160/ae.png",
-    destinationImage: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80",
+    destinationImage: "/other-visa/uae.png",
     title: "UAE",
     type: "Tourist Visa",
     pricePerApplicant: 195,
@@ -31,7 +31,7 @@ const OTHER_VISA_SERVICES = [
     id: "v2",
     country: "Saudi",
     flagImage: "https://flagcdn.com/w160/sa.png",
-    destinationImage: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
+    destinationImage: "/other-visa/suadia.png",
     title: "Saudi",
     type: "Tourist Visa",
     pricePerApplicant: 195,
@@ -46,7 +46,7 @@ const OTHER_VISA_SERVICES = [
     id: "v3",
     country: "UK",
     flagImage: "https://flagcdn.com/w160/gb.png",
-    destinationImage: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=900&q=80",
+    destinationImage: "/other-visa/uk.png",
     title: "UK",
     type: "Tourist Visa",
     pricePerApplicant: 195,
@@ -61,7 +61,7 @@ const OTHER_VISA_SERVICES = [
     id: "v4",
     country: "Turkey",
     flagImage: "https://flagcdn.com/w160/tr.png",
-    destinationImage: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=900&q=80",
+    destinationImage: "/other-visa/turky.jfif",
     title: "Turkey",
     type: "Tourist Visa",
     pricePerApplicant: 195,
@@ -74,10 +74,10 @@ const OTHER_VISA_SERVICES = [
   },
   {
     id: "v5",
-    country: "Thailand",
-    flagImage: "https://flagcdn.com/w160/th.png",
-    destinationImage: "https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=900&q=80",
-    title: "Thailand",
+    country: "New Zealand",
+    flagImage: "https://flagcdn.com/w160/nz.png",
+    destinationImage: "/other-visa/new-zealand.png",
+    title: "New Zealand",
     type: "Tourist Visa",
     pricePerApplicant: 195,
     currency: "£",
@@ -91,8 +91,98 @@ const OTHER_VISA_SERVICES = [
     id: "v6",
     country: "USA",
     flagImage: "https://flagcdn.com/w160/us.png",
-    destinationImage: "https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=900&q=80",
+    destinationImage: "/other-visa/us.png",
     title: "USA",
+    type: "Business Visa",
+    pricePerApplicant: 195,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "v7",
+    country: "Canada",
+    flagImage: "https://flagcdn.com/w160/us.png",
+    destinationImage: "/canada.png",
+    title: "Canada",
+    type: "Business Visa",
+    pricePerApplicant: 195,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "v8",
+    country: "Australia",
+    flagImage: "https://flagcdn.com/w160/us.png",
+    destinationImage: "/other-visa/australia.png",
+    title: "Australia",
+    type: "Business Visa",
+    pricePerApplicant: 195,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "v9",
+    country: "Singapur",
+    flagImage: "https://flagcdn.com/w160/us.png",
+    destinationImage: "/other-visa/singapur.png",
+    title: "Singapur",
+    type: "Business Visa",
+    pricePerApplicant: 195,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "v10",
+    country: "Thailand",
+    flagImage: "https://flagcdn.com/w160/us.png",
+    destinationImage: "/other-visa/thailand.png",
+    title: "Thailand",
+    type: "Business Visa",
+    pricePerApplicant: 195,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "v11",
+    country: "China",
+    flagImage: "https://flagcdn.com/w160/us.png",
+    destinationImage: "/other-visa/china.png",
+    title: "China",
+    type: "Business Visa",
+    pricePerApplicant: 195,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Review", "Checklist", "Support"],
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "v12",
+    country: "Japan",
+    flagImage: "https://flagcdn.com/w160/us.png",
+    destinationImage: "/other-visa/japan.png",
+    title: "Japan",
     type: "Business Visa",
     pricePerApplicant: 195,
     currency: "£",
@@ -125,17 +215,20 @@ function VisaServiceCard({ item }) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
-        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full shadow-md flex items-center gap-2 border border-gray-100">
-          <img
+        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-1  rounded-full shadow-md flex items-center gap-2 border border-gray-100">
+          {/* <img
             src={item.flagImage}
             alt={`${item.country} Flag`}
             className="w-5 h-3.5 object-cover rounded-xs border border-gray-200 shadow-2xs"
-          />
-          <span className="text-xs font-bold text-gray-900">{item.country}</span>
+          /> */}
+          <span className="text-lg font-bold text-gray-900">{item.country}</span>
         </div>
 
-        <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-md uppercase tracking-wide">
+        <div className="absolute top-3 right-3 bg-red-600 text-white text-lg font-black px-1  rounded-full shadow-md uppercase tracking-wide">
           {item.discountBadge}
+        </div>
+        <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-2  rounded-full shadow-md border border-gray-100 text-xl font-black text-[#191e3b]">
+          {item.currency}{item.pricePerApplicant}
         </div>
       </div>
 
@@ -177,12 +270,12 @@ function VisaServiceCard({ item }) {
           <div className="flex items-center gap-2">
             {item.phone && (
               <a
-                href={`tel:${item.phone}`}
-                aria-label={`Call ${item.phone}`}
+                href="tel:02039700100"
+                aria-label="Contact Us"
                 className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#003399] text-[#191e3b] hover:text-[#003399] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
               >
                 <Phone className="w-3.5 h-3.5 text-[#003399] shrink-0" />
-                <span className="hidden sm:inline">{item.phone}</span>
+                <span className="hidden sm:inline">Contact Us</span>
               </a>
             )}
 

@@ -5,7 +5,7 @@ import Footer from "./components/layout/Footer";
 import MobileNav from "./components/layout/MobileNav";
 import HeroBanner from "./components/home/HeroBanner";
 import AnniversarySaleBanner from "./components/home/AnniversarySaleBanner";
-import FeaturedDeals from "./components/home/FeaturedDeals";
+import SchengenVisaSection from "./components/home/SchengenVisaSection";
 import TrendingDestinations from "./components/home/TrendingDestinations";
 import PropertyTypes from "./components/home/PropertyTypes";
 import AppBanner from "./components/home/AppBanner";
@@ -26,8 +26,8 @@ export default function Home() {
         {/* 30th Anniversary Sale Banner */}
         <AnniversarySaleBanner />
 
-        {/* Featured Member Deals */}
-        <FeaturedDeals />
+        {/* Schengen Visa Section */}
+        <SchengenVisaSection />
 
         {/* Trending Destinations */}
         <TrendingDestinations />

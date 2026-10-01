@@ -203,7 +203,7 @@ function FlightsContent() {
                 href="tel:02039700100"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
-                <Phone className="w-4 h-4" /> 02039700100
+                <Phone className="w-4 h-4" /> Contact Us
               </a>
             </div>
           </aside>

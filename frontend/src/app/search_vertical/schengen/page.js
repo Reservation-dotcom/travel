@@ -23,7 +23,7 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
-    phone: "02039700100",
+    phone: "Contact Us",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
@@ -38,7 +38,7 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
-    phone: "02039700100",
+    phone: "Contact Us",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
@@ -53,7 +53,7 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "02039700100",
+    phone: "Contact Us",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
@@ -68,7 +68,7 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "02039700100",
+    phone: "Contact Us",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
@@ -83,7 +83,7 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "02039700100",
+    phone: "Contact Us",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
@@ -98,26 +98,11 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "File Building", "Submission & Tracking"],
-    phone: "02039700100",
+    phone: "Contact Us",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   },
   {
     id: "s7",
-    country: "Canada",
-    flagImage: "https://flagcdn.com/w160/ca.png",
-    destinationImage: "/canada.png",
-    title: "Canada Visa",
-    type: "Tourist",
-    pricePerApplicant: 45,
-    currency: "£",
-    discountBadge: "60% OFF",
-    successRatio: "99% Success Ratio",
-    services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
-  },
-  {
-    id: "s8",
     country: "Austria",
     flagImage: "https://flagcdn.com/w160/at.png",
     destinationImage: "/austrian.png",
@@ -127,8 +112,338 @@ const SCHENGEN_SERVICES = [
     currency: "£",
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "File Building"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s8",
+    country: "Belgium",
+    flagImage: "https://flagcdn.com/w160/be.png",
+    destinationImage: "/belgian.png",
+    title: "Belgium Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
-    phone: "02039700100",
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s9",
+    country: "Bulgaria",
+    flagImage: "https://flagcdn.com/w160/bg.png",
+    destinationImage: "/b.jfif",
+    title: "Bulgaria Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s10",
+    country: "Croatia",
+    flagImage: "https://flagcdn.com/w160/hr.png",
+    destinationImage: "croatia.jfif",
+    title: "Croatia Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s11",
+    country: "Czech Republic",
+    flagImage: "https://flagcdn.com/w160/cz.png",
+    destinationImage: "czech.jfif",
+    title: "Czech Republic Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "File Building"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s12",
+    country: "Denmark",
+    flagImage: "https://flagcdn.com/w160/dk.png",
+    destinationImage: "./denmark.jfif",
+    title: "Denmark Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s13",
+    country: "Estonia",
+    flagImage: "https://flagcdn.com/w160/ee.png",
+    destinationImage: "/estonia.png",
+    title: "Estonia Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Document Checklist", "File Building", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s14",
+    country: "Finland",
+    flagImage: "https://flagcdn.com/w160/fi.png",
+    destinationImage: "/finland.png",
+    title: "Finland Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "File Building"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s15",
+    country: "Greece",
+    flagImage: "https://flagcdn.com/w160/gr.png",
+    destinationImage: "/grece.png",
+    title: "Greece Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "File Building", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s16",
+    country: "Hungary",
+    flagImage: "https://flagcdn.com/w160/hu.png",
+    destinationImage: "/hungary.png",
+    title: "Hungary Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s17",
+    country: "Iceland",
+    flagImage: "https://flagcdn.com/w160/is.png",
+    destinationImage: "/iceland.png",
+    title: "Iceland Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s18",
+    country: "Latvia",
+    flagImage: "https://flagcdn.com/w160/lv.png",
+    destinationImage: "/latvia.png",
+    title: "Latvia Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "File Building"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s19",
+    country: "Liechtenstein",
+    flagImage: "https://flagcdn.com/w160/li.png",
+    destinationImage: "/liechtenstein.png",
+    title: "Liechtenstein Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s20",
+    country: "Lithuania",
+    flagImage: "https://flagcdn.com/w160/lt.png",
+    destinationImage: "/lithuanian.png",
+    title: "Lithuania Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Document Checklist", "File Building", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s21",
+    country: "Luxembourg",
+    flagImage: "https://flagcdn.com/w160/lu.png",
+    destinationImage: "/luxembourg.png",
+    title: "Luxembourg Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "File Building"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s22",
+    country: "Malta",
+    flagImage: "https://flagcdn.com/w160/mt.png",
+    destinationImage: "/malta.png",
+    title: "Malta Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "File Building", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s23",
+    country: "Norway",
+    flagImage: "https://flagcdn.com/w160/no.png",
+    destinationImage: "/norway.png",
+    title: "Norway Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s24",
+    country: "Poland",
+    flagImage: "https://flagcdn.com/w160/pl.png",
+    destinationImage: "/poland.png",
+    title: "Poland Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s25",
+    country: "Portugal",
+    flagImage: "https://flagcdn.com/w160/pt.png",
+    destinationImage: "/portugal.png",
+    title: "Portugal Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "File Building"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s26",
+    country: "Romania",
+    flagImage: "https://flagcdn.com/w160/ro.png",
+    destinationImage: "/romania.png",
+    title: "Romania Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s27",
+    country: "Slovakia",
+    flagImage: "https://flagcdn.com/w160/sk.png",
+    destinationImage: "/Slovakia.png",
+    title: "Slovakia Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Document Checklist", "File Building", "Submission & Tracking"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s28",
+    country: "Slovenia",
+    flagImage: "https://flagcdn.com/w160/si.png",
+    destinationImage: "/slovenia.png",
+    title: "Slovenia Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "Document Checklist", "File Building"],
+    phone: "Contact Us",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+  },
+  {
+    id: "s29",
+    country: "Sweden",
+    flagImage: "https://flagcdn.com/w160/se.png",
+    destinationImage: "/sweden.png",
+    title: "Sweden Schengen Visa",
+    type: "Tourist",
+    pricePerApplicant: 45,
+    currency: "£",
+    discountBadge: "60% OFF",
+    successRatio: "99% Success Ratio",
+    services: ["Free Assessment", "File Building", "Submission & Tracking"],
+    phone: "Contact Us",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
   }
 ];
@@ -153,22 +468,27 @@ function SchengenServiceCard({ item }) {
         <img
           src={item.destinationImage}
           alt={`${item.country} Famous Destination`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover  group-hover:scale-105 transition-transform duration-500"
         />
 
         {/* Country Flag Badge (Image 1) */}
-        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full shadow-md flex items-center gap-2 border border-gray-100">
-          <img
+        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-1  rounded-full shadow-md flex items-center gap-2 border border-gray-100">
+          {/* <img
             src={item.flagImage}
             alt={`${item.country} Flag`}
             className="w-5 h-3.5 object-cover rounded-xs border border-gray-200 shadow-2xs"
-          />
-          <span className="text-xs font-bold text-gray-900">{item.country}</span>
+          /> */}
+          <span className="text-lg font-bold text-gray-900">{item.country}</span>
         </div>
 
         {/* 60% OFF Badge on Image */}
-        <div className="absolute top-3 right-3 bg-red-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-md uppercase tracking-wide">
+        <div className="absolute top-3 right-3 bg-red-600 text-white text-lg font-black px-1 py-1 rounded-full shadow-md uppercase tracking-wide">
           {item.discountBadge}
+        </div>
+
+        {/* Price Badge on Bottom Left of Image */}
+        <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-2  rounded-full shadow-md border border-gray-100 text-xl font-black text-[#191e3b]">
+          {item.currency}{item.pricePerApplicant}
         </div>
       </div>
 
@@ -222,8 +542,8 @@ function SchengenServiceCard({ item }) {
           <div className="flex items-center gap-2">
             {item.phone && (
               <a
-                href={`tel:${item.phone}`}
-                aria-label={`Call ${item.phone}`}
+                href="tel:02039700100"
+                aria-label="Contact Us"
                 className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#003399] text-[#191e3b] hover:text-[#003399] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
               >
                 <Phone className="w-3.5 h-3.5 text-[#003399] shrink-0" />
@@ -333,7 +653,7 @@ function SchengenContent() {
                 href="tel:02039700100"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
-                <Phone className="w-4 h-4" /> 02039700100
+                <Phone className="w-4 h-4" /> Contact Us
               </a>
             </div>
           </aside>

@@ -11,47 +11,74 @@ import {
   Plane, Hotel, FileText, Sparkles, Shield, Phone, MessageSquareShare
 } from "lucide-react";
 
+const UMRAH_WITH_TRIP = [
+  {
+    id: "ut1",
+    name: "Umrah + Dubai",
+    duration: "10 Days",
+    price: 325000,
+    currency: "PKR",
+    rating: 5.0,
+    ratingText: "Excellent",
+    image:
+      "https://holidaysmaker.pk/cdn/shop/files/dubai--umrah-in-diwali-vacation_1695364033.jpg?v=1785846258",
+    badge: "Popular",
+    destination: "Makkah + Madinah + Dubai",
+    includes: ["Umrah", "Dubai Trip", "Accommodation"],
+  },
+  {
+    id: "ut2",
+    name: "Umrah + Sharm El Sheikh",
+    duration: "11 Days",
+    price: 399000,
+    currency: "PKR",
+    rating: 4.8,
+    ratingText: "Excellent",
+    image:
+      "https://holidaysmaker.pk/cdn/shop/files/Umrah_Sharm_El_Sheikh.png?v=1785763351&width=800",
+    badge: "Special",
+    destination: "Makkah + Madinah + Sharm El Sheikh",
+    includes: ["Umrah", "Sharm El Sheikh Trip", "Accommodation"],
+  },
+  {
+    id: "ut3",
+    name: "Umrah + Turkey",
+    duration: "11 Days",
+    price: 490000,
+    currency: "PKR",
+    rating: 4.9,
+    ratingText: "Excellent",
+    image:
+      "https://holidaysmaker.pk/cdn/shop/files/5-Star-Umrah-And-Turkey-For-10-Days.jpg?v=1785761521&width=800",
+    badge: "Premium",
+    destination: "Makkah + Madinah + Turkey",
+    includes: ["Umrah", "Turkey Trip", "Accommodation"],
+  },
+];
+
+
 const UMRAH_PACKAGES = [
   {
-    id: "u2",
-    name: "10 Days 3 Star Umrah Package",
+    id: "u1",
+    name: "7 Days 3 Star Umrah Package",
     category: "3 Star",
     stars: 3,
-    duration: "10 Days",
-    nights_makkah: 5,
-    nights_madinah: 5,
-    price: 695,
+    duration: "7 Days",
+    nights_makkah: 4,
+    nights_madinah: 3,
+    price: 595,
     currency: "£",
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80",
-    rating: 8.9,
+    image: "https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFra2FofGVufDB8fDB8fHww",
+    rating: 8.8,
     ratingText: "Very Good",
-    reviews: 380,
-    badge: "Best Value"
+    reviews: 420,
+    badge: "Budget Saver"
   },
   {
-    id: "u3",
-    name: "14 Days 3 Star Ramzan Umrah Package",
-    category: "3 Star",
-    stars: 3,
-    duration: "14 Days",
-    nights_makkah: 7,
-    nights_madinah: 7,
-    price: 795,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
-    rating: 9.1,
-    ratingText: "Exceptional",
-    reviews: 510,
-    badge: "Ramzan Special"
-  },
-  {
-    id: "u4",
+    id: "u2",
     name: "07 Days 4 Star Umrah Package",
     category: "4 Star",
     stars: 4,
@@ -70,45 +97,7 @@ const UMRAH_PACKAGES = [
     badge: "Popular"
   },
   {
-    id: "u5",
-    name: "10 Days 4 Star Ramzan Umrah Package",
-    category: "4 Star",
-    stars: 4,
-    duration: "10 Days",
-    nights_makkah: 5,
-    nights_madinah: 5,
-    price: 795,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://i.pinimg.com/1200x/c6/27/83/c62783fc7679e8a756a36064508de74b.jpg",
-    rating: 9.2,
-    ratingText: "Exceptional",
-    reviews: 450,
-    badge: "Ramzan Special"
-  },
-  {
-    id: "u6",
-    name: "14 Days 4 Star December Umrah Package",
-    category: "4 Star",
-    stars: 4,
-    duration: "14 Days",
-    nights_makkah: 7,
-    nights_madinah: 7,
-    price: 895,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80",
-    rating: 9.1,
-    ratingText: "Exceptional",
-    reviews: 720,
-    badge: "December Special"
-  },
-  {
-    id: "u7",
+    id: "u3",
     name: "07 Days 5 Star Umrah Package",
     category: "5 Star",
     stars: 5,
@@ -125,6 +114,83 @@ const UMRAH_PACKAGES = [
     ratingText: "Exceptional",
     reviews: 890,
     badge: "Luxury Pick"
+  },
+  {
+    id: "u4",
+    name: "07 Days 3 Star December & Ramadan Umrah",
+    category: "3 Star",
+    stars: 3,
+    duration: "7 Days",
+    nights_makkah: 4,
+    nights_madinah: 3,
+    price: 995,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/makkah_al_mukarramah_and_high_resolution_wallpaper.jpg",
+    rating: 8.9,
+    ratingText: "Very Good",
+    reviews: 340,
+    badge: "Dec & Ramadan"
+  },
+  {
+    id: "u5",
+    name: "07 Days 4 Star December & Ramadan Umrah",
+    category: "4 Star",
+    stars: 4,
+    duration: "7 Days",
+    nights_makkah: 4,
+    nights_madinah: 3,
+    price: 1095,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://i.pinimg.com/1200x/84/62/f2/8462f24e9f017c1e9c443a1b6ad2e738.jpg",
+    rating: 9.2,
+    ratingText: "Exceptional",
+    reviews: 620,
+    badge: "Dec & Ramadan"
+  },
+
+  {
+    id: "u6",
+    name: "10 Days 3 Star Umrah Package",
+    category: "3 Star",
+    stars: 3,
+    duration: "10 Days",
+    nights_makkah: 5,
+    nights_madinah: 5,
+    price: 695,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFra2FofGVufDB8fDB8fHww",
+    rating: 8.9,
+    ratingText: "Very Good",
+    reviews: 380,
+    badge: "Best Value"
+  },
+  {
+    id: "u7",
+    name: "10 Days 4 Star Ramzan Umrah Package",
+    category: "4 Star",
+    stars: 4,
+    duration: "10 Days",
+    nights_makkah: 5,
+    nights_madinah: 5,
+    price: 795,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://i.pinimg.com/1200x/c6/27/83/c62783fc7679e8a756a36064508de74b.jpg",
+    rating: 9.2,
+    ratingText: "Exceptional",
+    reviews: 450,
+    badge: "Ramzan Special"
   },
   {
     id: "u8",
@@ -147,44 +213,6 @@ const UMRAH_PACKAGES = [
   },
   {
     id: "u9",
-    name: "14 Days 5 Star Umrah Package",
-    category: "5 Star",
-    stars: 5,
-    duration: "14 Days",
-    nights_makkah: 7,
-    nights_madinah: 7,
-    price: 995,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/makkah-2-beautiful-wallpaper-1024x768-1.jpg",
-    rating: 9.6,
-    ratingText: "Exceptional",
-    reviews: 1120,
-    badge: "VIP Premium"
-  },
-  {
-    id: "u10",
-    name: "07 Days 3 Star December & Ramadan Umrah",
-    category: "3 Star",
-    stars: 3,
-    duration: "7 Days",
-    nights_makkah: 4,
-    nights_madinah: 3,
-    price: 995,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/makkah_al_mukarramah_and_high_resolution_wallpaper.jpg",
-    rating: 8.9,
-    ratingText: "Very Good",
-    reviews: 340,
-    badge: "Dec & Ramadan"
-  },
-  {
-    id: "u11",
     name: "10 Days 3 Star December & Ramadan Umrah",
     category: "3 Star",
     stars: 3,
@@ -203,7 +231,84 @@ const UMRAH_PACKAGES = [
     badge: "Dec & Ramadan"
   },
   {
+    id: "u10",
+    name: "10 Days 4 Star December & Ramadan Umrah",
+    category: "4 Star",
+    stars: 4,
+    duration: "10 Days",
+    nights_makkah: 5,
+    nights_madinah: 5,
+    price: 1195,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://i.pinimg.com/1200x/dd/ba/f8/ddbaf8fb8a8fc1297391badac6e410c4.jpg",
+    rating: 9.3,
+    ratingText: "Exceptional",
+    reviews: 710,
+    badge: "Dec & Ramadan"
+  },
+
+  {
+    id: "u11",
+    name: "14 Days 3 Star Ramzan Umrah Package",
+    category: "3 Star",
+    stars: 3,
+    duration: "14 Days",
+    nights_makkah: 7,
+    nights_madinah: 7,
+    price: 795,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
+    rating: 9.1,
+    ratingText: "Exceptional",
+    reviews: 510,
+    badge: "Ramzan Special"
+  },
+  {
     id: "u12",
+    name: "14 Days 4 Star December Umrah Package",
+    category: "4 Star",
+    stars: 4,
+    duration: "14 Days",
+    nights_makkah: 7,
+    nights_madinah: 7,
+    price: 895,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80",
+    rating: 9.1,
+    ratingText: "Exceptional",
+    reviews: 720,
+    badge: "December Special"
+  },
+  {
+    id: "u13",
+    name: "14 Days 5 Star Umrah Package",
+    category: "5 Star",
+    stars: 5,
+    duration: "14 Days",
+    nights_makkah: 7,
+    nights_madinah: 7,
+    price: 995,
+    currency: "£",
+    phone: "02039700100",
+    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    includes: ["Flight", "Visa", "Accommodation"],
+    image: "https://i.pinimg.com/1200x/f8/e2/89/f8e2892de422badb472d8bc5522804aa.jpg",
+    rating: 9.6,
+    ratingText: "Exceptional",
+    reviews: 1120,
+    badge: "VIP Premium"
+  },
+  {
+    id: "u14",
     name: "14 Days 3 Star December & Ramadan Umrah",
     category: "3 Star",
     stars: 3,
@@ -222,63 +327,6 @@ const UMRAH_PACKAGES = [
     badge: "Dec & Ramadan"
   },
   {
-    id: "u1",
-    name: "7 Days 3 Star Umrah Package",
-    category: "3 Star",
-    stars: 3,
-    duration: "7 Days",
-    nights_makkah: 4,
-    nights_madinah: 3,
-    price: 595,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://i.pinimg.com/736x/bd/09/aa/bd09aa5b48c02fbf6e79b39528d9f43a.jpg",
-    rating: 8.8,
-    ratingText: "Very Good",
-    reviews: 420,
-    badge: "Budget Saver"
-  },
-  {
-    id: "u13",
-    name: "07 Days 4 Star December & Ramadan Umrah",
-    category: "4 Star",
-    stars: 4,
-    duration: "7 Days",
-    nights_makkah: 4,
-    nights_madinah: 3,
-    price: 1095,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/images-3.jpg",
-    rating: 9.2,
-    ratingText: "Exceptional",
-    reviews: 620,
-    badge: "Dec & Ramadan"
-  },
-  {
-    id: "u14",
-    name: "10 Days 4 Star December & Ramadan Umrah",
-    category: "4 Star",
-    stars: 4,
-    duration: "10 Days",
-    nights_makkah: 5,
-    nights_madinah: 5,
-    price: 1195,
-    currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
-    includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFra2FofGVufDB8fDB8fHww",
-    rating: 9.3,
-    ratingText: "Exceptional",
-    reviews: 710,
-    badge: "Dec & Ramadan"
-  },
-  {
     id: "u15",
     name: "14 Days 4 Star December & Ramadan Umrah",
     category: "4 Star",
@@ -291,12 +339,13 @@ const UMRAH_PACKAGES = [
     phone: "02039700100",
     whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
     includes: ["Flight", "Visa", "Accommodation"],
-    image: "https://images.unsplash.com/photo-1667454872134-c25973237138?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFkaW5haCUyMG1vc3F1ZXxlbnwwfHwwfHx8MA%3D%3D",
+    image: "https://i.pinimg.com/1200x/37/10/b9/3710b9c8fd1190a8c98dd66a1ee1d2f5.jpg",
     rating: 9.4,
     ratingText: "Exceptional",
     reviews: 850,
     badge: "Dec & Ramadan"
-  }
+  },
+
 ];
 
 function PageHeaderIcon({ src, alt }) {
@@ -391,12 +440,12 @@ function UmrahPackageCard({ pkg }) {
           <div className="flex items-center gap-2">
             {pkg.phone && (
               <a
-                href={`tel:${pkg.phone}`}
-                aria-label={`Call ${pkg.phone}`}
+                href="tel:02039700100"
+                aria-label="Contact Us"
                 className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
               >
                 <Phone className="w-3.5 h-3.5 text-[#006ce4] shrink-0" />
-                <span className="hidden sm:inline">{pkg.phone}</span>
+                <span className="hidden sm:inline">Contact Us</span>
               </a>
             )}
 
@@ -414,6 +463,148 @@ function UmrahPackageCard({ pkg }) {
             )}
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function UmrahWithTripCard({ pkg }) {
+  return (
+    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col md:flex-row group">
+
+      {/* Image */}
+      <div className="relative w-full h-56 sm:h-60 md:w-72 md:h-auto shrink-0 overflow-hidden">
+        <img
+          src={pkg.image}
+          alt={pkg.name}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        />
+
+        {/* Badge */}
+        {pkg.badge && (
+          <span className="absolute top-3 left-3 bg-[#006ce4] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
+            {pkg.badge}
+          </span>
+        )}
+
+        {/* Rating */}
+        <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-lg shadow-sm">
+          <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+          <span className="text-xs font-bold text-[#191e3b]">
+            {pkg.rating}
+          </span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 p-5 flex flex-col justify-between gap-4">
+
+        <div>
+          {/* Title + Rating */}
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <h3 className="text-base sm:text-lg font-bold text-[#191e3b] leading-tight">
+                {pkg.name}
+              </h3>
+
+              <div className="flex items-center gap-1 mt-1 text-gray-500 text-xs">
+                <MapPin className="w-3.5 h-3.5 shrink-0 text-[#006ce4]" />
+                <span>{pkg.destination}</span>
+              </div>
+            </div>
+
+            <div className="text-right shrink-0">
+              <div className="inline-flex items-center gap-1 bg-[#006ce4] text-white text-xs font-bold px-2.5 py-1 rounded-xl">
+                <Star className="w-3 h-3 fill-white" />
+                {pkg.rating}
+              </div>
+
+              <div className="text-[10px] text-gray-500 mt-0.5">
+                {pkg.ratingText}
+              </div>
+            </div>
+          </div>
+
+          {/* Meta Chips */}
+          <div className="flex flex-wrap gap-2 mt-3">
+
+            <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-green-100">
+              <Clock className="w-3.5 h-3.5" />
+              {pkg.duration}
+            </span>
+
+            <span className="inline-flex items-center gap-1 bg-blue-50 text-[#006ce4] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-blue-100">
+              <Plane className="w-3.5 h-3.5" />
+              Umrah Trip
+            </span>
+
+            <span className="inline-flex items-center gap-1 bg-purple-50 text-purple-700 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-purple-100">
+              <MapPin className="w-3.5 h-3.5" />
+              Multi Destination
+            </span>
+
+          </div>
+
+          {/* Inclusions */}
+          <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-3 pt-2 border-t border-gray-100">
+
+            <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+              Umrah Included
+            </span>
+
+            <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
+              <Plane className="w-3.5 h-3.5 text-[#006ce4]" />
+              Trip Included
+            </span>
+
+            <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
+              <Hotel className="w-3.5 h-3.5 text-amber-600" />
+              Accommodation Included
+            </span>
+
+          </div>
+        </div>
+
+        {/* Price + Actions */}
+        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 pt-3">
+
+          <div>
+            <div className="text-2xl font-black text-[#191e3b]">
+              {pkg.currency} {pkg.price.toLocaleString()}
+            </div>
+
+            <div className="text-[10px] text-gray-500">
+              Starting from · per person
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex items-center gap-2">
+
+            <a
+              href="tel:02039700100"
+              aria-label="Contact Us"
+              className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
+            >
+              <Phone className="w-3.5 h-3.5 text-[#006ce4] shrink-0" />
+              <span className="hidden sm:inline">Contact Us</span>
+            </a>
+
+            <a
+              href="https://api.whatsapp.com/send?phone=442039700100"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Contact via WhatsApp"
+              className="px-2.5 py-2.5 sm:px-4 sm:py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+            >
+              <MessageSquareShare className="w-4 h-4 shrink-0" />
+              <span className="hidden sm:inline">WhatsApp</span>
+            </a>
+
+          </div>
+        </div>
+
       </div>
     </div>
   );
@@ -504,7 +695,7 @@ function UmrahContent() {
                 href="tel:02039700100"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
-                <Phone className="w-4 h-4" /> 02039700100
+                <Phone className="w-4 h-4" /> Contact Us
               </a>
             </div>
           </aside>
@@ -566,6 +757,14 @@ function UmrahContent() {
                 </button>
               </div>
             )}
+            <div className="space-y-4">
+              {UMRAH_WITH_TRIP.map((pkg) => (
+                <UmrahWithTripCard
+                  key={pkg.id}
+                  pkg={pkg}
+                />
+              ))}
+            </div>
           </section>
 
         </div>

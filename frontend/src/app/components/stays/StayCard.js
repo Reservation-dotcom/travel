@@ -148,12 +148,12 @@ export default function StayCard({ stay }) {
           {/* Right: Contact Details (Phone + WhatsApp) */}
           <div className="flex items-center gap-2">
             <a
-              href={`tel:${(stay.phone || "02039700100").replace(/\s+/g, "")}`}
+              href="tel:02039700100"
               className="px-3.5 py-2.5 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-2xs"
-              aria-label="Call phone"
+              aria-label="Contact Us"
             >
               <Phone className="w-3.5 h-3.5 text-[#006ce4]" />
-              <span className="hidden sm:inline">{stay.phone || "02039700100"}</span>
+              <span className="hidden sm:inline">Contact Us</span>
             </a>
 
             <a
@@ -164,7 +164,7 @@ export default function StayCard({ stay }) {
               aria-label="WhatsApp contact"
             >
               <MessageSquareShare className="w-4 h-4" />
-              <span>WhatsApp</span>
+              <span className="hidden sm:inline">WhatsApp</span>
             </a>
           </div>
         </div>
