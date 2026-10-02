@@ -23,8 +23,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s2",
@@ -38,8 +38,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s3",
@@ -53,8 +53,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s4",
@@ -68,8 +68,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s5",
@@ -83,8 +83,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s6",
@@ -98,8 +98,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s7",
@@ -113,8 +113,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s8",
@@ -128,8 +128,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s9",
@@ -143,8 +143,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s10",
@@ -158,8 +158,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s11",
@@ -173,8 +173,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s12",
@@ -188,8 +188,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s13",
@@ -203,8 +203,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s14",
@@ -218,8 +218,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s15",
@@ -233,8 +233,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s16",
@@ -248,8 +248,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s17",
@@ -263,8 +263,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s18",
@@ -278,8 +278,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s19",
@@ -293,8 +293,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s20",
@@ -308,8 +308,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s21",
@@ -323,8 +323,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s22",
@@ -338,8 +338,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s23",
@@ -353,8 +353,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s24",
@@ -368,8 +368,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s25",
@@ -383,8 +383,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s26",
@@ -398,8 +398,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Appointment & Briefing", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s27",
@@ -413,8 +413,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Document Checklist", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s28",
@@ -428,8 +428,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "Document Checklist", "File Building"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "s29",
@@ -443,8 +443,8 @@ const SCHENGEN_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Free Assessment", "File Building", "Submission & Tracking"],
-    phone: "Contact Us",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   }
 ];
 
@@ -504,10 +504,10 @@ function SchengenServiceCard({ item }) {
               </h3>
             </div>
             <div className="text-right shrink-0">
-              <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-[10px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-full border border-emerald-200 shadow-2xs">
+              <span className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-[13px] sm:text-xs font-bold px-2.5 sm:px-3 py-1 rounded-full border border-emerald-200 shadow-2xs">
                 <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-600 shrink-0" />
-                <span className="hidden sm:inline">{item.successRatio}</span>
-                <span className="sm:hidden">99% Ratio</span>
+                <span className="">{item.successRatio}</span>
+                {/* <span className="sm:hidden">99% Ratio</span> */}
               </span>
             </div>
           </div>
@@ -539,15 +539,15 @@ function SchengenServiceCard({ item }) {
           </div>
 
           {/* Contact Buttons: Phone & WhatsApp */}
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center gap-2 sm:w-auto">
             {item.phone && (
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 aria-label="Contact Us"
-                className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#003399] text-[#191e3b] hover:text-[#003399] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#2563EB] px-3 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-3.5 sm:py-2 sm:text-xs"
               >
-                <Phone className="w-3.5 h-3.5 text-[#003399] shrink-0" />
-                <span className="hidden sm:inline">{item.phone}</span>
+                <Phone className="w-3.5 h-3.5 shrink-0 text-white" />
+                <span className="whitespace-nowrap">Call Now</span>
               </a>
             )}
 
@@ -557,10 +557,10 @@ function SchengenServiceCard({ item }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contact via WhatsApp"
-                className="px-2.5 py-2.5 sm:px-4 sm:py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#25D366] px-3 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#20bd5a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-4 sm:py-2 sm:text-xs"
               >
                 <MessageSquareShare className="w-4 h-4 shrink-0" />
-                <span className="hidden sm:inline">WhatsApp</span>
+                <span>WhatsApp</span>
               </a>
             )}
           </div>
@@ -650,7 +650,7 @@ function SchengenContent() {
                 Guaranteed slot assistance, customized file preparation & appointment booking support across Europe.
               </p>
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
                 <Phone className="w-4 h-4" /> Contact Us

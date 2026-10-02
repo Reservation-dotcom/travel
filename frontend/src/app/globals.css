@@ -3,20 +3,20 @@
 :root {
   --background: #ffffff;
   --foreground: #191e3b;
-  --expedia-blue: #003580;
-  --expedia-blue-hover: #00224f;
-  --expedia-accent-blue: #1668e3;
-  --expedia-yellow: #fcd535;
-  --expedia-navy: #0a1128;
-  --expedia-text-dark: #191e3b;
-  --expedia-text-muted: #5e6c84;
-  --expedia-border: #d1d5db;
-  --expedia-card-bg: #ffffff;
+  --travel-brand-blue: #003580;
+  --travel-brand-blue-hover: #00224f;
+  --travel-brand-accent-blue: #1668e3;
+  --travel-brand-yellow: #fcd535;
+  --travel-brand-navy: #0a1128;
+  --travel-brand-text-dark: #191e3b;
+  --travel-brand-text-muted: #5e6c84;
+  --travel-brand-border: #d1d5db;
+  --travel-brand-card-bg: #ffffff;
 }
 
 body {
   background-color: #f5f7f9;
-  color: var(--expedia-text-dark);
+  color: var(--travel-brand-text-dark);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   overflow-x: hidden;
 }

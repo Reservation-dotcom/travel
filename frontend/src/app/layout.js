@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Expedia Travel: Vacation Homes, Hotels, Airlines, Car Rentals, Flights & More",
-  description: "Plan your trip with Expedia. Find cheap flights, hotel deals, car rentals, and vacation packages. Earn OneKeyCash™ rewards on eligible bookings.",
+  title: "Schengen | Visa, Umrah, Flights & Stay",
+  description: "Plan visa services, Umrah, flights, stays, holidays, Hajj, and travel insurance with Schengen.",
 };
 
 export default function RootLayout({ children }) {

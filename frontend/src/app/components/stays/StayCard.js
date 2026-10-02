@@ -146,25 +146,26 @@ export default function StayCard({ stay }) {
           </div>
 
           {/* Right: Contact Details (Phone + WhatsApp) */}
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center gap-2 sm:w-auto">
             <a
-              href="tel:02039700100"
-              className="px-3.5 py-2.5 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-2xs"
+              href="tel:02039703003"
+              className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#2563EB] px-3 py-2 text-sm font-bold text-white transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-3.5 sm:py-2.5 sm:text-xs sm:shadow-2xs"
               aria-label="Contact Us"
             >
-              <Phone className="w-3.5 h-3.5 text-[#006ce4]" />
-              <span className="hidden sm:inline">Contact Us</span>
+              <Phone className="w-3.5 h-3.5 text-white" />
+              <span className="whitespace-nowrap sm:hidden">Call Now</span>
+              <span className="hidden sm:inline">Call Now</span>
             </a>
 
             <a
-              href="https://api.whatsapp.com/send?phone=4407821030906"
+              href="https://api.whatsapp.com/send?phone=447413059890"
               target="_blank"
               rel="noreferrer"
-              className="px-4 py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-[1.02] active:scale-95 flex items-center gap-1.5"
+              className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#25D366] px-3 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#20bd5a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-4 sm:py-2.5 sm:text-xs"
               aria-label="WhatsApp contact"
             >
               <MessageSquareShare className="w-4 h-4" />
-              <span className="hidden sm:inline">WhatsApp</span>
+              <span>WhatsApp</span>
             </a>
           </div>
         </div>

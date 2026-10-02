@@ -1,7 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, Globe, ChevronRight } from "lucide-react";
+import { CheckCircle2, Globe, ChevronRight, Phone } from "lucide-react";
+
+const SCHENGEN_PHONE = "020 3970 0100";
+const SCHENGEN_PHONE_LINK = "tel:02039703003";
+const SCHENGEN_WHATSAPP_LINK = "https://api.whatsapp.com/send?phone=447413059890";
 
 const FEATURED_SCHENGEN = [
   {
@@ -56,8 +60,7 @@ const FEATURED_SCHENGEN = [
 
 function SchengenCard({ item }) {
   return (
-    <Link
-      href="/search_vertical/schengen"
+    <article
       className="group bg-white rounded-3xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col"
     >
       {/* Image */}
@@ -117,12 +120,37 @@ function SchengenCard({ item }) {
             {item.currency}{item.pricePerApplicant}
             <span className="text-xs font-normal text-gray-500 ml-1">/ per person</span>
           </div>
-          <span className="text-xs font-bold text-[#003399] group-hover:underline">
-            Apply Now →
-          </span>
+          <Link
+            href="/search_vertical/schengen"
+            className="rounded-lg bg-[#003399] px-3 py-2 text-xs font-bold text-white shadow-sm transition-colors hover:bg-[#002277] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#003399] focus-visible:ring-offset-2"
+          >
+            Apply Now
+          </Link>
+        </div>
+        <div className="flex items-center justify-between gap-2 border-t border-gray-100 pt-3">
+          <a
+            href={SCHENGEN_PHONE_LINK}
+            aria-label={`Call ${SCHENGEN_PHONE}`}
+            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#2563EB] px-3 py-2 text-sm font-bold text-white transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2"
+          >
+            <Phone className="h-3.5 w-3.5 shrink-0 text-white" />
+            <span className="whitespace-nowrap">Call Now</span>
+          </a>
+          <a
+            href={SCHENGEN_WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact via WhatsApp"
+            className="inline-flex flex-1 items-center justify-center gap-1 rounded-lg bg-[#25D366] px-3 py-2 text-sm font-bold text-white hover:bg-[#20bd5a]"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.157 4.228 4.228-1.157zm11.758-6.141c-.287-.143-1.697-.838-1.96-.933-.263-.096-.454-.143-.646.144-.191.286-.74 1.05-.908 1.242-.168.191-.335.215-.622.072-.287-.143-1.214-.447-2.313-1.427-.855-.763-1.433-1.706-1.601-1.993-.168-.287-.018-.442.126-.584.13-.129.287-.335.43-.502.143-.167.191-.286.287-.478.096-.191.048-.359-.024-.502-.072-.143-.646-1.555-.885-2.129-.233-.56-.47-.483-.646-.492l-.55-.009c-.191 0-.502.072-.765.359s-1.004.981-1.004 2.394 1.028 2.774 1.171 2.966c.143.191 2.023 3.088 4.901 4.332.685.296 1.22.473 1.637.605.689.219 1.316.188 1.812.114.554-.083 1.697-.694 1.936-1.363.239-.669.239-1.242.168-1.363-.072-.121-.263-.193-.55-.336z" />
+            </svg>
+            WhatsApp
+          </a>
         </div>
       </div>
-    </Link>
+    </article>
   );
 }
 

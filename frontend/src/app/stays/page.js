@@ -39,8 +39,8 @@ function StaysContent() {
       reviewCount: 1324,
       discountTag: "STAY + TRANSPORT",
       totalPrice: 299,
-      phone: "02039700100",
-      whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Royal spa access", "Executive Chauffeur pick & drop", "Private valet"],
       images: [
         "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
@@ -64,8 +64,8 @@ function StaysContent() {
       reviewCount: 980,
       discountTag: "STAY + TRANSPORT",
       totalPrice: 289,
-      phone: "02039700100",
-      whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Historic city center", "Private airport pickup", "Rooftop terrace"],
       images: [
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80",
@@ -89,8 +89,8 @@ function StaysContent() {
       reviewCount: 1140,
       discountTag: "STAY + TRANSPORT",
       totalPrice: 349,
-      phone: "02039700100",
-      whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Palace Hotel stay", "Private airport chauffeur", "VIP concierge"],
       images: [
         "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=80",
@@ -114,8 +114,8 @@ function StaysContent() {
       reviewCount: 875,
       discountTag: "STAY + TRANSPORT",
       totalPrice: 319,
-      phone: "02039700100",
-      whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Panoramic Lake view", "Private shuttle & train pass", "Thermal spa"],
       images: [
         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
@@ -139,8 +139,8 @@ function StaysContent() {
       reviewCount: 1045,
       discountTag: "STAY + TRANSPORT",
       totalPrice: 279,
-      phone: "02039700100",
-      whatsapp: "https://api.whatsapp.com/send?phone=4407821030906",
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Bosphorus view suite", "Private airport pickup", "Turkish bath"],
       images: [
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80",
@@ -227,10 +227,10 @@ function StaysContent() {
                 All packages include verified 5-star hotel accommodation and private chauffeur airport pick &amp; drop ground transport.
               </p>
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
-                <Phone className="w-4 h-4" /> Contact Us
+                <Phone className="w-4 h-4" /> Call Now
               </a>
             </div>
           </aside>

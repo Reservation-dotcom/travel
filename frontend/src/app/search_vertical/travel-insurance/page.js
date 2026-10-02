@@ -507,20 +507,21 @@ function TravelInsuranceContent() {
               </div>
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <a
-                  href="tel:02039700100"
-                  className="flex-1 sm:flex-initial px-4 py-2.5 bg-white/10 hover:bg-white/20 border border-white/30 text-white text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-2"
+                  href="tel:02039703003"
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-transparent bg-[#2563EB] px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#191e3b] sm:flex-initial sm:rounded-xl sm:border-white/30 sm:bg-white/10 sm:px-4 sm:text-xs sm:hover:bg-white/20"
                 >
-                  <Phone className="w-4 h-4 text-yellow-300" />
-                  <span className="hidden sm:inline">Contact Us</span>
+                  <Phone className="w-4 h-4 text-white sm:text-yellow-300" />
+                  <span className="whitespace-nowrap sm:hidden">Call Now</span>
+                  <span className="hidden sm:inline">Call Now</span>
                 </a>
                 <a
-                  href="https://api.whatsapp.com/send?phone=4407821030906"
+                  href="https://api.whatsapp.com/send?phone=447413059890"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 sm:flex-initial px-5 py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all flex items-center justify-center gap-2"
+                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-[#25D366] px-3 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#20bd5a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#191e3b] sm:flex-initial sm:rounded-xl sm:px-5 sm:text-xs"
                 >
                   <MessageSquareShare className="w-4 h-4" />
-                  <span className="hidden sm:inline">WhatsApp</span>
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>

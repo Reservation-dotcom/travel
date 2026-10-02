@@ -22,8 +22,8 @@ const HAJJ_PACKAGES = [
     nights_madinah: 12,
     price: 6730,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://media.istockphoto.com/id/482206266/photo/kaaba-in-mecca.webp?a=1&b=1&s=612x612&w=0&k=20&c=YWHRjAp4EQi7gwiWgnmSwh9m8ez2fUTiJFFTSGlx0Pg=",
     rating: 8.9,
@@ -41,8 +41,8 @@ const HAJJ_PACKAGES = [
     nights_madinah: 8,
     price: 6000,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/images-1.jpg",
     rating: 8.7,
@@ -60,8 +60,8 @@ const HAJJ_PACKAGES = [
     nights_madinah: 7,
     price: 5700,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/makkah-2-beautiful-wallpaper-1024x768-1.jpg",
     rating: 8.8,
@@ -79,8 +79,8 @@ const HAJJ_PACKAGES = [
     nights_madinah: 3,
     price: 7000,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://images.unsplash.com/photo-1553755088-ef1973c7b4a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1ha2thaHxlbnwwfHwwfHx8MA%3D%3D",
     rating: 9.6,
@@ -98,8 +98,8 @@ const HAJJ_PACKAGES = [
     nights_madinah: 3,
     price: 6000,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/images-3.jpg",
     rating: 9.2,
@@ -117,8 +117,8 @@ const HAJJ_PACKAGES = [
     nights_madinah: 3,
     price: 5200,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/al-haram-mosque.jpg",
     rating: 8.6,
@@ -220,7 +220,7 @@ function HajjPackageCard({ pkg }) {
           <div className="flex items-center gap-2">
             {pkg.phone && (
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 aria-label="Contact Us"
                 className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
               >
@@ -330,7 +330,7 @@ function HajjContent() {
                 Direct quota booking with Saudi Ministry clearance, flight tickets, hotel stay & ground guidance in Makkah & Madinah.
               </p>
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-300 hover:text-amber-100"
               >
                 <Phone className="w-4 h-4" /> Contact Us

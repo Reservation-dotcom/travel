@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -35,15 +36,15 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group shrink-0">
-            <div className="w-8 h-8 rounded-lg bg-[#fcd535] flex items-center justify-center text-[#191e3b] font-black shadow-xs transition-transform group-hover:scale-105">
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M5 19L19 5M19 5H9M19 5V15" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#191e3b]">
-              Expedia
-            </span>
+          <Link href="/" className="flex items-center group shrink-0">
+            <Image
+              src="/schengen-logo.svg"
+              alt="Schengen: Visa, Umrah, Flights, Stay"
+              width={560}
+              height={144}
+              priority
+              className="h-10 sm:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}

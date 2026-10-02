@@ -11,50 +11,50 @@ import {
   Plane, Hotel, FileText, Sparkles, Shield, Phone, MessageSquareShare
 } from "lucide-react";
 
-const UMRAH_WITH_TRIP = [
-  {
-    id: "ut1",
-    name: "Umrah + Dubai",
-    duration: "10 Days",
-    price: 325000,
-    currency: "PKR",
-    rating: 5.0,
-    ratingText: "Excellent",
-    image:
-      "https://holidaysmaker.pk/cdn/shop/files/dubai--umrah-in-diwali-vacation_1695364033.jpg?v=1785846258",
-    badge: "Popular",
-    destination: "Makkah + Madinah + Dubai",
-    includes: ["Umrah", "Dubai Trip", "Accommodation"],
-  },
-  {
-    id: "ut2",
-    name: "Umrah + Sharm El Sheikh",
-    duration: "11 Days",
-    price: 399000,
-    currency: "PKR",
-    rating: 4.8,
-    ratingText: "Excellent",
-    image:
-      "https://holidaysmaker.pk/cdn/shop/files/Umrah_Sharm_El_Sheikh.png?v=1785763351&width=800",
-    badge: "Special",
-    destination: "Makkah + Madinah + Sharm El Sheikh",
-    includes: ["Umrah", "Sharm El Sheikh Trip", "Accommodation"],
-  },
-  {
-    id: "ut3",
-    name: "Umrah + Turkey",
-    duration: "11 Days",
-    price: 490000,
-    currency: "PKR",
-    rating: 4.9,
-    ratingText: "Excellent",
-    image:
-      "https://holidaysmaker.pk/cdn/shop/files/5-Star-Umrah-And-Turkey-For-10-Days.jpg?v=1785761521&width=800",
-    badge: "Premium",
-    destination: "Makkah + Madinah + Turkey",
-    includes: ["Umrah", "Turkey Trip", "Accommodation"],
-  },
-];
+// const UMRAH_WITH_TRIP = [
+//   {
+//     id: "ut1",
+//     name: "Umrah + Dubai",
+//     duration: "10 Days",
+//     price: 325000,
+//     currency: "PKR",
+//     rating: 5.0,
+//     ratingText: "Excellent",
+//     image:
+//       "https://holidaysmaker.pk/cdn/shop/files/dubai--umrah-in-diwali-vacation_1695364033.jpg?v=1785846258",
+//     badge: "Popular",
+//     destination: "Makkah + Madinah + Dubai",
+//     includes: ["Umrah", "Dubai Trip", "Accommodation"],
+//   },
+//   {
+//     id: "ut2",
+//     name: "Umrah + Sharm El Sheikh",
+//     duration: "11 Days",
+//     price: 399000,
+//     currency: "PKR",
+//     rating: 4.8,
+//     ratingText: "Excellent",
+//     image:
+//       "https://holidaysmaker.pk/cdn/shop/files/Umrah_Sharm_El_Sheikh.png?v=1785763351&width=800",
+//     badge: "Special",
+//     destination: "Makkah + Madinah + Sharm El Sheikh",
+//     includes: ["Umrah", "Sharm El Sheikh Trip", "Accommodation"],
+//   },
+//   {
+//     id: "ut3",
+//     name: "Umrah + Turkey",
+//     duration: "11 Days",
+//     price: 490000,
+//     currency: "PKR",
+//     rating: 4.9,
+//     ratingText: "Excellent",
+//     image:
+//       "https://holidaysmaker.pk/cdn/shop/files/5-Star-Umrah-And-Turkey-For-10-Days.jpg?v=1785761521&width=800",
+//     badge: "Premium",
+//     destination: "Makkah + Madinah + Turkey",
+//     includes: ["Umrah", "Turkey Trip", "Accommodation"],
+//   },
+// ];
 
 
 const UMRAH_PACKAGES = [
@@ -68,8 +68,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 3,
     price: 595,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFra2FofGVufDB8fDB8fHww",
     rating: 8.8,
@@ -87,8 +87,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 3,
     price: 695,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://i.pinimg.com/1200x/f9/67/67/f967673096d31252dced546e0809ea0b.jpg",
     rating: 9.0,
@@ -106,8 +106,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 3,
     price: 795,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/10-days-5-star-umrah-package-840-visahotelsreturn-flight-560x400-1.jpg",
     rating: 9.4,
@@ -125,8 +125,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 3,
     price: 995,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/makkah_al_mukarramah_and_high_resolution_wallpaper.jpg",
     rating: 8.9,
@@ -144,8 +144,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 3,
     price: 1095,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://i.pinimg.com/1200x/84/62/f2/8462f24e9f017c1e9c443a1b6ad2e738.jpg",
     rating: 9.2,
@@ -164,8 +164,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 5,
     price: 695,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWFra2FofGVufDB8fDB8fHww",
     rating: 8.9,
@@ -183,8 +183,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 5,
     price: 795,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://i.pinimg.com/1200x/c6/27/83/c62783fc7679e8a756a36064508de74b.jpg",
     rating: 9.2,
@@ -202,8 +202,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 5,
     price: 895,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/06/12-days-5-star-umrah-package-895-visareturn-flighthotels-560x400-1.jpg",
     rating: 9.5,
@@ -221,8 +221,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 5,
     price: 1095,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://images.unsplash.com/photo-1605553378313-22d0dc541393?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1ha2thaHxlbnwwfHwwfHx8MA%3D%3D",
     rating: 9.0,
@@ -240,8 +240,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 5,
     price: 1195,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://i.pinimg.com/1200x/dd/ba/f8/ddbaf8fb8a8fc1297391badac6e410c4.jpg",
     rating: 9.3,
@@ -260,8 +260,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 7,
     price: 795,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=900&q=80",
     rating: 9.1,
@@ -279,8 +279,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 7,
     price: 895,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80",
     rating: 9.1,
@@ -298,8 +298,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 7,
     price: 995,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://i.pinimg.com/1200x/f8/e2/89/f8e2892de422badb472d8bc5522804aa.jpg",
     rating: 9.6,
@@ -317,8 +317,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 7,
     price: 1195,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://cheapestumrah.co.uk/wp-content/uploads/2023/01/umrah-hajj.jpg",
     rating: 9.1,
@@ -336,8 +336,8 @@ const UMRAH_PACKAGES = [
     nights_madinah: 7,
     price: 1295,
     currency: "£",
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
     includes: ["Flight", "Visa", "Accommodation"],
     image: "https://i.pinimg.com/1200x/37/10/b9/3710b9c8fd1190a8c98dd66a1ee1d2f5.jpg",
     rating: 9.4,
@@ -437,15 +437,16 @@ function UmrahPackageCard({ pkg }) {
           </div>
 
           {/* Phone & WhatsApp CTAs */}
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center gap-2 sm:w-auto">
             {pkg.phone && (
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 aria-label="Contact Us"
-                className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#2563EB] px-3 py-2 text-sm font-bold text-white transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-3.5 sm:py-2 sm:text-xs sm:shadow-2xs"
               >
-                <Phone className="w-3.5 h-3.5 text-[#006ce4] shrink-0" />
-                <span className="hidden sm:inline">Contact Us</span>
+                <Phone className="w-3.5 h-3.5 shrink-0 text-white" />
+                <span className="whitespace-nowrap sm:hidden">Call Now</span>
+                <span className="hidden sm:inline">Call Now</span>
               </a>
             )}
 
@@ -455,10 +456,10 @@ function UmrahPackageCard({ pkg }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contact via WhatsApp"
-                className="px-2.5 py-2.5 sm:px-4 sm:py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#25D366] px-3 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#20bd5a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-4 sm:py-2 sm:text-xs"
               >
                 <MessageSquareShare className="w-4 h-4 shrink-0" />
-                <span className="hidden sm:inline">WhatsApp</span>
+                <span>WhatsApp</span>
               </a>
             )}
           </div>
@@ -468,147 +469,148 @@ function UmrahPackageCard({ pkg }) {
   );
 }
 
-function UmrahWithTripCard({ pkg }) {
-  return (
-    <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col md:flex-row group">
+// function UmrahWithTripCard({ pkg }) {
+//   return (
+//     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col md:flex-row group">
 
-      {/* Image */}
-      <div className="relative w-full h-56 sm:h-60 md:w-72 md:h-auto shrink-0 overflow-hidden">
-        <img
-          src={pkg.image}
-          alt={pkg.name}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-        />
+//       {/* Image */}
+//       <div className="relative w-full h-56 sm:h-60 md:w-72 md:h-auto shrink-0 overflow-hidden">
+//         <img
+//           src={pkg.image}
+//           alt={pkg.name}
+//           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+//         />
 
-        {/* Badge */}
-        {pkg.badge && (
-          <span className="absolute top-3 left-3 bg-[#006ce4] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
-            {pkg.badge}
-          </span>
-        )}
+//         {/* Badge */}
+//         {pkg.badge && (
+//           <span className="absolute top-3 left-3 bg-[#006ce4] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow">
+//             {pkg.badge}
+//           </span>
+//         )}
 
-        {/* Rating */}
-        <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-lg shadow-sm">
-          <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-          <span className="text-xs font-bold text-[#191e3b]">
-            {pkg.rating}
-          </span>
-        </div>
-      </div>
+//         {/* Rating */}
+//         <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-white/95 px-2.5 py-1 rounded-lg shadow-sm">
+//           <Star className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+//           <span className="text-xs font-bold text-[#191e3b]">
+//             {pkg.rating}
+//           </span>
+//         </div>
+//       </div>
 
-      {/* Content */}
-      <div className="flex-1 p-5 flex flex-col justify-between gap-4">
+//       {/* Content */}
+//       <div className="flex-1 p-5 flex flex-col justify-between gap-4">
 
-        <div>
-          {/* Title + Rating */}
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <h3 className="text-base sm:text-lg font-bold text-[#191e3b] leading-tight">
-                {pkg.name}
-              </h3>
+//         <div>
+//           {/* Title + Rating */}
+//           <div className="flex items-start justify-between gap-3">
+//             <div>
+//               <h3 className="text-base sm:text-lg font-bold text-[#191e3b] leading-tight">
+//                 {pkg.name}
+//               </h3>
 
-              <div className="flex items-center gap-1 mt-1 text-gray-500 text-xs">
-                <MapPin className="w-3.5 h-3.5 shrink-0 text-[#006ce4]" />
-                <span>{pkg.destination}</span>
-              </div>
-            </div>
+//               <div className="flex items-center gap-1 mt-1 text-gray-500 text-xs">
+//                 <MapPin className="w-3.5 h-3.5 shrink-0 text-[#006ce4]" />
+//                 <span>{pkg.destination}</span>
+//               </div>
+//             </div>
 
-            <div className="text-right shrink-0">
-              <div className="inline-flex items-center gap-1 bg-[#006ce4] text-white text-xs font-bold px-2.5 py-1 rounded-xl">
-                <Star className="w-3 h-3 fill-white" />
-                {pkg.rating}
-              </div>
+//             <div className="text-right shrink-0">
+//               <div className="inline-flex items-center gap-1 bg-[#006ce4] text-white text-xs font-bold px-2.5 py-1 rounded-xl">
+//                 <Star className="w-3 h-3 fill-white" />
+//                 {pkg.rating}
+//               </div>
 
-              <div className="text-[10px] text-gray-500 mt-0.5">
-                {pkg.ratingText}
-              </div>
-            </div>
-          </div>
+//               <div className="text-[10px] text-gray-500 mt-0.5">
+//                 {pkg.ratingText}
+//               </div>
+//             </div>
+//           </div>
 
-          {/* Meta Chips */}
-          <div className="flex flex-wrap gap-2 mt-3">
+//           {/* Meta Chips */}
+//           <div className="flex flex-wrap gap-2 mt-3">
 
-            <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-green-100">
-              <Clock className="w-3.5 h-3.5" />
-              {pkg.duration}
-            </span>
+//             <span className="inline-flex items-center gap-1 bg-green-50 text-green-700 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-green-100">
+//               <Clock className="w-3.5 h-3.5" />
+//               {pkg.duration}
+//             </span>
 
-            <span className="inline-flex items-center gap-1 bg-blue-50 text-[#006ce4] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-blue-100">
-              <Plane className="w-3.5 h-3.5" />
-              Umrah Trip
-            </span>
+//             <span className="inline-flex items-center gap-1 bg-blue-50 text-[#006ce4] text-[11px] font-semibold px-2.5 py-1 rounded-full border border-blue-100">
+//               <Plane className="w-3.5 h-3.5" />
+//               Umrah Trip
+//             </span>
 
-            <span className="inline-flex items-center gap-1 bg-purple-50 text-purple-700 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-purple-100">
-              <MapPin className="w-3.5 h-3.5" />
-              Multi Destination
-            </span>
+//             <span className="inline-flex items-center gap-1 bg-purple-50 text-purple-700 text-[11px] font-semibold px-2.5 py-1 rounded-full border border-purple-100">
+//               <MapPin className="w-3.5 h-3.5" />
+//               Multi Destination
+//             </span>
 
-          </div>
+//           </div>
 
-          {/* Inclusions */}
-          <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-3 pt-2 border-t border-gray-100">
+//           {/* Inclusions */}
+//           <div className="flex flex-wrap gap-x-4 gap-y-1.5 mt-3 pt-2 border-t border-gray-100">
 
-            <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-              Umrah Included
-            </span>
+//             <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
+//               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+//               Umrah Included
+//             </span>
 
-            <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
-              <Plane className="w-3.5 h-3.5 text-[#006ce4]" />
-              Trip Included
-            </span>
+//             <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
+//               <Plane className="w-3.5 h-3.5 text-[#006ce4]" />
+//               Trip Included
+//             </span>
 
-            <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
-              <Hotel className="w-3.5 h-3.5 text-amber-600" />
-              Accommodation Included
-            </span>
+//             <span className="flex items-center gap-1 text-xs font-semibold text-gray-700">
+//               <Hotel className="w-3.5 h-3.5 text-amber-600" />
+//               Accommodation Included
+//             </span>
 
-          </div>
-        </div>
+//           </div>
+//         </div>
 
-        {/* Price + Actions */}
-        <div className="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 pt-3">
+//         {/* Price + Actions */}
+//         <div className="flex flex-wrap items-center justify-between gap-3 border-t border-gray-100 pt-3">
 
-          <div>
-            <div className="text-2xl font-black text-[#191e3b]">
-              {pkg.currency} {pkg.price.toLocaleString()}
-            </div>
+//           <div>
+//             <div className="text-2xl font-black text-[#191e3b]">
+//               {pkg.currency} {pkg.price.toLocaleString()}
+//             </div>
 
-            <div className="text-[10px] text-gray-500">
-              Starting from · per person
-            </div>
-          </div>
+//             <div className="text-[10px] text-gray-500">
+//               Starting from · per person
+//             </div>
+//           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex items-center gap-2">
+//           {/* CTA Buttons */}
+//           <div className="flex w-full items-center gap-2 sm:w-auto">
 
-            <a
-              href="tel:02039700100"
-              aria-label="Contact Us"
-              className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
-            >
-              <Phone className="w-3.5 h-3.5 text-[#006ce4] shrink-0" />
-              <span className="hidden sm:inline">Contact Us</span>
-            </a>
+//             <a
+//               href="tel:02039703003"
+//               aria-label="Contact Us"
+//               className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#2563EB] px-3 py-2 text-sm font-bold text-white transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-3.5 sm:py-2 sm:text-xs sm:shadow-2xs"
+//             >
+//               <Phone className="w-3.5 h-3.5 shrink-0 text-white" />
+//               <span className="whitespace-nowrap sm:hidden">Call Now</span>
+//               <span className="hidden sm:inline">Contact Us</span>
+//             </a>
 
-            <a
-              href="https://api.whatsapp.com/send?phone=442039700100"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Contact via WhatsApp"
-              className="px-2.5 py-2.5 sm:px-4 sm:py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
-            >
-              <MessageSquareShare className="w-4 h-4 shrink-0" />
-              <span className="hidden sm:inline">WhatsApp</span>
-            </a>
+//             <a
+//               href="https://api.whatsapp.com/send?phone=447413059890"
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               aria-label="Contact via WhatsApp"
+//               className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#25D366] px-3 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#20bd5a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-4 sm:py-2 sm:text-xs"
+//             >
+//               <MessageSquareShare className="w-4 h-4 shrink-0" />
+//               <span>WhatsApp</span>
+//             </a>
 
-          </div>
-        </div>
+//           </div>
+//         </div>
 
-      </div>
-    </div>
-  );
-}
+//       </div>
+//     </div>
+//   );
+// }
 
 function UmrahContent() {
   const searchParams = useSearchParams();
@@ -692,7 +694,7 @@ function UmrahContent() {
                 Contact our Umrah advisors directly via Phone or WhatsApp for customized flight dates, family discounts & ground transport.
               </p>
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
                 <Phone className="w-4 h-4" /> Contact Us
@@ -757,14 +759,14 @@ function UmrahContent() {
                 </button>
               </div>
             )}
-            <div className="space-y-4">
+            {/* <div className="space-y-4">
               {UMRAH_WITH_TRIP.map((pkg) => (
                 <UmrahWithTripCard
                   key={pkg.id}
                   pkg={pkg}
                 />
               ))}
-            </div>
+            </div> */}
           </section>
 
         </div>

@@ -21,7 +21,7 @@ export default function HeroBanner() {
       <div className="relative w-full hidden sm:block" style={{ height: "260px" }}>
         <Image
           src="https://forever.travel-assets.com/flex/flexmanager/mediaasset/1445686-0_2-BEX00141_BBM_GoingPlaces_CL_Landscapes_Provoste_0009_V02_QC_FNL.jpg?impolicy=fcrop&w=1920&h=345&q=mediumHigh"
-          alt="Expedia Landscape Background"
+          alt="Scenic mountain landscape"
           fill
           priority
           unoptimized

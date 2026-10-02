@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Globe, Lock, Shield, ArrowUp } from "lucide-react";
 
@@ -10,12 +11,12 @@ export default function Footer() {
 
   const footerLinks = {
     Company: [
-      { name: "About Expedia", href: "#" },
+      { name: "About Schengen", href: "#" },
       { name: "Jobs & Careers", href: "#" },
       { name: "Investor Relations", href: "#" },
-      { name: "Expedia Group Media", href: "#" },
-      { name: "Advertising & Partner Solutions", href: "#" },
-      { name: "One Key™ Rewards Details", href: "#" },
+      { name: "Travel News", href: "#" },
+      { name: "Partner with Schengen", href: "#" },
+      { name: "Our Travel Services", href: "/" },
     ],
     Explore: [
       { name: "Hotels in United States", href: "/stays" },
@@ -28,8 +29,8 @@ export default function Footer() {
     Policies: [
       { name: "Privacy Policy", href: "#" },
       { name: "Terms of Use", href: "#" },
-      { name: "Vrbo Terms & Conditions", href: "#" },
-      { name: "One Key Terms & Conditions", href: "#" },
+      { name: "Booking Terms & Conditions", href: "#" },
+      { name: "Travel Partner Terms", href: "#" },
       { name: "Accessibility Statement", href: "#" },
       { name: "Your Privacy Choices", href: "#" },
     ],
@@ -38,20 +39,19 @@ export default function Footer() {
       { name: "Cancel your hotel booking", href: "#" },
       { name: "Cancel your flight", href: "#" },
       { name: "Refund timelines & policies", href: "#" },
-      { name: "Use an Expedia coupon", href: "#" },
+      { name: "Use a travel promo code", href: "#" },
       { name: "Travel documents & advisories", href: "#" },
     ],
   };
 
-  const partnerBrands = [
-    "Hotels.com",
-    "Vrbo",
-    "Orbitz",
-    "Travelocity",
-    "trivago",
-    "Wotif",
-    "CarRentals.com",
-    "CheapTickets",
+  const travelServices = [
+    { name: "Flights", href: "/flights" },
+    { name: "Stays", href: "/stays" },
+    { name: "Visa services", href: "/visa" },
+    { name: "Holiday packages", href: "/love-holiday" },
+    { name: "Hajj", href: "/hajj" },
+    { name: "Umrah", href: "/umrah" },
+    { name: "Travel insurance", href: "/travel-insurance" },
   ];
 
   return (
@@ -74,14 +74,15 @@ export default function Footer() {
           
           {/* Col 1: Logo & Summary */}
           <div className="col-span-2 md:col-span-1 space-y-3">
-            <div className="flex items-center">
-              <span className="text-2xl font-black tracking-tight text-[#003580] flex items-center">
-                Expedia
-                <span className="w-2.5 h-2.5 rounded-full bg-[#fcd535] ml-1 mb-2"></span>
-              </span>
-            </div>
+            <Image
+              src="/schengen-logo.svg"
+              alt="Schengen: Visa, Umrah, Flights, Stay"
+              width={560}
+              height={144}
+              className="h-12 w-auto"
+            />
             <p className="text-xs text-gray-500 leading-relaxed">
-              Explore the world with Expedia. Compare cheap hotels, flights, vacation packages, and rental cars with One Key™ rewards.
+              Plan flights, stays, visa assistance, holidays, Hajj, and Umrah with Schengen.
             </p>
           </div>
 
@@ -108,16 +109,16 @@ export default function Footer() {
 
         </div>
 
-        {/* Expedia Group Brands Section */}
+        {/* Travel Services Section */}
         <div className="pt-8 border-t border-gray-200">
           <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3 text-center sm:text-left">
-            Explore Expedia Group Brands
+            Explore our travel services
           </div>
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 text-xs font-semibold text-gray-500">
-            {partnerBrands.map((brand, i) => (
-              <span key={i} className="hover:text-[#003580] cursor-pointer transition-colors">
-                {brand}
-              </span>
+            {travelServices.map((service) => (
+              <Link key={service.href} href={service.href} className="hover:text-[#003580] hover:underline transition-colors">
+                {service.name}
+              </Link>
             ))}
           </div>
         </div>
@@ -125,7 +126,7 @@ export default function Footer() {
         {/* Legal & Copyright */}
         <div className="pt-8 mt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
           <p>
-            © 2026 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the Expedia Logo are trademarks or registered trademarks of Expedia, Inc.
+            © 2026 Schengen. All rights reserved.
           </p>
           <div className="flex items-center gap-4 shrink-0">
             <span className="flex items-center gap-1 text-gray-600">

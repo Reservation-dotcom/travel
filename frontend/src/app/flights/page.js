@@ -200,10 +200,10 @@ function FlightsContent() {
                 Direct flights and best connection fares to Islamabad (ISB) from UK airports with flexible rebooking options.
               </p>
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-yellow-300 hover:text-yellow-100"
               >
-                <Phone className="w-4 h-4" /> Contact Us
+                <Phone className="w-4 h-4" /> Call Now
               </a>
             </div>
           </aside>

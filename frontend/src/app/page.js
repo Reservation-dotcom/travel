@@ -2,7 +2,6 @@
 
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import MobileNav from "./components/layout/MobileNav";
 import HeroBanner from "./components/home/HeroBanner";
 import AnniversarySaleBanner from "./components/home/AnniversarySaleBanner";
 import SchengenVisaSection from "./components/home/SchengenVisaSection";
@@ -14,7 +13,7 @@ import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#ffffff] text-[#191e3b] font-sans pb-16 md:pb-0 relative">
+    <div className="min-h-screen flex flex-col bg-[#ffffff] text-[#191e3b] font-sans relative">
       {/* Top Navbar */}
       <Header />
 
@@ -44,9 +43,6 @@ export default function Home() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Mobile Bottom Navigation */}
-      <MobileNav />
 
       <FloatingWhatsApp />
     </div>

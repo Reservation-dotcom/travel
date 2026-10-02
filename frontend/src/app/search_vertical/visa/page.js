@@ -24,8 +24,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Assessment", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v2",
@@ -39,8 +39,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Interview", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v3",
@@ -54,8 +54,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Advice", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v4",
@@ -69,8 +69,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Checklist", "Review", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v5",
@@ -84,8 +84,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Guide", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v6",
@@ -99,8 +99,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v7",
@@ -114,8 +114,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v8",
@@ -129,8 +129,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v9",
@@ -144,8 +144,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v10",
@@ -159,8 +159,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v11",
@@ -174,8 +174,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
     id: "v12",
@@ -189,8 +189,8 @@ const OTHER_VISA_SERVICES = [
     discountBadge: "60% OFF",
     successRatio: "99% Success Ratio",
     services: ["Review", "Checklist", "Support"],
-    phone: "02039700100",
-    whatsapp: "https://api.whatsapp.com/send?phone=442039700100"
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
 ];
 
@@ -267,15 +267,16 @@ function VisaServiceCard({ item }) {
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex w-full items-center gap-2 sm:w-auto">
             {item.phone && (
               <a
-                href="tel:02039700100"
+                href="tel:02039703003"
                 aria-label="Contact Us"
-                className="px-2.5 py-2.5 sm:px-3.5 sm:py-2 border border-gray-300 hover:border-[#003399] text-[#191e3b] hover:text-[#003399] text-xs font-bold rounded-xl transition-all flex items-center justify-center gap-1.5 shadow-2xs"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#2563EB] px-3 py-2 text-sm font-bold text-white transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-3.5 sm:py-2 sm:text-xs sm:shadow-2xs"
               >
-                <Phone className="w-3.5 h-3.5 text-[#003399] shrink-0" />
-                <span className="hidden sm:inline">Contact Us</span>
+                <Phone className="w-3.5 h-3.5 shrink-0 text-white sm:text-[#003399]" />
+                <span className="whitespace-nowrap sm:hidden">Call Now</span>
+                <span className="hidden sm:inline">Call Now</span>
               </a>
             )}
 
@@ -285,10 +286,10 @@ function VisaServiceCard({ item }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Contact via WhatsApp"
-                className="px-2.5 py-2.5 sm:px-4 sm:py-2 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5"
+                className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#25D366] px-3 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#20bd5a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:px-4 sm:py-2 sm:text-xs"
               >
                 <MessageSquareShare className="w-4 h-4 shrink-0" />
-                <span className="hidden sm:inline">WhatsApp</span>
+                <span>WhatsApp</span>
               </a>
             )}
           </div>

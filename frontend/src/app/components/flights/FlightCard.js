@@ -53,27 +53,28 @@ export default function FlightCard({ flight }) {
           </div>
 
           {/* Buttons: Book Now + Phone + WhatsApp */}
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex w-full items-center gap-2 sm:w-auto sm:flex-wrap">
 
 
             <a
-              href="tel:02039700100"
+              href="tel:02039703003"
               aria-label="Contact Us"
-              className="px-3 py-2.5 border border-gray-300 hover:border-[#006ce4] text-[#191e3b] hover:text-[#006ce4] text-xs font-bold rounded-xl transition-all flex items-center gap-1.5 shadow-2xs"
+              className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-transparent bg-[#2563EB] px-3 py-2.5 text-sm font-bold text-white transition-colors hover:bg-[#1D4ED8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:text-xs sm:shadow-2xs"
             >
-              <Phone className="w-3.5 h-3.5 text-[#006ce4]" />
-              <span className="hidden sm:inline">Contact Us</span>
+              <Phone className="w-3.5 h-3.5 text-white" />
+              <span className="whitespace-nowrap sm:hidden">Call Now</span>
+              <span className="hidden sm:inline">Call Now</span>
             </a>
 
             <a
-              href="https://api.whatsapp.com/send?phone=4407821030906"
+              href="https://api.whatsapp.com/send?phone=447413059890"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Contact via WhatsApp"
-              className="px-3 py-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-bold rounded-xl shadow-sm transition-all flex items-center gap-1.5"
+              className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#25D366] px-3 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-[#20bd5a] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 sm:flex-none sm:rounded-xl sm:text-xs"
             >
               <MessageSquareShare className="w-4 h-4" />
-              <span className="hidden sm:inline">WhatsApp</span>
+              <span>WhatsApp</span>
             </a>
           </div>
 

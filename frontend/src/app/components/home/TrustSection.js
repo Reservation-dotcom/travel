@@ -21,8 +21,8 @@ export default function TrustSection() {
     },
     {
       icon: Sparkles,
-      title: "One Key™ universal rewards",
-      desc: "Earn OneKeyCash™ rewards that you can redeem directly across Expedia, Hotels.com, and Vrbo.",
+      title: "Support for every step",
+      desc: "Find help with flights, stays, visa applications, holidays, Hajj, and Umrah trips.",
     },
   ];
 
@@ -34,7 +34,7 @@ export default function TrustSection() {
             Plan with peace of mind
           </h2>
           <p className="text-sm text-gray-500 mt-2">
-            Expedia gives you total confidence from initial search through your return trip.
+            Schengen &amp; Beyond Travel helps you plan from your first search through your journey home.
           </p>
         </div>
 
