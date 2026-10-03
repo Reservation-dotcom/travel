@@ -40,7 +40,7 @@ export default function Header() {
             <Image
               src="/schengen-logo.svg"
               alt="Schengen: Visa, Umrah, Flights, Stay"
-              width={560}
+              width={610}
               height={144}
               priority
               className="h-10 sm:h-12 w-auto"
