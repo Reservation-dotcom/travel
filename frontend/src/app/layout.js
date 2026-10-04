@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Schengen | Visa, Umrah, Flights & Stay",
-  description: "Plan visa services, Umrah, flights, stays, holidays, Hajj, and travel insurance with Schengen.",
+  title: "Schengen Masters | Visa, Umrah, Flights & Stay",
+  description: "Plan visa services, Umrah, flights, stays, holidays, Hajj, and travel insurance with Schengen Masters.",
 };
 
 export default function RootLayout({ children }) {

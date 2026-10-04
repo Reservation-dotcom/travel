@@ -11,11 +11,11 @@ export default function Footer() {
 
   const footerLinks = {
     Company: [
-      { name: "About Schengen", href: "#" },
+      { name: "About Schengen Masters", href: "#" },
       { name: "Jobs & Careers", href: "#" },
       { name: "Investor Relations", href: "#" },
       { name: "Travel News", href: "#" },
-      { name: "Partner with Schengen", href: "#" },
+      { name: "Partner with Schengen Masters", href: "#" },
       { name: "Our Travel Services", href: "/" },
     ],
     Explore: [
@@ -76,13 +76,13 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 space-y-3">
             <Image
               src="/schengen-logo.svg"
-              alt="Schengen: Visa, Umrah, Flights, Stay"
-              width={560}
+              alt="Schengen Master: Visa, Umrah, Flights, Stay"
+              width={720}
               height={144}
               className="h-12 w-auto"
             />
             <p className="text-xs text-gray-500 leading-relaxed">
-              Plan flights, stays, visa assistance, holidays, Hajj, and Umrah with Schengen.
+              Plan flights, stays, visa assistance, holidays, Hajj, and Umrah with Schengen Masters.
             </p>
           </div>
 
@@ -126,7 +126,7 @@ export default function Footer() {
         {/* Legal & Copyright */}
         <div className="pt-8 mt-8 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
           <p>
-            © 2026 Schengen. All rights reserved.
+            © 2026 Schengen Masters. All rights reserved.
           </p>
           <div className="flex items-center gap-4 shrink-0">
             <span className="flex items-center gap-1 text-gray-600">

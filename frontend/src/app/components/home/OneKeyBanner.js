@@ -18,7 +18,7 @@ export default function OneKeyBanner() {
           <div className="lg:col-span-7 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#fcd535]/20 border border-[#fcd535]/30 text-[#fcd535] text-xs font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5 fill-[#fcd535]" />
-              Schengen Travel
+              Schengen Masters
             </div>
 
             <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
@@ -27,7 +27,7 @@ export default function OneKeyBanner() {
             </h2>
 
             <p className="text-sm sm:text-base text-blue-100 max-w-xl leading-relaxed">
-              Plan visa services, flights, stays, holidays, Hajj, and Umrah with Schengen.
+              Plan visa services, flights, stays, holidays, Hajj, and Umrah with Schengen Masters.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">

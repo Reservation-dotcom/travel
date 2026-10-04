@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 144" role="img" aria-labelledby="title">
-  <title id="title">Schengen: Visa, Umrah, Flights, Stay</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 144" role="img" aria-labelledby="title">
+  <title id="title">Schengen Master: Visa, Umrah, Flights, Stay</title>
   <rect width="144" height="144" rx="37" fill="#0C2B49" />
   <path d="M104 31C86 25 61 26 49 39c-12 13-2 26 20 37 21 11 29 21 18 35-10 13-31 17-49 7" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-width="8" />
   <circle cx="104" cy="28" r="10.5" fill="#D2A840" />
   <circle cx="40" cy="108" r="11.5" fill="#D2A840" />
-  <text x="184" y="71" fill="#0C2B49" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="500">Schengen</text>
+  <text x="184" y="71" fill="#0C2B49" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="500">Schengen Master</text>
   <text x="186" y="120" fill="#777C84" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="400">Visa · Umrah · Flights · Stay</text>
 </svg>

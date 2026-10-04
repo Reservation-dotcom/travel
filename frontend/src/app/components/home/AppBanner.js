@@ -32,11 +32,11 @@ export default function AppBanner() {
           <div className="lg:col-span-7 space-y-5">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#003580]/10 text-[#003580] text-xs font-bold uppercase tracking-wider">
               <Smartphone className="w-3.5 h-3.5" />
-              <span>Schengen Travel</span>
+              <span>Schengen Masters</span>
             </div>
 
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[#191e3b] tracking-tight leading-tight">
-              Get the Schengen app for trip details and travel updates
+              Get the Schengen Masters app for trip details and travel updates
             </h2>
 
             <ul className="space-y-2.5 text-sm text-gray-700">

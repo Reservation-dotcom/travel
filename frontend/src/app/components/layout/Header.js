@@ -39,8 +39,8 @@ export default function Header() {
           <Link href="/" className="flex items-center group shrink-0">
             <Image
               src="/schengen-logo.svg"
-              alt="Schengen: Visa, Umrah, Flights, Stay"
-              width={610}
+              alt="Schengen Master: Visa, Umrah, Flights, Stay"
+              width={720}
               height={144}
               priority
               className="h-10 sm:h-12 w-auto"
@@ -51,17 +51,17 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = pathname === item.href;
+              const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-xl text-xs xl:text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${isActive
+                  className={`group px-3 py-2 rounded-xl text-xs xl:text-sm font-bold transition-all duration-200 flex items-center gap-1.5 ${isActive
                       ? "bg-blue-50 text-[#006ce4] border border-blue-200/80 shadow-2xs"
-                      : "text-gray-700 hover:text-[#006ce4] hover:bg-gray-100"
+                      : "border border-transparent text-gray-700 hover:text-[#006ce4] hover:bg-blue-50 hover:border-blue-200/80"
                     }`}
                 >
-                  <Icon className={`w-4 h-4 ${isActive ? "text-[#006ce4]" : "text-gray-500"}`} />
+                  <Icon className={`w-4 h-4 ${isActive ? "text-[#006ce4]" : "text-gray-500 group-hover:text-[#006ce4]"}`} />
                   <span>{item.name}</span>
                 </Link>
               );
@@ -88,7 +88,7 @@ export default function Header() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {navItems.map((item) => {
               const Icon = item.icon;
-              const isActive = pathname === item.href;
+              const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
               return (
                 <Link
                   key={item.href}

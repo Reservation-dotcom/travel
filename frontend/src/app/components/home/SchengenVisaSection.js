@@ -7,56 +7,47 @@ const SCHENGEN_PHONE = "020 3970 0100";
 const SCHENGEN_PHONE_LINK = "tel:02039703003";
 const SCHENGEN_WHATSAPP_LINK = "https://api.whatsapp.com/send?phone=447413059890";
 
-const FEATURED_SCHENGEN = [
-  {
-    id: "s1",
-    country: "France",
-    flagImage: "https://flagcdn.com/w160/fr.png",
-    destinationImage: "/france.png",
-    title: "France Schengen Visa",
-    type: "Tourist",
-    pricePerApplicant: 45,
-    currency: "£",
-    discountBadge: "60% OFF",
-    services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
-  },
-  {
-    id: "s2",
-    country: "Germany",
-    flagImage: "https://flagcdn.com/w160/de.png",
-    destinationImage: "/germany.png",
-    title: "Germany Schengen Visa",
-    type: "Business",
-    pricePerApplicant: 45,
-    currency: "£",
-    discountBadge: "60% OFF",
-    services: ["Free Assessment", "File Building", "Submission & Tracking"],
-  },
-  {
-    id: "s3",
-    country: "Spain",
-    flagImage: "https://flagcdn.com/w160/es.png",
-    destinationImage: "/spain.png",
-    title: "Spain Schengen Visa",
-    type: "Tourist",
-    pricePerApplicant: 45,
-    currency: "£",
-    discountBadge: "60% OFF",
-    services: ["Document Checklist", "Appointment", "Submission & Tracking"],
-  },
-  {
-    id: "s4",
-    country: "Italy",
-    flagImage: "https://flagcdn.com/w160/it.png",
-    destinationImage: "/italy.png",
-    title: "Italy Schengen Visa",
-    type: "Tourist",
-    pricePerApplicant: 45,
-    currency: "£",
-    discountBadge: "60% OFF",
-    services: ["Free Assessment", "Document Checklist", "File Building"],
-  },
+const SCHENGEN_DESTINATIONS = [
+  { country: "France", destinationImage: "/france.png" },
+  { country: "Germany", destinationImage: "/germany.png" },
+  { country: "Spain", destinationImage: "/spain.png" },
+  { country: "Italy", destinationImage: "/italy.png" },
+  { country: "Netherlands", destinationImage: "/netherland.png" },
+  { country: "Switzerland", destinationImage: "/switzerland.png" },
+  { country: "Austria", destinationImage: "/austrian.png" },
+  { country: "Belgium", destinationImage: "/belgian.png" },
+  { country: "Bulgaria", destinationImage: "/b.jfif" },
+  { country: "Croatia", destinationImage: "/croatia.png" },
+  { country: "Czech Republic", destinationImage: "/czech.png" },
+  { country: "Denmark", destinationImage: "/denmark.png" },
+  { country: "Estonia", destinationImage: "/estonia.png" },
+  { country: "Finland", destinationImage: "/finland.png" },
+  { country: "Greece", destinationImage: "/grece.png" },
+  { country: "Hungary", destinationImage: "/hungary.png" },
+  { country: "Iceland", destinationImage: "/iceland.png" },
+  { country: "Latvia", destinationImage: "/latvia.png" },
+  { country: "Liechtenstein", destinationImage: "/liechtenstein.png" },
+  { country: "Lithuania", destinationImage: "/lithuanian.png" },
+  { country: "Luxembourg", destinationImage: "/luxembourg.png" },
+  { country: "Malta", destinationImage: "/malta.png" },
+  { country: "Norway", destinationImage: "/norway.png" },
+  { country: "Poland", destinationImage: "/poland.png" },
+  { country: "Portugal", destinationImage: "/portugal.png" },
+  { country: "Romania", destinationImage: "/romania.png" },
+  { country: "Slovakia", destinationImage: "/Slovakia.png" },
+  { country: "Slovenia", destinationImage: "/slovenia.png" },
+  { country: "Sweden", destinationImage: "/sweden.png" },
 ];
+
+const FEATURED_SCHENGEN = SCHENGEN_DESTINATIONS.map((destination, index) => ({
+  ...destination,
+  id: `s${index + 1}`,
+  title: `${destination.country} Schengen Visa`,
+  pricePerApplicant: 45,
+  currency: "£",
+  discountBadge: "60% OFF",
+  services: ["Free Assessment", "Document Checklist", "Appointment & Briefing"],
+}));
 
 function SchengenCard({ item }) {
   return (
@@ -164,10 +155,10 @@ export default function SchengenVisaSection() {
             <span>Schengen Visa Services</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-[#191e3b] tracking-tight">
-            Europe Schengen Visa — From £45 Only
+            Schengen Visa Services for All 29 Countries
           </h2>
           <p className="text-sm text-gray-500 mt-1">
-            Expert document filing, appointment booking &amp; 99% visa success rate.
+            Expert document filing and appointment booking across Europe, from £45.
           </p>
         </div>
         <Link

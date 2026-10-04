@@ -34,7 +34,7 @@ export default function TrustSection() {
             Plan with peace of mind
           </h2>
           <p className="text-sm text-gray-500 mt-2">
-            Schengen &amp; Beyond Travel helps you plan from your first search through your journey home.
+            Schengen Masters helps you plan from your first search through your journey home.
           </p>
         </div>
 

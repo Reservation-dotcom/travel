@@ -43,10 +43,8 @@ function StaysContent() {
       whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Royal spa access", "Executive Chauffeur pick & drop", "Private valet"],
       images: [
-        "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80"
-      ]
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLoikZNgtlAYqszbAg9s776cU5H1STelK-h3UCCOw_g&s=10",
+              ]
     },
     {
       id: "stay-2",
@@ -69,9 +67,7 @@ function StaysContent() {
       features: ["Historic city center", "Private airport pickup", "Rooftop terrace"],
       images: [
         "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=80"
-      ]
+              ]
     },
     {
       id: "stay-3",
@@ -93,10 +89,8 @@ function StaysContent() {
       whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Palace Hotel stay", "Private airport chauffeur", "VIP concierge"],
       images: [
-        "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80"
-      ]
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrTv_u6ASDRLd7NgUvPznfwlKXyXX7fJgtpBDd3-_ZDg&s=10",
+             ]
     },
     {
       id: "stay-4",
@@ -118,10 +112,8 @@ function StaysContent() {
       whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
       features: ["Panoramic Lake view", "Private shuttle & train pass", "Thermal spa"],
       images: [
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80"
-      ]
+        "https://static-new.lhw.com/HotelImages/Final/LW1630/lw1630_91240046_960x540.jpg",
+            ]
     },
     {
       id: "stay-5",
@@ -144,8 +136,236 @@ function StaysContent() {
       features: ["Bosphorus view suite", "Private airport pickup", "Turkish bath"],
       images: [
         "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1560200353-ce0a95ef1641?auto=format&fit=crop&w=1000&q=80",
-        "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1000&q=80"
+       ]
+    },
+    {
+      id: "stay-6",
+      name: "Jumeirah Burj Al Arab",
+      location: "Dubai, United Arab Emirates",
+      country: "United Arab Emirates",
+      countryFlag: "🇦🇪",
+      flagImage: "https://flagcdn.com/w160/ae.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.6,
+      ratingText: "Exceptional",
+      reviewCount: 1450,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 449,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Iconic sail-shaped hotel", "Private beach access", "Luxury chauffeur pickup"],
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb1rDdRST3ed4-GvXWIgjsg9TQhqn0mlKyeZ84Wtb-Xg&s=10",
+       ]
+    },
+    {
+      id: "stay-7",
+      name: "Marina Bay Sands",
+      location: "Singapore",
+      country: "Singapore",
+      countryFlag: "🇸🇬",
+      flagImage: "https://flagcdn.com/w160/sg.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport and City Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.4,
+      ratingText: "Exceptional",
+      reviewCount: 1260,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 429,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["SkyPark infinity pool", "Marina Bay views", "Private airport pickup"],
+      images: [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/647111401.jpg?k=2c05478b869ed2864722c36383b89a46db66ccfcf6a456d4abc3e57927592542&o=",
+     ]
+    },
+    {
+      id: "stay-8",
+      name: "The Taj Mahal Palace",
+      location: "Mumbai, India",
+      country: "India",
+      countryFlag: "🇮🇳",
+      flagImage: "https://flagcdn.com/w160/in.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport Chauffeur and City Transfer",
+      freeWifi: true,
+      rating: 9.3,
+      ratingText: "Exceptional",
+      reviewCount: 1180,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 389,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Heritage sea-view rooms", "Near the Gateway of India", "Private airport pickup"],
+      images: [
+        "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1000&q=80",
+             ]
+    },
+    {
+      id: "stay-9",
+      name: "The Beverly Hills Hotel",
+      location: "Beverly Hills, United States",
+      country: "United States",
+      countryFlag: "🇺🇸",
+      flagImage: "https://flagcdn.com/w160/us.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport and City Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.2,
+      ratingText: "Exceptional",
+      reviewCount: 1025,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 479,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Iconic Pink Palace", "Sunset Boulevard location", "Private airport pickup"],
+      images: [
+        "https://www.dorchestercollection.com/media/ctvnuk1r/thebeverlyhillshotel-superiorguestroom-dorchestercollection-2.jpg?width=1050&height=615&format=webp&rmode=crop"
+      ]
+    },
+    {
+      id: "stay-10",
+      name: "Mandarin Oriental, Bangkok",
+      location: "Bangkok, Thailand",
+      country: "Thailand",
+      countryFlag: "🇹🇭",
+      flagImage: "https://flagcdn.com/w160/th.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport Chauffeur and Riverside Transfer",
+      freeWifi: true,
+      rating: 9.5,
+      ratingText: "Exceptional",
+      reviewCount: 1100,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 399,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Chao Phraya river views", "Luxury riverside stay", "Private airport pickup"],
+      images: [
+        "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Tig2qnyqN7SjIcdZOh86Nx-qruUtr8UufiY-k49vq80e8emHYYjLHY1w3ECbp3Kp6y52PJ2daaq5ljXm4M3aUrxv-KuAnFd2_PEAH49B9Xle-_GdcJBam7wZFjFHm-cKGK0nk1xjH1eHuT=s680-w680-h510-rw",
+             ]
+    },
+    {
+      id: "stay-11",
+      name: "The Savoy",
+      location: "London, United Kingdom",
+      country: "United Kingdom",
+      countryFlag: "🇬🇧",
+      flagImage: "https://flagcdn.com/w160/gb.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Heathrow Airport Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.4,
+      ratingText: "Exceptional",
+      reviewCount: 1210,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 459,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Historic Thames-side hotel", "Near Covent Garden", "Private airport pickup"],
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSnRBs6SwY95dbIy6oy2dT7pgtiQ--SiIVEXSsMme5Lg&s=10",
+      ]
+    },
+    {
+      id: "stay-12",
+      name: "Park Hyatt Sydney",
+      location: "Sydney, Australia",
+      country: "Australia",
+      countryFlag: "🇦🇺",
+      flagImage: "https://flagcdn.com/w160/au.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport and Harbour Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.3,
+      ratingText: "Exceptional",
+      reviewCount: 1080,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 449,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Sydney Harbour views", "Steps from the Opera House", "Private airport pickup"],
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_PvjREhbW4XduuLmGdv1aHR_mjjLgVXAdg0W-KVc62Q&s=10",
+      ]
+    },
+    {
+      id: "stay-13",
+      name: "Islamabad Serena Hotel",
+      location: "Islamabad, Pakistan",
+      country: "Pakistan",
+      countryFlag: "🇵🇰",
+      flagImage: "https://flagcdn.com/w160/pk.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport and City Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.1,
+      ratingText: "Exceptional",
+      reviewCount: 930,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 259,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Margalla Hills views", "Pakistani-inspired architecture", "Private airport pickup"],
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgcKri8MldQJ4kMndiMY2o_qNIJNy7SyLM7lHAUocSYA&s=10",
+      ]
+    },
+    {
+      id: "stay-14",
+      name: "Fairmont Le Château Frontenac",
+      location: "Quebec City, Canada",
+      country: "Canada",
+      countryFlag: "🇨🇦",
+      flagImage: "https://flagcdn.com/w160/ca.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport and Old Quebec Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.2,
+      ratingText: "Exceptional",
+      reviewCount: 1150,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 399,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Iconic Old Quebec landmark", "Views over the St. Lawrence River", "Private airport pickup"],
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQedYAvYcSKqnmAQ6vAWG-mEt_Oukt5T0ijxMq_AN4Kxg&s=10",
+      ]
+    },
+    {
+      id: "stay-15",
+      name: "Imperial Hotel, Tokyo",
+      location: "Tokyo, Japan",
+      country: "Japan",
+      countryFlag: "🇯🇵",
+      flagImage: "https://flagcdn.com/w160/jp.png",
+      type: "hotels",
+      breakfastIncluded: true,
+      transportType: "Private Airport and Tokyo City Chauffeur Transfer",
+      freeWifi: true,
+      rating: 9.3,
+      ratingText: "Exceptional",
+      reviewCount: 1040,
+      discountTag: "STAY + TRANSPORT",
+      totalPrice: 479,
+      phone: "02039703003",
+      whatsapp: "https://api.whatsapp.com/send?phone=447413059890",
+      features: ["Landmark Ginza location", "Near the Imperial Palace", "Private airport pickup"],
+      images: [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTepM5M7Novz3VxZF0k__CyfQUgZCceYr_rUi0kVE5nZg&s=10",
       ]
     }
   ];

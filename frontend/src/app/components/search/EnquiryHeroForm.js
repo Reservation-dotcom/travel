@@ -98,7 +98,7 @@ export default function EnquiryHeroForm({
     setSubmitted(true);
 
     try {
-      const response = await fetch("/api/enquiry", {
+      const response = await fetch("/enquiry.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

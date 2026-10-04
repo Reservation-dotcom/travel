@@ -8,12 +8,269 @@ import EnquiryHeroForm from "../../components/search/EnquiryHeroForm";
 import FloatingWhatsApp from "../../components/ui/FloatingWhatsApp";
 import {
   Calendar, Utensils, Info, Heart, ChevronLeft, ChevronRight,
-  Star, MapPin, Phone, MessageSquareShare, ChevronDown, ChevronUp,
+  Star, MapPin, Phone, Plane, MessageSquareShare, ChevronDown, ChevronUp,
   SlidersHorizontal, Check, Search, Globe, Shield
 } from "lucide-react";
 
 const LOVE_HOLIDAY_PACKAGES = [
   {
+    id: "lh6",
+    name: "Grand Ideal Premium",
+    location: "Marmaris, Dalaman, Turkey · 2.0km from the beach",
+    datesNights: "14 Apr 2027 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £53",
+    wasPrice: "£406 pp",
+    price: "£379 pp",
+    rawPrice: 379,
+    localFees: "No local fees due",
+    image: "https://a.loveholidays.com/018/018e77f8e8dd50faba8a037371913bd6b2d4593c.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Turkey",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh7",
+    name: "Side Moon Palace Hotel",
+    location: "Side, Antalya, Turkey",
+    datesNights: "8 Dec 2026 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £31",
+    wasPrice: "£285 pp",
+    price: "£269 pp",
+    rawPrice: 269,
+    localFees: "No local fees due",
+    image: "https://a.loveholidays.com/hotels/13880065/d0cef5869f2b1aaa3638517ccb184cb641127cc6.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Turkey",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh8",
+    name: "Grand Park Lara",
+    location: "Lara Beach, Antalya, Turkey",
+    datesNights: "8 Dec 2026 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £51",
+    wasPrice: "£325 pp",
+    price: "£299 pp",
+    rawPrice: 299,
+    localFees: "No local fees due",
+    image: "https://a.loveholidays.com/hotels/371012/a45ba05c153faf1d122c493dca190d6c85f2bdd0.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Turkey",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh9",
+    name: "NH Collection Dubai The Palm",
+    location: "The Palm Jumeirah, Dubai, United Arab Emirates",
+    lhReviews: "197 reviews",
+    taReviews: "3,598 reviews",
+    datesNights: "7 Jun 2027 · 7 nights",
+    boardBasis: "Breakfast included",
+    flightsIncluded: true,
+    deposit: "£29 pp deposit",
+    saving: "Save £34",
+    wasPrice: "£756 pp",
+    price: "£739 pp",
+    rawPrice: 739,
+    localFees: "An additional £11 pp in local fees is due at this hotel, making the total £750 pp.",
+    badge: "Most loved",
+    image: "https://a.loveholidays.com/hotels/11316566/133bb99bda3ed508a0584420b46f23ac897186a4.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Dubai",
+    promotion: "Most loved",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh10",
+    name: "The First Collection at Jumeirah Village Circle, a Tribute Portfolio",
+    location: "Jumeirah Village Circle, Dubai, United Arab Emirates · 0.9km from the city centre",
+    lhReviews: "391 reviews",
+    taReviews: "3,897 reviews",
+    datesNights: "3 Jun 2027 · 7 nights",
+    boardBasis: "Breakfast included",
+    flightsIncluded: true,
+    deposit: "£29 pp deposit",
+    saving: "£276 below peak price",
+    price: "£599 pp",
+    rawPrice: 599,
+    localFees: "An additional £11 pp in local fees is due at this hotel, making the total £610 pp.",
+    badge: "Most loved",
+    image: "https://a.loveholidays.com/hotels/11359710/c891d172cba2ed56b875a943b876dadf4dfb8153.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Dubai",
+    promotion: "Most loved",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh11",
+    name: "W Dubai - The Palm",
+    location: "The Palm Jumeirah, Dubai, United Arab Emirates",
+    lhReviews: "50 reviews",
+    taReviews: "3,772 reviews",
+    datesNights: "7 Jun 2027 · 7 nights",
+    boardBasis: "Breakfast included",
+    flightsIncluded: true,
+    deposit: "£29 pp deposit",
+    saving: "Save £50 extra using BIGDEAL",
+    wasPrice: "£996 pp",
+    price: "£939 pp",
+    rawPrice: 939,
+    localFees: "An additional £15 pp in local fees is due at this hotel, making the total £954 pp.",
+    image: "https://a.loveholidays.com/62e/62eab73c691c9826717b1f0b61ce0d32232572b6.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Dubai",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh12",
+    name: "The Ixian Grand & All Suites",
+    location: "Ixia, Rhodes, Greek Islands · 1.3km from the beach",
+    lhReviews: "454 reviews",
+    taReviews: "4,979 reviews",
+    datesNights: "1 Nov 2026 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £58",
+    wasPrice: "£578 pp",
+    price: "£549 pp",
+    rawPrice: 549,
+    localFees: "An additional £45 pp in local fees is due at this hotel, making the total £594 pp.",
+    badge: "Most loved",
+    image: "https://a.loveholidays.com/hotels/6230/50e37e9f03726ce6b51e7629684b801cb87434e1.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Rhodes",
+    promotion: "Most loved",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh13",
+    name: "Olympic Palace Resort Hotel & Convention Centre",
+    location: "Ixia, Rhodes, Greek Islands · 1.1km from the beach",
+    lhReviews: "311 reviews",
+    taReviews: "3,237 reviews",
+    datesNights: "14 Oct 2026 · 7 nights",
+    boardBasis: "Breakfast included",
+    flightsIncluded: true,
+    saving: "Save £59",
+    wasPrice: "£509 pp",
+    price: "£479 pp",
+    rawPrice: 479,
+    localFees: "An additional £45 pp in local fees is due at this hotel, making the total £524 pp.",
+    image: "https://a.loveholidays.com/hotels/3871/8517168c81dc16b58c2f89db564ba841a5217c6e.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Rhodes",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh14",
+    name: "Sandy Beach Resort",
+    location: "Aghios Georgios, Corfu, Greek Islands · Close to the beach",
+    lhReviews: "167 reviews",
+    taReviews: "1,253 reviews",
+    datesNights: "10 Oct 2027 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £19",
+    wasPrice: "£469 pp",
+    price: "£459 pp",
+    rawPrice: 459,
+    localFees: "An additional £30 pp in local fees is due at this hotel, making the total £489 pp.",
+    image: "https://a.loveholidays.com/hotels/6209/29f0ed748e087d95e879966cdd966dd0e07cc496.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Greek Islands",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh15",
+    name: "Inter2 Salou",
+    location: "Salou, Costa Dorada, Spain · Close to the beach",
+    lhReviews: "566 reviews",
+    taReviews: "2,253 reviews",
+    datesNights: "24 Apr 2027 · 7 nights",
+    boardBasis: "Self catering",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "£276 below peak price",
+    price: "£209 pp",
+    rawPrice: 209,
+    localFees: "No local fees due",
+    image: "https://a.loveholidays.com/hotels/1485/ca399a36c034fd63185f3f1306bb286ac3360d6a.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Costa Dorada",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh16",
+    name: "Caves Beach Resort Hurghada",
+    location: "Hurghada, Red Sea, Egypt",
+    lhReviews: "1,429 reviews",
+    taReviews: "4,088 reviews",
+    datesNights: "5 Feb 2027 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £46",
+    wasPrice: "£522 pp",
+    price: "£499 pp",
+    rawPrice: 499,
+    localFees: "No local fees due",
+    image: "https://a.loveholidays.com/hotels/449586/eb183d3a36665235aba6e1137911f7d58847cdd5.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Red Sea",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh17",
+    name: "Sol Lanzarote Hotel",
+    location: "Puerto del Carmen, Lanzarote, Canary Islands · Close to the beach",
+    lhReviews: "317 reviews",
+    taReviews: "8,027 reviews",
+    datesNights: "11 Dec 2026 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £69",
+    wasPrice: "£574 pp",
+    price: "£539 pp",
+    rawPrice: 539,
+    localFees: "No local fees due",
+    image: "https://a.loveholidays.com/32c/32c89639c8489a17a49b1b05ded06584afb30832.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Canary Islands",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh18",
+    name: "BLUESEA Bahía Fañabe & Villas",
+    location: "Costa Adeje, Tenerife, Canary Islands · Close to the beach",
+    lhReviews: "458 reviews",
+    taReviews: "1,927 reviews",
+    datesNights: "14 Dec 2026 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £71",
+    wasPrice: "£535 pp",
+    price: "£499 pp",
+    rawPrice: 499,
+    localFees: "No local fees due",
+    image: "https://a.loveholidays.com/hotels/588441/736f9b5c83f0bab7588f975d0db91fb4a482fcd6.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Canary Islands",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+   {
     id: "lh1",
     name: "Sol Pelícanos Ocas",
     stars: 3,
@@ -106,28 +363,72 @@ const LOVE_HOLIDAY_PACKAGES = [
     whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
   {
-    id: "lh5",
-    name: "The Ixian Grand & All Suites",
-    stars: 5,
-    location: "Ixia, Rhodes, Greek Islands · 1.3km from the beach",
-    lhReviews: "447 reviews",
-    taReviews: "4,951 reviews",
-    datesNights: "10 May 2027 · 7 nights",
+    id: "lh19",
+    name: "Grand Pasa Hotel - All Inclusive",
+    location: "Marmaris, Dalaman, Turkey",
+    lhReviews: "288 reviews",
+    taReviews: "4,915 reviews",
+    datesNights: "14 Apr 2027 · 7 nights",
     boardBasis: "All inclusive",
+    flightsIncluded: true,
     deposit: "£19 pp deposit",
-    saving: "Save £39",
-    wasPrice: "£589 pp",
-    price: "£569 pp",
-    rawPrice: 569,
-    localFees: "An additional £46 pp in local fees is due at this hotel, making the total £615 pp.",
-    badge: "Most loved",
-    image: "https://a.loveholidays.com/hotels/6230/50e37e9f03726ce6b51e7629684b801cb87434e1.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
-    imageCount: "1/78",
-    region: "Rhodes",
+    saving: "Save £53",
+    wasPrice: "£436 pp",
+    price: "£409 pp",
+    rawPrice: 409,
+    localFees: "No local fees due",
+    badge: "Payday deal",
+    image: "https://a.loveholidays.com/hotels_enhanced/4408/21cde7ad29c6a2c4f3e48e38fe61f52987610dcc.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Turkey",
     promotion: "Most loved",
     phone: "02039703003",
     whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
-  }
+  },
+  {
+    id: "lh20",
+    name: "Rixos the Palm Dubai Hotel and Suites",
+    location: "The Palm Jumeirah, Dubai, United Arab Emirates · 1.6km from the beach",
+    lhReviews: "95 reviews",
+    taReviews: "11,888 reviews",
+    datesNights: "17 Jun 2027 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£29 pp deposit",
+    saving: "Save £50 extra using BIGDEAL",
+    wasPrice: "£1,606 pp",
+    price: "£1,489 pp",
+    rawPrice: 1489,
+    localFees: "An additional £15 pp in local fees is due at this hotel, making the total £1,504 pp.",
+    badge: "Most loved",
+    image: "https://a.loveholidays.com/786/7866187fbbfca156e4b986dcf77e46e8bcdc39c8.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Dubai",
+    promotion: "Most loved",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+  {
+    id: "lh21",
+    name: "The Savoy",
+    location: "Sharm el Sheikh, Red Sea, Egypt · Close to the beach",
+    lhReviews: "143 reviews",
+    taReviews: "12,307 reviews",
+    datesNights: "7 Jan 2027 · 7 nights",
+    boardBasis: "All inclusive",
+    flightsIncluded: true,
+    deposit: "£19 pp deposit",
+    saving: "Save £95",
+    wasPrice: "£757 pp",
+    price: "£709 pp",
+    rawPrice: 709,
+    localFees: "No local fees due",
+    badge: "Most loved",
+    image: "https://a.loveholidays.com/059/059429019294ce469b8294c71ed9049b1461c727.jpg?auto=avif%2Cwebp&quality=70&dpr=2&optimize=high&fit=crop&width=350&height=250",
+    region: "Red Sea",
+    promotion: "Most loved",
+    phone: "02039703003",
+    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
+  },
+
 ];
 
 function LoveHolidayCard({ item }) {
@@ -152,14 +453,21 @@ function LoveHolidayCard({ item }) {
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
-        {/* Top Left Badge (Payday deal / Most loved) */}
-        {item.badge && (
-          <span
-            className={`absolute top-3 left-3 text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md backdrop-blur-xs tracking-wide ${item.badge === "Payday deal" ? "bg-[#e6005c]" : "bg-[#c4004f]"
-              }`}
-          >
-            {item.badge}
-          </span>
+        {/* Top Left Badges (Payday deal / Most loved) */}
+        {(item.badge || (item.promotion && item.promotion !== item.badge)) && (
+          <div className="absolute top-3 left-3 flex gap-1">
+            {[item.badge, item.promotion !== item.badge ? item.promotion : null]
+              .filter(Boolean)
+              .map((badge) => (
+                <span
+                  key={badge}
+                  className={`text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md backdrop-blur-xs tracking-wide ${badge === "Payday deal" ? "bg-[#e6005c]" : "bg-[#c4004f]"
+                    }`}
+                >
+                  {badge}
+                </span>
+              ))}
+          </div>
         )}
 
         {/* Top Right Heart Wishlist Button */}
@@ -186,9 +494,11 @@ function LoveHolidayCard({ item }) {
         </button>
 
         {/* Bottom Image Count Badge */}
-        <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">
-          {item.imageCount}
-        </span>
+        {item.imageCount && (
+          <span className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">
+            {item.imageCount}
+          </span>
+        )}
       </div>
 
       {/* ── RIGHT CONTENT AREA ── */}
@@ -199,11 +509,13 @@ function LoveHolidayCard({ item }) {
             <div>
               <h3 className="text-lg sm:text-xl font-extrabold text-[#191e3b] leading-tight">
                 {item.name}
-                <span className="inline-flex items-center gap-0.5 ml-2 text-amber-500 align-middle">
-                  {Array.from({ length: item.stars }).map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                  ))}
-                </span>
+                {item.stars && (
+                  <span className="inline-flex items-center gap-0.5 ml-2 text-amber-500 align-middle">
+                    {Array.from({ length: item.stars }).map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                    ))}
+                  </span>
+                )}
               </h3>
 
               {/* Location & Beach distance */}
@@ -220,20 +532,26 @@ function LoveHolidayCard({ item }) {
               </div>
 
               {/* Review Ratings Line */}
-              <div className="flex items-center gap-3 mt-2 text-[11px] text-gray-600 flex-wrap">
+              {(item.lhReviews || item.taReviews) && (
+                <div className="flex items-center gap-3 mt-2 text-[11px] text-gray-600 flex-wrap">
                 {/* LoveHolidays Smile Rating */}
-                <div className="flex items-center gap-1 font-medium">
-                  <span className="w-3.5 h-3.5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-[9px] font-black">♥</span>
-                  <span className="flex gap-0.5 text-rose-500 text-xs">••••○</span>
-                  <span className="text-gray-700 font-bold ml-0.5">{item.lhReviews}</span>
-                </div>
+                {item.lhReviews && (
+                  <div className="flex items-center gap-1 font-medium">
+                    <span className="w-3.5 h-3.5 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-[9px] font-black">♥</span>
+                    <span className="flex gap-0.5 text-rose-500 text-xs">••••○</span>
+                    <span className="text-gray-700 font-bold ml-0.5">{item.lhReviews}</span>
+                  </div>
+                )}
                 {/* TripAdvisor Rating */}
-                <div className="flex items-center gap-1 font-medium">
-                  <span className="w-3.5 h-3.5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[9px] font-bold">🦉</span>
-                  <span className="flex gap-0.5 text-emerald-600 text-xs">••••○</span>
-                  <span className="text-gray-700 font-bold ml-0.5">{item.taReviews}</span>
+                {item.taReviews && (
+                  <div className="flex items-center gap-1 font-medium">
+                    <span className="w-3.5 h-3.5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[9px] font-bold">🦉</span>
+                    <span className="flex gap-0.5 text-emerald-600 text-xs">••••○</span>
+                    <span className="text-gray-700 font-bold ml-0.5">{item.taReviews}</span>
+                  </div>
+                )}
                 </div>
-              </div>
+              )}
             </div>
           </div>
 
@@ -250,16 +568,23 @@ function LoveHolidayCard({ item }) {
                 <Utensils className="w-4 h-4 text-gray-500 shrink-0" />
                 <span>{item.boardBasis}</span>
               </div>
-              {/* Note: Flights line completely removed as requested */}
+              {item.flightsIncluded && (
+                <div className="flex items-center gap-2">
+                  <Plane className="w-4 h-4 text-gray-500 shrink-0" />
+                  <span>Flights included</span>
+                </div>
+              )}
             </div>
 
             {/* Right Pricing Column */}
             <div className="text-left sm:text-right space-y-1">
               {/* Badges */}
               <div className="flex items-center justify-start sm:justify-end gap-1.5 flex-wrap">
-                <span className="bg-blue-50 text-[#006ce4] text-[11px] font-bold px-2.5 py-1 rounded-full border border-blue-100">
-                  {item.deposit}
-                </span>
+                {item.deposit && (
+                  <span className="bg-blue-50 text-[#006ce4] text-[11px] font-bold px-2.5 py-1 rounded-full border border-blue-100">
+                    {item.deposit}
+                  </span>
+                )}
                 {item.saving && (
                   <span className="bg-[#e6005c] text-white text-[11px] font-extrabold px-2.5 py-1 rounded-full shadow-2xs">
                     {item.saving}
@@ -374,7 +699,12 @@ function LoveHolidayContent() {
     { name: "Costa Blanca", count: 334 },
     { name: "Costa del Sol", count: 448 },
     { name: "Rhodes", count: 189 },
-    { name: "Greek Islands", count: 250 }
+    { name: "Greek Islands", count: 250 },
+    { name: "Turkey", count: 3 },
+    { name: "Dubai", count: 3 },
+    { name: "Costa Dorada", count: 1 },
+    { name: "Red Sea", count: 1 },
+    { name: "Canary Islands", count: 2 }
   ];
 
   // Filtering Logic
