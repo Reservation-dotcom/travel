@@ -8,7 +8,7 @@ import DatePickerModal from "./DatePickerModal";
 export default function UmrahSearch({ onSearch }) {
   const router = useRouter();
 
-  const [origin, setOrigin] = useState("Lahore, Pakistan");
+  const [origin, setOrigin] = useState("London, UK");
   const [destination, setDestination] = useState("Makkah & Madinah, Saudi Arabia");
   const [packageCategory, setPackageCategory] = useState("5 Star Luxury");
 
@@ -43,14 +43,19 @@ export default function UmrahSearch({ onSearch }) {
   ];
 
   const departureCities = [
-    { city: "Lahore", country: "Pakistan" },
-    { city: "Islamabad", country: "Pakistan" },
-    { city: "Karachi", country: "Pakistan" },
-    { city: "Peshawar", country: "Pakistan" },
-    { city: "Dubai", country: "UAE" },
     { city: "London", country: "UK" },
+    { city: "Manchester", country: "UK" },
+
+    { city: "Birmingham", country: "UK" },
+    { city: "Liverpool", country: "UK" },
+    { city: "Edinburgh", country: "UK" },
+    { city: "Dubai", country: "UAE" },
     { city: "New York", country: "USA" },
+    { city: "Islamabad", country: "Pakistan" },
+    { city: "Mumbai", country: "India" },
   ];
+
+
 
   const filteredCities = originQuery
     ? departureCities.filter(

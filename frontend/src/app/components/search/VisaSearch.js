@@ -7,8 +7,8 @@ import { Globe, ShieldCheck, User, Search, FileText, Plus, Minus } from "lucide-
 export default function VisaSearch({ onSearch }) {
   const router = useRouter();
 
-  const [passportCountry, setPassportCountry] = useState("Pakistan");
-  const [destCountry, setDestCountry] = useState("United Arab Emirates (Dubai 30 Days)");
+  const [passportCountry, setPassportCountry] = useState("United Kingdom");
+  const [destCountry, setDestCountry] = useState("UAE (Dubai 30 / 60 Days E-Visa)");
   const [visaType, setVisaType] = useState("Tourist Visa");
 
   const [isDestOpen, setIsDestOpen] = useState(false);
@@ -37,15 +37,25 @@ export default function VisaSearch({ onSearch }) {
   ];
 
   const visaDestinations = [
-    { country: "United Arab Emirates", detail: "Dubai 30 / 60 Days E-Visa", flag: "🇦🇪" },
-    { country: "Saudi Arabia", detail: "Umrah / Tourist E-Visa 1 Year", flag: "🇸🇦" },
-    { country: "United Kingdom", detail: "Standard Visitor Visa 6 Months", flag: "🇬🇧" },
+    { country: "UAE", detail: "Dubai 30 / 60 Days E-Visa", flag: "🇦🇪" },
+    { country: "Saudi", detail: "Umrah / Tourist E-Visa 1 Year", flag: "🇸🇦" },
+    { country: "UK", detail: "Standard Visitor Visa 6 Months", flag: "🇬🇧" },
     { country: "Turkey", detail: "E-Visa 30 Days Single Entry", flag: "🇹🇷" },
-    { country: "Thailand", detail: "Tourist Visa On Arrival / Sticker", flag: "🇹🇭" },
-    { country: "Malaysia", detail: "E-Visa 30 Days", flag: "🇲🇾" },
-    { country: "Schengen Area (Europe)", detail: "Tourist C-Type Visa", flag: "🇪🇺" },
-    { country: "United States", detail: "B1/B2 Tourist Visitor Visa", flag: "🇺🇸" },
+    { country: "New Zealand", detail: "Visitor visa services", flag: "🇳🇿" },
+    { country: "USA", detail: "B1/B2 Tourist Visitor Visa", flag: "🇺🇸" },
     { country: "Canada", detail: "Visitor Visa V-1", flag: "🇨🇦" },
+    { country: "Australia", detail: "Visitor visa services", flag: "🇦🇺" },
+    { country: "Singapur", detail: "Tourist visa services", flag: "🇸🇬" },
+    { country: "Thailand", detail: "Tourist Visa On Arrival / Sticker", flag: "🇹🇭" },
+    { country: "China", detail: "Tourist visa services", flag: "🇨🇳" },
+    { country: "Japan", detail: "Tourist visa services", flag: "🇯🇵" },
+    { country: "Pakistan", detail: "Tourist visa services", flag: "🇵🇰" },
+    { country: "Egypt", detail: "Tourist visa services", flag: "🇪🇬" },
+    { country: "South Korea", detail: "Tourist visa services", flag: "🇰🇷" },
+    { country: "Maxico", detail: "Tourist visa services", flag: "🇲🇽" },
+    { country: "Israel", detail: "Tourist visa services", flag: "🇮🇱" },
+    { country: "Malaysia", detail: "E-Visa 30 Days", flag: "🇲🇾" },
+    { country: "South Africa", detail: "Tourist visa services", flag: "🇿🇦" },
   ];
 
   const filteredVisas = destQuery
@@ -108,11 +118,20 @@ export default function VisaSearch({ onSearch }) {
                   onChange={(e) => setPassportCountry(e.target.value)}
                   className="w-full text-sm font-bold text-[#191e3b] bg-transparent focus:outline-none cursor-pointer"
                 >
-                  <option value="Pakistan">🇵🇰 Pakistan</option>
-                  <option value="India">🇮🇳 India</option>
-                  <option value="United Arab Emirates">🇦🇪 UAE</option>
                   <option value="United Kingdom">🇬🇧 UK</option>
+                  <option value="Canada">🇨🇦 Canada</option>
+                  <option value="United Arab Emirates">🇦🇪 UAE</option>
                   <option value="United States">🇺🇸 USA</option>
+                  <option value="Turkey">🇹🇷 Turkey</option>
+                  <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
+                  <option value="China">🇨🇳 China</option>
+                  <option value="Russia">🇷🇺 Russia</option>
+                  <option value="India">🇮🇳 India</option>
+                  <option value="Morocco">🇲🇦 Morocco</option>
+                  <option value="Pakistan">🇵🇰 Pakistan</option>
+                  <option value="Algeria">🇩🇿 Algeria</option>
+                  <option value="Bangladesh">🇧🇩 Bangladesh</option>
+   
                 </select>
               </div>
             </div>

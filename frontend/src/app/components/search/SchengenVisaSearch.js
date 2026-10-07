@@ -8,7 +8,7 @@ import DatePickerModal from "./DatePickerModal";
 export default function SchengenVisaSearch({ onSearch }) {
   const router = useRouter();
 
-  const [passportCountry, setPassportCountry] = useState("Pakistan");
+  const [passportCountry, setPassportCountry] = useState("United Kingdom");
   const [destCountry, setDestCountry] = useState("France (Paris – Tourist C-Type)");
   const [visaType, setVisaType] = useState("Tourist");
   const [destQuery, setDestQuery] = useState("");
@@ -117,19 +117,19 @@ export default function SchengenVisaSearch({ onSearch }) {
                   onChange={(e) => setPassportCountry(e.target.value)}
                   className="w-full text-sm font-bold text-[#191e3b] bg-transparent focus:outline-none cursor-pointer"
                 >
-                  <option value="China">🇨🇳 China</option>
-                  <option value="Turkey">🇹🇷 Turkey</option>
-                  <option value="India">🇮🇳 India</option>
-                  <option value="Russia">🇷🇺 Russia</option>
-                  <option value="Morocco">🇲🇦 Morocco</option>
-                  <option value="Algeria">🇩🇿 Algeria</option>
-                  <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
-                  <option value="Pakistan">🇵🇰 Pakistan</option>
-                  <option value="United Arab Emirates">🇦🇪 UAE</option>
                   <option value="United Kingdom">🇬🇧 UK</option>
                   <option value="United States">🇺🇸 USA</option>
-                  <option value="Bangladesh">🇧🇩 Bangladesh</option>
+                  <option value="United Arab Emirates">🇦🇪 UAE</option>
                   <option value="Canada">🇨🇦 Canada</option>
+                  <option value="Turkey">🇹🇷 Turkey</option>
+                  <option value="Saudi Arabia">🇸🇦 Saudi Arabia</option>
+                  <option value="India">🇮🇳 India</option>
+                  <option value="Russia">🇷🇺 Russia</option>
+                  <option value="China">🇨🇳 China</option>
+                  <option value="Morocco">🇲🇦 Morocco</option>
+                  <option value="Algeria">🇩🇿 Algeria</option>
+                  <option value="Pakistan">🇵🇰 Pakistan</option>
+                  <option value="Bangladesh">🇧🇩 Bangladesh</option>
                 </select>
               </div>
             </div>

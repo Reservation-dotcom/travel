@@ -9,7 +9,7 @@ export default function FlightSearch({ onSearch }) {
   const router = useRouter();
 
   const [tripType, setTripType] = useState("roundtrip");
-  const [origin, setOrigin] = useState("Lahore (LHE)");
+  const [origin, setOrigin] = useState("London (LHR)");
   const [destination, setDestination] = useState("Dubai (DXB)");
   const [cabinClass, setCabinClass] = useState("Economy");
 
@@ -42,17 +42,15 @@ export default function FlightSearch({ onSearch }) {
   }, []);
 
   const popularAirports = [
-    { city: "Lahore", code: "LHE", airport: "Allama Iqbal Intl", country: "Pakistan" },
-    { city: "Islamabad", code: "ISB", airport: "Islamabad Intl", country: "Pakistan" },
-    { city: "Karachi", code: "KHI", airport: "Jinnah Intl", country: "Pakistan" },
-    { city: "Dubai", code: "DXB", airport: "Dubai Intl", country: "UAE" },
-    { city: "New York", code: "JFK", airport: "John F. Kennedy Intl", country: "USA" },
     { city: "London", code: "LHR", airport: "Heathrow", country: "UK" },
+    { city: "New York", code: "JFK", airport: "John F. Kennedy Intl", country: "USA" },
+    { city: "Dubai", code: "DXB", airport: "Dubai Intl", country: "UAE" },
     { city: "Paris", code: "CDG", airport: "Charles de Gaulle", country: "France" },
-    { city: "Tokyo", code: "HND", airport: "Haneda", country: "Japan" },
     { city: "Istanbul", code: "IST", airport: "Istanbul Airport", country: "Turkey" },
     { city: "Bangkok", code: "BKK", airport: "Suvarnabhumi", country: "Thailand" },
-  ];
+    { city: "Tokyo", code: "HND", airport: "Haneda", country: "Japan" },
+    { city: "Islamabad", code: "ISB", airport: "Islamabad Intl", country: "Pakistan" },
+    ];
 
   const filteredOrigin = originQuery
     ? popularAirports.filter(

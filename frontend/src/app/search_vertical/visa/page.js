@@ -297,21 +297,7 @@ const OTHER_VISA_SERVICES = [
     phone: "02039703003",
     whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
   },
-  {
-    id: "v20",
-    country: "V",
-    flagImage: "https://flagcdn.com/w160/us.png",
-    destinationImage: "/other-visa/south-africa.png",
-    title: "South Africa",
-    type: "Business Visa",
-    pricePerApplicant: 195,
-    currency: "£",
-    discountBadge: "60% OFF",
-    successRatio: "99% Success Ratio",
-    services: ["Review", "Checklist", "Support"],
-    phone: "02039703003",
-    whatsapp: "https://api.whatsapp.com/send?phone=447413059890"
-  },
+  
 ];
 
 function PageHeaderIcon({ src, alt }) {

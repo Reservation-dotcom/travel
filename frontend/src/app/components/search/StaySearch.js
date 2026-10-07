@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { MapPin, Calendar, User, Search, X, Plus, Minus } from "lucide-react";
 import DatePickerModal from "./DatePickerModal";
 
-export default function StaySearch({ initialLocation = "Lahore, Punjab, Pakistan", onSearch }) {
+export default function StaySearch({ initialLocation = "London, Greater London, United Kingdom", onSearch }) {
   const router = useRouter();
   const [destination, setDestination] = useState(initialLocation);
   const [searchQuery, setSearchQuery] = useState("");
@@ -34,16 +34,14 @@ export default function StaySearch({ initialLocation = "Lahore, Punjab, Pakistan
   }, []);
 
   const popularDestinations = [
-    { name: "Lahore, Punjab", country: "Pakistan" },
-    { name: "Islamabad, ICT", country: "Pakistan" },
-    { name: "Karachi, Sindh", country: "Pakistan" },
-    { name: "Dubai, Dubai Emirate", country: "United Arab Emirates" },
-    { name: "New York, New York", country: "United States of America" },
     { name: "London, Greater London", country: "United Kingdom" },
+    { name: "New York, New York", country: "United States of America" },
+    { name: "Dubai, Dubai Emirate", country: "United Arab Emirates" },
     { name: "Paris, Île-de-France", country: "France" },
-    { name: "Tokyo, Tokyo Prefecture", country: "Japan" },
     { name: "Istanbul, Marmara", country: "Turkey" },
+    { name: "Tokyo, Tokyo Prefecture", country: "Japan" },
     { name: "Bangkok, Central", country: "Thailand" },
+    { name: "Islamabad, ICT", country: "Pakistan" },
   ];
 
   const filteredDestinations = searchQuery

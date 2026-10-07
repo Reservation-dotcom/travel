@@ -1,10 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Calendar } from "lucide-react";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function formatTravelDate(date) {
+  if (!date) return "";
+
+  const [year, month, day] = date.split("-");
+  return year && month && day ? `${month}/${day}/${year}` : "";
+}
 
 export default function EnquiryHeroForm({
   title = "For More Cheapest Offers, Fill the Form",
@@ -21,6 +29,18 @@ export default function EnquiryHeroForm({
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const datePickerRef = useRef(null);
+
+  const openDatePicker = () => {
+    const datePicker = datePickerRef.current;
+    if (!datePicker) return;
+
+    if (typeof datePicker.showPicker === "function") {
+      datePicker.showPicker();
+    } else {
+      datePicker.click();
+    }
+  };
 
   const validateForm = () => {
     const name = formData.name.trim();
@@ -226,18 +246,40 @@ export default function EnquiryHeroForm({
 
               <div>
                 <label className="hidden sm:hidden md:block text-xs font-bold text-gray-700 mb-1.5">Travel Date</label>
-                <input
-                  type="text"
-                  name="travelDate"
-                  placeholder="Traveling Date"
-                  onFocus={(e) => (e.target.type = "date")}
-                  onBlur={(e) => {
-                    if (!e.target.value) e.target.type = "text";
-                  }}
-                  value={formData.travelDate}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2.5 text-sm bg-white border border-[#80d4f2] focus:border-[#2bb2d5] rounded-xl focus:ring-2 focus:ring-[#80d4f2]/40 focus:outline-none transition-all placeholder-gray-400 text-gray-800"
-                />
+                <div className="relative">
+                  <input
+                    type="text"
+                    name="travelDate"
+                    placeholder="mm/dd/yyyy"
+                    value={formatTravelDate(formData.travelDate)}
+                    onClick={openDatePicker}
+                    readOnly
+                    aria-label="Travel date (mm/dd/yyyy)"
+                    className="w-full px-4 pr-11 py-2.5 text-sm bg-white border border-[#80d4f2] focus:border-[#2bb2d5] rounded-xl focus:ring-2 focus:ring-[#80d4f2]/40 focus:outline-none transition-all placeholder-gray-400 text-gray-800 cursor-pointer"
+                  />
+                  <button
+                    type="button"
+                    onClick={openDatePicker}
+                    aria-label="Choose travel date"
+                    className="absolute inset-y-0 right-0 flex items-center px-3 text-gray-500 hover:text-[#2bb2d5]"
+                  >
+                    <Calendar className="w-5 h-5" aria-hidden="true" />
+                  </button>
+                  <input
+                    ref={datePickerRef}
+                    type="date"
+                    value={formData.travelDate}
+                    onChange={(e) =>
+                      setFormData((previous) => ({
+                        ...previous,
+                        travelDate: e.target.value,
+                      }))
+                    }
+                    aria-hidden="true"
+                    tabIndex={-1}
+                    className="absolute h-px w-px opacity-0 pointer-events-none"
+                  />
+                </div>
               </div>
 
               <div>
