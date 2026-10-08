@@ -70,16 +70,16 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         
         {/* Brand & 4-Column Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
           
           {/* Col 1: Logo & Summary */}
           <div className="col-span-2 md:col-span-1 space-y-3">
             <Image
-              src="/schengen-logo.svg"
-              alt="Schengen Master: Visa, Umrah, Flights, Stay"
-              width={720}
-              height={144}
-              className="h-12 w-auto"
+              src="/schengenmasterlogo.jpg"
+              alt="Schengen Masters logo"
+              width={1117}
+              height={768}
+              className="h-20 w-auto max-w-full object-contain"
             />
             <p className="text-xs text-gray-500 leading-relaxed">
               Plan flights, stays, visa assistance, holidays, Hajj, and Umrah with Schengen Masters.
@@ -106,6 +106,21 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+
+          <div className="space-y-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#191e3b]">
+              Contact
+            </h4>
+            <address className="not-italic text-xs leading-relaxed text-gray-600">
+              <p className="font-semibold text-[#191e3b] mb-1">Registered office address</p>
+              <p>
+                128 City Road,<br />
+                London,<br />
+                United Kingdom,<br />
+                EC1V 2NX
+              </p>
+            </address>
+          </div>
 
         </div>
 

@@ -33,19 +33,23 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 text-[#191e3b] shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-20 sm:h-24">
 
           {/* Logo */}
-          <Link href="/" className="flex items-center group shrink-0">
-            <Image
-              src="/schengen-logo.svg"
-              alt="Schengen Master: Visa, Umrah, Flights, Stay"
-              width={720}
-              height={144}
-              priority
-              className="h-10 sm:h-12 w-auto"
-            />
+
+          <Link href="/" aria-label="Schengen Master home" className="flex shrink-0 items-center group">
+            <div className="relative aspect-[1117/768] w-[115px] overflow-hidden transition-transform group-hover:scale-105 sm:w-[128px]">
+              <Image
+                src="/schengenmasterlogo.jpg"
+                alt="Schengen Masters"
+                fill
+                priority
+                sizes="(max-width: 639px) 105px, 128px"
+                className="object-contain"
+              />
+            </div>
           </Link>
+
 
           {/* Desktop Navigation Links */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">

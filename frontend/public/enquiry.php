@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 $recipientEmail = 'rabiajabreel@gmail.com';
-$senderEmail = 'website@schengenmasters.co.uk';
+$senderEmail = 'rabiajabreel@gmail.com';
 
 if ($recipientEmail === 'REPLACE_WITH_YOUR_INBOX@example.com'
     || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)
